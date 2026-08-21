@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ticketpartner0.com/sitemap.xml
+Sitemap: https://www.ticketpartner0.com/sitemap.xml
