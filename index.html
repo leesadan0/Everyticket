@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>에브리티켓 | 티켓 양도 · 대리예매 · 선예매 전문</title>
-<meta name="description" content="에브리티켓은 콘서트·공연 티켓 대리예매, 양도, 선예매를 전문으로 하는 업계 최고의 예약 대행 서비스입니다. 성공 시 후불결제, 실패 시 예약금 전액 환불.">
+<meta name="description" content="에브리티켓은 콘서트·공연 티켓 대리예매, 양도, 선예매를 전문으로 하는 업계 최고의 예약 대행 서비스입니다. 인증 후 결제, 실패 시 결제금 전액 환불.">
 
 <link rel="canonical" href="https://www.ticketpartner0.com/">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://www.ticketpartner0.com/">
 <meta property="og:title" content="에브리티켓 | 티켓 양도 · 대리예매 · 선예매 전문">
-<meta property="og:description" content="양도 · 대리예매 · 선예매 문의 — 성공 시 후불결제, 실패 시 예약금 전액 환불">
+<meta property="og:description" content="양도 · 대리예매 · 선예매 문의 — 인증 후 결제, 실패 시 결제금 전액 환불">
 <meta property="og:image" content="https://www.ticketpartner0.com/assets/img/hero-banner.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 
 <script type="application/ld+json">
 {
@@ -32,6 +32,8 @@
   "description": "콘서트·공연 티켓 양도, 대리예매, 선예매를 전문으로 하는 온라인 예약 대행 서비스",
   "url": "https://www.ticketpartner0.com/",
   "image": "https://www.ticketpartner0.com/assets/img/hero-banner.png",
+  "founder": { "@type": "Person", "name": "김동수" },
+  "taxID": "883-22-01600",
   "areaServed": { "@type": "Country", "name": "대한민국" },
   "priceRange": "₩₩",
   "openingHoursSpecification": {
@@ -54,11 +56,6 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "수수료는 어떻게 결제하나요?",
-      "acceptedAnswer": { "@type": "Answer", "text": "먼저 대행 수수료의 30%를 예약금으로 예치하시고, 예매에 성공하면 남은 70%를 후불로 결제하시면 됩니다. 실패한 경우 예약금은 전액 환불해 드립니다." }
-    },
     {
       "@type": "Question",
       "name": "어떤 정보를 알려드려야 하나요?",
@@ -96,7 +93,7 @@
 <div class="topbar">
   <div class="wrap topbar__inner">
     <span class="topbar__dot" aria-hidden="true"></span>
-    <p>카카오톡 상담 <b>24시간 연중무휴</b> · 성공 시에만 수수료를 받습니다</p>
+    <p>카카오톡 상담 <b>24시간 연중무휴</b> · 안전하고 빠른 온라인 거래를 기본으로 진행합니다.</p>
     <a class="topbar__link" href="#contact">지금 문의하기 →</a>
   </div>
 </div>
@@ -158,8 +155,8 @@
       </div>
 
       <ul class="hero__badges">
-        <li><span aria-hidden="true">🔒</span> 성공 시 후불결제</li>
-        <li><span aria-hidden="true">↩️</span> 실패 시 예약금 100% 환불</li>
+        <li><span aria-hidden="true">🔒</span> 인증 후 결제</li>
+        <li><span aria-hidden="true">↩️</span> 실패 시 100% 환불</li>
         <li><span aria-hidden="true">⏱️</span> 평균 응답 5분</li>
       </ul>
     </div>
@@ -172,10 +169,10 @@
   <!-- 지표 -->
   <div class="wrap">
     <ul class="stats">
-      <li><strong data-count="1200" data-suffix="+">0</strong><span>누적 성공 건수</span></li>
+      <li><strong id="successCount" data-live-success="1">0</strong><span>누적 성공 건수</span></li>
       <li><strong data-count="98" data-suffix="%">0</strong><span>티켓팅 성공률</span></li>
       <li><strong data-count="24" data-suffix="시간">0</strong><span>연중무휴 상담</span></li>
-      <li><strong data-count="7" data-suffix="년">0</strong><span>업계 운영 경력</span></li>
+      <li><strong data-count="6" data-suffix="년">0</strong><span>업계 운영 경력</span></li>
     </ul>
   </div>
 </section>
@@ -381,7 +378,7 @@
     </header>
 
     <div class="whys">
-      <div class="why"><div class="why__ico" aria-hidden="true">🛡️</div><h3>실패하면 0원</h3><p>성공 시에만 수수료를 청구하고, 실패 시 예약금은 전액 환불합니다.</p></div>
+      <div class="why"><div class="why__ico" aria-hidden="true">🛡️</div><h3>실패하면 0원</h3><p>성공 시에만 수수료를 청구하고, 실패 시 결제금은 전액 환불합니다.</p></div>
       <div class="why"><div class="why__ico" aria-hidden="true">👥</div><h3>전담 인력 배정</h3><p>공연별 전담 인력이 여러 회선으로 동시에 예매를 진행합니다.</p></div>
       <div class="why"><div class="why__ico" aria-hidden="true">🔔</div><h3>실시간 진행 안내</h3><p>티켓 오픈 전후 진행 상황과 결과를 바로 알려드립니다.</p></div>
       <div class="why"><div class="why__ico" aria-hidden="true">🤫</div><h3>개인정보 철저 보호</h3><p>제공해 주신 정보는 대행 목적 외 사용하지 않으며 완료 후 폐기합니다.</p></div>
@@ -399,10 +396,6 @@
 
     <div class="faq">
       <details class="faq__item" open>
-        <summary>수수료는 어떻게 결제하나요?</summary>
-        <div class="faq__body"><p>먼저 대행 수수료의 30%를 예약금으로 예치하시고, 예매에 성공하면 남은 70%를 후불로 결제하시면 됩니다. 실패한 경우 예약금은 전액 환불해 드립니다.</p></div>
-      </details>
-      <details class="faq__item">
         <summary>어떤 정보를 알려드려야 하나요?</summary>
         <div class="faq__body"><p>공연명, 희망 날짜와 회차, 인원, 선호 좌석(플로어/VIP/지정석 등), 예매처 계정 정보가 필요합니다. 상담 시 순서대로 안내해 드립니다.</p></div>
       </details>
@@ -442,7 +435,7 @@
       <ul class="contact__info">
         <li><b>상담 시간</b> 24시간 연중무휴</li>
         <li><b>평균 응답</b> 5분 이내</li>
-        <li><b>결제 방식</b> 성공 시 후불결제</li>
+        <li><b>결제 방식</b> 인증 후 결제</li>
       </ul>
     </div>
 
@@ -471,9 +464,9 @@
       <div><h4>안내</h4><a href="#process">이용 절차</a><a href="#status">접수현황</a><a href="#success">성공내역</a><a href="#faq">자주 묻는 질문</a></div>
     </div>
     <div class="footer__biz">
+      <p class="footer__ceo"><span>대표자</span> <b>김동수</b></p>
       <p>상호명 : 에브리티켓</p>
-      <p>사업자등록번호 : 000-00-00000</p>
-      <p>대표번호 : 카카오톡 채널 상담</p>
+      <p>사업자등록번호 : 883-22-01600</p>
     </div>
   </div>
   <div class="wrap footer__bottom">
@@ -489,6 +482,6 @@
 
 <button class="to-top" id="toTop" aria-label="맨 위로">▲</button>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=2"></script>
 </body>
 </html>

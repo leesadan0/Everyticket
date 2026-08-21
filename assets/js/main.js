@@ -77,8 +77,81 @@
     });
   }
 
+  /* ---------- 누적 성공 건수 (매일 13건, 랜덤 간격) ---------- */
+  const SUCCESS_BASE = 12731;
+  const SUCCESS_PER_DAY = 13;
+  const SUCCESS_START = Date.UTC(2026, 7, 21) - 9 * 3600 * 1000;
+
+  const mulberry32 = (seed) => {
+    let a = seed | 0;
+    return () => {
+      a = (a + 0x6d2b79f5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  };
+
+  const kstYmd = (dayStartMs) => {
+    const kst = new Date(dayStartMs + 9 * 3600 * 1000);
+    return kst.getUTCFullYear() * 10000 + (kst.getUTCMonth() + 1) * 100 + kst.getUTCDate();
+  };
+
+  const incrementMinutesForDay = (ymd) => {
+    const rand = mulberry32(ymd ^ 0x51ed);
+    const startMin = 8 * 60;
+    const endMin = 23 * 60 + 40;
+    const slot = (endMin - startMin) / SUCCESS_PER_DAY;
+    const times = [];
+    for (let i = 0; i < SUCCESS_PER_DAY; i += 1) {
+      times.push(Math.floor(startMin + i * slot + rand() * slot * 0.85));
+    }
+    return times;
+  };
+
+  const successAt = (nowMs) => {
+    if (nowMs < SUCCESS_START) return { count: SUCCESS_BASE, nextAt: SUCCESS_START + incrementMinutesForDay(kstYmd(SUCCESS_START))[0] * 60000 };
+    const dayMs = 24 * 3600 * 1000;
+    const fullDays = Math.floor((nowMs - SUCCESS_START) / dayMs);
+    const dayStart = SUCCESS_START + fullDays * dayMs;
+    const times = incrementMinutesForDay(kstYmd(dayStart));
+    const elapsedMin = (nowMs - dayStart) / 60000;
+    let today = 0;
+    let nextMin = null;
+    for (let i = 0; i < times.length; i += 1) {
+      if (elapsedMin >= times[i]) today += 1;
+      else if (nextMin === null) nextMin = times[i];
+    }
+    let nextAt;
+    if (nextMin !== null) {
+      nextAt = dayStart + nextMin * 60000;
+    } else {
+      const nextDay = dayStart + dayMs;
+      nextAt = nextDay + incrementMinutesForDay(kstYmd(nextDay))[0] * 60000;
+    }
+    return { count: SUCCESS_BASE + fullDays * SUCCESS_PER_DAY + today, nextAt };
+  };
+
+  const formatCount = (n) => n.toLocaleString('ko-KR');
+
+  const paintSuccess = (el, n) => {
+    el.dataset.count = String(n);
+    el.textContent = formatCount(n);
+  };
+
+  const scheduleSuccessTick = (el) => {
+    const { count, nextAt } = successAt(Date.now());
+    paintSuccess(el, count);
+    const wait = Math.max(1000, nextAt - Date.now() + 80);
+    window.setTimeout(() => scheduleSuccessTick(el), Math.min(wait, 60 * 60 * 1000));
+  };
+
   /* ---------- 숫자 카운트업 ---------- */
   const counters = document.querySelectorAll('.stats strong');
+  const liveSuccess = document.getElementById('successCount');
+  if (liveSuccess) {
+    liveSuccess.dataset.count = String(successAt(Date.now()).count);
+  }
 
   const runCount = (el) => {
     const target = Number(el.dataset.count);
@@ -91,6 +164,7 @@
       const eased = 1 - Math.pow(1 - p, 3);
       el.textContent = Math.round(target * eased).toLocaleString('ko-KR') + suffix;
       if (p < 1) requestAnimationFrame(tick);
+      else if (el.dataset.liveSuccess) scheduleSuccessTick(el);
     };
     requestAnimationFrame(tick);
   };
@@ -134,6 +208,7 @@
     revealTargets.forEach((el) => el.classList.add('is-in'));
     counters.forEach((el) => {
       el.textContent = Number(el.dataset.count).toLocaleString('ko-KR') + (el.dataset.suffix || '');
+      if (el.dataset.liveSuccess) scheduleSuccessTick(el);
     });
   }
 
