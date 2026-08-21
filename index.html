@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="assets/css/style.css?v=13">
+<link rel="stylesheet" href="assets/css/style.css?v=25">
 
 <script type="application/ld+json">
 {
@@ -44,8 +44,7 @@
   "makesOffer": [
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 티켓팅 대행" } },
     { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 예약 대행" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 입찰 대행" } },
-    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 신청 대행" } }
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 입찰 대행" } }
   ]
 }
 </script>
@@ -109,6 +108,7 @@
 
     <nav class="nav" id="nav" aria-label="주요 메뉴">
       <a href="#service">서비스</a>
+      <a href="#inquiry">문의양식</a>
       <a href="#process">이용안내</a>
       <a href="#status">접수현황</a>
       <a href="#success">성공내역</a>
@@ -150,7 +150,7 @@
         <a class="btn btn--primary" href="#contact" data-kakao-open>
           <span class="btn__ico" aria-hidden="true">💬</span> 카카오톡 무료 상담
         </a>
-        <a class="btn btn--ghost" href="#status">접수 중인 공연 보기</a>
+        <a class="btn btn--ghost" href="#inquiry">문의 양식 작성</a>
       </div>
 
       <ul class="hero__badges">
@@ -173,6 +173,57 @@
       <li><strong data-count="24" data-suffix="시간">0</strong><span>연중무휴 상담</span></li>
       <li><strong data-count="6" data-suffix="년">0</strong><span>업계 운영 경력</span></li>
     </ul>
+  </div>
+</section>
+
+<!-- ===== 문의 양식 ===== -->
+<section class="section section--white" id="inquiry" data-inquiry-template>
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-head__tag">INQUIRY</p>
+      <h2 class="sec-head__title">문의는 <em>이 한 장</em>이면 끝</h2>
+      <p class="sec-head__desc">네 가지만 채우면 문의 문장이 완성됩니다. 복사해서 카카오톡으로 보내 주세요.</p>
+    </header>
+
+    <div class="inq">
+      <div class="inq__form">
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">🎤</i> 공연명</span>
+          <input class="inq__input" type="text" id="inqShow" placeholder="예) 2026 임영웅 콘서트" autocomplete="off">
+        </label>
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">📅</i> 날짜 · 회차</span>
+          <input class="inq__input" type="text" id="inqDate" placeholder="예) 9월 5일 토요일" autocomplete="off">
+        </label>
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">👥</i> 인원</span>
+          <input class="inq__input" type="text" id="inqCount" placeholder="예) 2매 연석" autocomplete="off">
+        </label>
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">💺</i> 희망 좌석</span>
+          <input class="inq__input" type="text" id="inqSeat" placeholder="예) 플로어 앞쪽 / 1층 중앙" autocomplete="off">
+        </label>
+        <p class="inq__tip"><span aria-hidden="true">💡</span> 모르는 항목은 비워 두셔도 됩니다. 아는 것만 보내 주세요.</p>
+      </div>
+
+      <div class="inq__preview">
+        <div class="inq__chat">
+          <p class="inq__chat-top"><span class="inq__avatar" aria-hidden="true">🎟️</span> 에브리티켓</p>
+          <div class="inq__bubble">
+            <pre class="inq__text" id="inqText">공연명 :
+날짜 :
+인원 :
+희망좌석 :</pre>
+          </div>
+        </div>
+        <div class="inq__btns">
+          <button class="btn btn--primary" type="button" id="inqCopyBtn">문의 문장 복사</button>
+          <button class="btn btn--kakao" type="button" data-kakao-open>
+            <span class="btn__ico" aria-hidden="true">💬</span> 카카오톡으로 문의
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -207,14 +258,6 @@
         <h3>온라인 입찰 대행</h3>
         <p>클라이언트를 대신해 온라인 입찰 과정에 참여하고 절차를 관리합니다. 경쟁이 치열한 환경에서 고객의 이익을 최대한 보호합니다.</p>
         <ul class="card__tags"><li>절차 관리</li><li>기한 대응</li><li>결과 리포트</li></ul>
-        <a class="card__link" href="#contact" data-kakao-open>상담 신청 <i aria-hidden="true">→</i></a>
-      </article>
-
-      <article class="card card--orange">
-        <div class="card__ico" aria-hidden="true">📝</div>
-        <h3>온라인 신청 대행</h3>
-        <p>병원 예약, 수강 신청, 교육 신청, 병무청 입대 절차 등 복잡한 온라인 신청을 간소화합니다. 정확성과 신뢰성으로 시간의 가치를 지켜드립니다.</p>
-        <ul class="card__tags"><li>병원 예약</li><li>수강 신청</li><li>입대 신청</li></ul>
         <a class="card__link" href="#contact" data-kakao-open>상담 신청 <i aria-hidden="true">→</i></a>
       </article>
     </div>
@@ -281,94 +324,145 @@
     <div class="tabs" role="tablist" aria-label="접수 상태 필터">
       <button class="tab is-active" role="tab" aria-selected="true" data-filter="all">전체</button>
       <button class="tab" role="tab" aria-selected="false" data-filter="open">접수중</button>
-      <button class="tab" role="tab" aria-selected="false" data-filter="done">대행성공</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="soon">오픈예정</button>
     </div>
 
     <div class="shows" id="showList">
       <article class="show" data-status="open">
+        <div class="show__body">
         <span class="show__badge show__badge--open">접수중</span>
-        <h3>2026 임영웅 콘서트</h3>
-        <p class="show__meta">고양종합운동장 · 9.4–9.6</p>
-        <a class="show__btn" href="#contact">대행 신청</a>
+        <h3>2026 임영웅 콘서트 [IM HERO - THE STADIUM 2]</h3>
+        <p class="show__meta">고양종합운동장 주경기장 · 9.4-9.6</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 임영웅 콘서트">대행 신청</a>
+        </div>
       </article>
       <article class="show" data-status="open">
-        <span class="show__badge show__badge--open">접수중</span>
-        <h3>NCT 127 5TH TOUR [NEO CITY : SEOUL - THE REDLINE]</h3>
-        <p class="show__meta">올림픽공원 · 9.18–9.20</p>
-        <a class="show__btn" href="#contact">대행 신청</a>
-      </article>
-      <article class="show" data-status="open">
+        <div class="show__body">
         <span class="show__badge show__badge--open">접수중</span>
         <h3>2026 PLAVE World Tour [KEEP IT MANIC] in Incheon</h3>
-        <p class="show__meta">인천문학경기장 · 9.12–9.13</p>
-        <a class="show__btn" href="#contact">대행 신청</a>
+        <p class="show__meta">인천문학경기장 주경기장 · 9.12-9.13</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 PLAVE World Tour [KEEP IT MANIC] in Incheon">대행 신청</a>
+        </div>
+      </article>
+      <article class="show" data-status="open">
+        <div class="show__body">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>NCT 127 5TH TOUR [NEO CITY : SEOUL - THE REDLINE]</h3>
+        <p class="show__meta">올림픽공원 KSPO DOME · 9.18-9.20</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="NCT 127 5TH TOUR [NEO CITY : SEOUL - THE REDLINE]">대행 신청</a>
+        </div>
+      </article>
+      <article class="show" data-status="open">
+        <div class="show__body">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>2026 영탁 단독 콘서트 [TAK SHOW5]</h3>
+        <p class="show__meta">고려대학교 화정체육관 · 10.3-10.5</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 영탁 단독 콘서트 [TAK SHOW5]">대행 신청</a>
+        </div>
+      </article>
+      <article class="show" data-status="open">
+        <div class="show__body">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>2026 성시경 콘서트</h3>
+        <p class="show__meta">올림픽공원 88잔디마당 · 9.5-9.6</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 성시경 콘서트">대행 신청</a>
+        </div>
+      </article>
+      <article class="show" data-status="open">
+        <div class="show__body">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>2026 &amp;TEAM [BLAZE THE WAY] ENCORE</h3>
+        <p class="show__meta">올림픽공원 KSPO DOME · 10.3-10.4</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 &amp;TEAM [BLAZE THE WAY] ENCORE">대행 신청</a>
+        </div>
       </article>
       <article class="show" data-status="open">
         <span class="show__badge show__badge--open">접수중</span>
-        <h3>2026 10CM FAN CONCERT [THE MISSING TRACKS]</h3>
-        <p class="show__meta">올림픽공원 올림픽홀 · 10.9–10.11</p>
-        <a class="show__btn" href="#contact">대행 신청</a>
+        <h3>2026 윤종신 전국투어 콘서트 [가을냄새] 수원</h3>
+        <p class="show__meta">경기아트센터 대극장 · 10.17</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 윤종신 전국투어 콘서트 [가을냄새] 수원">대행 신청</a>
       </article>
       <article class="show" data-status="open">
         <span class="show__badge show__badge--open">접수중</span>
-        <h3>2026 ifeye 1st APAC TOUR [If I] IN SEOUL</h3>
-        <p class="show__meta">예스24 원더로크홀 · 9.19</p>
-        <a class="show__btn" href="#contact">대행 신청</a>
+        <h3>H△G 1st One Man Live in Seoul</h3>
+        <p class="show__meta">웨스트브릿지 · 10.17</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="H△G 1st One Man Live in Seoul">대행 신청</a>
       </article>
       <article class="show" data-status="open">
         <span class="show__badge show__badge--open">접수중</span>
-        <h3>2026 HAN JI WOO 1ST FANMEETING [SCENE #1]</h3>
-        <p class="show__meta">구름아래소극장 · 10.4</p>
-        <a class="show__btn" href="#contact">대행 신청</a>
+        <h3>2026 소수빈 단독공연</h3>
+        <p class="show__meta">올림픽공원 올림픽홀 · 10.24-10.25</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 소수빈 단독공연">대행 신청</a>
       </article>
-      <article class="show" data-status="done">
-        <span class="show__badge show__badge--done">대행성공</span>
-        <h3>IVE WORLD TOUR ‘SHOW WHAT I AM’</h3>
-        <p class="show__meta">아이브 · 월드투어</p>
-        <a class="show__btn show__btn--ghost" href="#success">성공내역 보기</a>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>에버블루 페스티벌 in 대구</h3>
+        <p class="show__meta">대구 엑스코 5층 컨벤션홀 · 10.31</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="에버블루 페스티벌 in 대구">대행 신청</a>
       </article>
-      <article class="show" data-status="done">
-        <span class="show__badge show__badge--done">대행성공</span>
-        <h3>2025 PLAVE Asia Tour [DASH: Quantum Leap] 앙콘</h3>
-        <p class="show__meta">플레이브 · 아시아투어</p>
-        <a class="show__btn show__btn--ghost" href="#success">성공내역 보기</a>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>AKANE YONEZAWA Black Pasta TOUR in Seoul</h3>
+        <p class="show__meta">예스24 원더로크홀 · 11.7</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="AKANE YONEZAWA Black Pasta TOUR in Seoul">대행 신청</a>
       </article>
-      <article class="show" data-status="done">
-        <span class="show__badge show__badge--done">대행성공</span>
-        <h3>Stray Kids World Tour</h3>
-        <p class="show__meta">스트레이키즈 · 월드투어</p>
-        <a class="show__btn show__btn--ghost" href="#success">성공내역 보기</a>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>2026 김장훈 전국투어 콘서트 : 원맨쇼 - 밀양</h3>
+        <p class="show__meta">밀양아리랑아트센터 대공연장 · 11.8</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="2026 김장훈 전국투어 콘서트 : 원맨쇼 - 밀양">대행 신청</a>
       </article>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>WONDERLIVET 2026</h3>
+        <p class="show__meta">KINTEX · 11.20-11.22</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="WONDERLIVET 2026">대행 신청</a>
+      </article>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>ELLEGARDEN 내한공연 [Bad For Education Tour II]</h3>
+        <p class="show__meta">YES24 LIVE HALL · 11.28-11.29</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="ELLEGARDEN 내한공연 [Bad For Education Tour II]">대행 신청</a>
+      </article>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>DOMi &amp; JD BECK LIVE IN SEOUL</h3>
+        <p class="show__meta">공감센터 공감홀 · 12.12</p>
+        <a class="show__btn" href="#contact" data-kakao-open data-show-title="DOMi &amp; JD BECK LIVE IN SEOUL">대행 신청</a>
+      </article>
+    </div>
+    <div class="more-wrap">
+      <button class="btn btn--outline" id="openMoreBtn">더 보기 <i aria-hidden="true">▾</i></button>
     </div>
   </div>
 </section>
 
-<!-- ===== 성공내역 ===== -->
+<!-- ===== 성공후기 ===== -->
 <section class="section section--white" id="success">
   <div class="wrap">
     <header class="sec-head">
       <p class="sec-head__tag">SUCCESS</p>
-      <h2 class="sec-head__title">쌓여가는 <em>성공 내역</em></h2>
-      <p class="sec-head__desc">실제로 진행한 대행 결과를 그대로 공개합니다.</p>
+      <h2 class="sec-head__title">쌓여가는 <em>성공 후기</em></h2>
+      <p class="sec-head__desc">카드를 누르면 고객 후기를 볼 수 있습니다. 이름과 예매번호는 가려 공개합니다.</p>
     </header>
 
     <div class="success-grid" id="successGrid">
-      <article class="succ"><div class="succ__top"><h3>STAYC 팬콘서트</h3><span class="succ__cnt">6X건</span></div><p class="succ__date">2026.08.22</p></article>
-      <article class="succ"><div class="succ__top"><h3>CORTIS 서울 콘서트</h3><span class="succ__cnt">8X건</span></div><p class="succ__date">2026.08.22</p></article>
-      <article class="succ"><div class="succ__top"><h3>포레스텔라 콘서트</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2026.08.22</p></article>
-      <article class="succ"><div class="succ__top"><h3>손태진 수원 콘서트</h3><span class="succ__cnt">5X건</span></div><p class="succ__date">2026.08.22</p></article>
-      <article class="succ"><div class="succ__top"><h3>디노X피철인 팬쇼</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2026.08.21</p></article>
-      <article class="succ"><div class="succ__top"><h3>씨야 20주년 콘서트</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">2026.08.29</p></article>
-      <article class="succ is-hidden"><div class="succ__top"><h3>넬 콘서트</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">2026.08.28</p></article>
-      <article class="succ is-hidden"><div class="succ__top"><h3>데이비드 번 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.08.21</p></article>
-      <article class="succ is-hidden"><div class="succ__top"><h3>스티브 레이시 내한</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">2026.08.19</p></article>
-      <article class="succ is-hidden"><div class="succ__top"><h3>쏜애플 콘서트</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2026.08.15</p></article>
-      <article class="succ is-hidden"><div class="succ__top"><h3>FT아일랜드 콘서트</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">2026.08.15</p></article>
-      <article class="succ is-hidden"><div class="succ__top"><h3>HYNN 콘서트</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">2026.08.15</p></article>
+      <article class="succ" data-review="s0" tabindex="0"><div class="succ__top"><h3>이창섭 단독 콘서트</h3><span class="succ__cnt">6X건</span></div><p class="succ__date">오픈 8.26</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s1" tabindex="0"><div class="succ__top"><h3>KO1KEYZ 팬미팅</h3><span class="succ__cnt">6X건</span></div><p class="succ__date">오픈 9.2</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s2" tabindex="0"><div class="succ__top"><h3>포레스텔라 부산 콘서트</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">오픈 예정</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s3" tabindex="0"><div class="succ__top"><h3>한지우 팬미팅</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">오픈 8.26</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s4" tabindex="0"><div class="succ__top"><h3>포레스텔라 인천 콘서트</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">오픈 예정</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s5" tabindex="0"><div class="succ__top"><h3>10CM 팬콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.09</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ is-extra is-hidden" data-review="s6" tabindex="0"><div class="succ__top"><h3>ELLEGARDEN 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 9.1</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ is-extra is-hidden" data-review="s7" tabindex="0"><div class="succ__top"><h3>소수빈 단독공연</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.24</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ is-extra is-hidden" data-review="s8" tabindex="0"><div class="succ__top"><h3>H△G 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.24</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ is-extra is-hidden" data-review="s9" tabindex="0"><div class="succ__top"><h3>AKANE 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.31</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ is-extra is-hidden" data-review="s10" tabindex="0"><div class="succ__top"><h3>김장훈 밀양 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.24</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ is-extra is-hidden" data-review="s11" tabindex="0"><div class="succ__top"><h3>PENTAGON 서울 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.09</p><p class="succ__hint">고객 후기</p></article>
     </div>
 
     <div class="more-wrap">
-      <button class="btn btn--outline" id="moreBtn">성공내역 더 보기 <i aria-hidden="true">▾</i></button>
+      <button class="btn btn--outline" id="moreBtn">성공후기 더 보기 <i aria-hidden="true">▾</i></button>
     </div>
   </div>
 </section>
@@ -465,7 +559,7 @@
       <p>업계 최고의 전문업체, 모든 티켓 서비스<br>양도 · 대리예매 · 선예매 문의</p>
     </div>
     <div class="footer__links">
-      <div><h4>서비스</h4><a href="#service">티켓팅 대행</a><a href="#service">예약 대행</a><a href="#service">입찰 대행</a><a href="#service">신청 대행</a></div>
+      <div><h4>서비스</h4><a href="#service">티켓팅 대행</a><a href="#service">예약 대행</a><a href="#service">입찰 대행</a></div>
       <div><h4>안내</h4><a href="#process">이용 절차</a><a href="#status">접수현황</a><a href="#success">성공내역</a><a href="#faq">자주 묻는 질문</a></div>
     </div>
     <div class="footer__biz">
@@ -498,7 +592,7 @@
     <ol class="kakao-modal__steps">
       <li>아래 버튼으로 아이디를 복사합니다.</li>
       <li>카카오톡 → <span class="kakao-modal__personplus" aria-label="사람 플러스 아이콘" title="프로필 위 사람+ 아이콘"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="9" cy="7" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.8 19c.4-3.4 2.6-5.2 5.2-5.2s4.8 1.8 5.2 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M18 8v8M14 12h8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></span> 친구 추가 → ID로 추가</li>
-      <li>붙여넣고 친구 추가한 뒤 공연명·날짜를 보내 주세요.</li>
+      <li>붙여넣고 친구 추가한 뒤, <a href="#inquiry" data-kakao-close>문의 양식</a>에서 복사한 문장을 보내 주세요.</li>
       <li>카톡 친추가 안될 시 트위터에 에브리티켓 검색 후 다이렉트 메시지 부탁드립니다.</li>
     </ol>
     <div class="kakao-modal__btns">
@@ -508,8 +602,26 @@
   </div>
 </dialog>
 
+<dialog class="review-modal" id="reviewModal" aria-labelledby="reviewModalTitle">
+  <div class="review-modal__panel">
+    <button class="review-modal__close" type="button" data-review-close aria-label="닫기">×</button>
+    <p class="review-modal__kicker">CUSTOMER REVIEW</p>
+    <h2 class="review-modal__title" id="reviewModalTitle">고객 후기</h2>
+    <p class="review-modal__sub" id="reviewModalSub">이름과 예매정보는 일부만 공개합니다.</p>
+    <div class="review-list" id="reviewList"></div>
+  </div>
+</dialog>
+
 <button class="to-top" id="toTop" aria-label="맨 위로">▲</button>
 
-<script src="assets/js/main.js?v=5"></script>
+<!-- autoShows / inquiryTemplate 를 false 로 바꾸면 원래 접수현황·모달로 돌아갑니다 -->
+
+<script>
+window.ET_FEATURES = {
+  autoShows: true,
+  inquiryTemplate: true
+};
+</script>
+<script src="assets/js/main.js?v=23"></script>
 </body>
 </html>
