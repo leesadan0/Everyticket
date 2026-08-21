@@ -36,7 +36,7 @@
   });
 
   /* ---------- 페이지 ---------- */
-  const SHOW_PAGE_SIZE = 6;
+  const SHOW_PAGE_SIZE = 9;
   const PROOF_PAGE_SIZE = 6;
   const SUCC_PAGE_SIZE = 9;
 
