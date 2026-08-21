@@ -306,13 +306,99 @@
     sections.forEach((s) => navIo.observe(s));
   }
 
-  /* ---------- 카카오톡 링크 미설정 안내 ---------- */
-  document.querySelectorAll('[data-placeholder="kakao"]').forEach((el) => {
+  /* ---------- 카카오톡 문의 모달 ---------- */
+  const kakaoModal = document.getElementById('kakaoModal');
+  const kakaoCopyBtn = document.getElementById('kakaoCopyBtn');
+  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'ticket411';
+
+  document.querySelectorAll('[data-kakao-id-text]').forEach((el) => {
+    el.textContent = kakaoId;
+  });
+
+  const openKakaoModal = () => {
+    if (!kakaoModal || typeof kakaoModal.showModal !== 'function') return;
+    if (!kakaoModal.open) kakaoModal.showModal();
+    const closeBtn = kakaoModal.querySelector('[data-kakao-close]');
+    if (closeBtn) closeBtn.focus();
+  };
+
+  const closeKakaoModal = () => {
+    if (kakaoModal && kakaoModal.open) kakaoModal.close();
+  };
+
+  document.querySelectorAll('[data-kakao-open]').forEach((el) => {
     el.addEventListener('click', (e) => {
-      if (el.getAttribute('href') === '#') {
-        e.preventDefault();
-        alert('카카오톡 채널 주소를 아직 연결하지 않았습니다.\nindex.html에서 data-placeholder="kakao" 링크의 href를 채널 URL로 바꿔주세요.');
-      }
+      e.preventDefault();
+      openKakaoModal();
+    });
+    el.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      if (el.tagName === 'A' || el.tagName === 'BUTTON') return;
+      e.preventDefault();
+      openKakaoModal();
     });
   });
+
+  if (kakaoModal) {
+    kakaoModal.querySelectorAll('[data-kakao-close]').forEach((btn) => {
+      btn.addEventListener('click', closeKakaoModal);
+    });
+    kakaoModal.addEventListener('click', (e) => {
+      if (!e.target.closest('.kakao-modal__panel')) closeKakaoModal();
+    });
+  }
+
+  const copyKakaoId = async () => {
+    let ok = false;
+    try {
+      await navigator.clipboard.writeText(kakaoId);
+      ok = true;
+    } catch (_) {
+      const ta = document.createElement('textarea');
+      ta.value = kakaoId;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      ok = document.execCommand('copy');
+      ta.remove();
+    }
+    if (!kakaoCopyBtn) return;
+    const prev = kakaoCopyBtn.textContent;
+    kakaoCopyBtn.textContent = ok ? '아이디가 복사되었습니다' : '복사에 실패했습니다';
+    kakaoCopyBtn.classList.toggle('is-copied', ok);
+    window.setTimeout(() => {
+      kakaoCopyBtn.textContent = prev;
+      kakaoCopyBtn.classList.remove('is-copied');
+    }, 1800);
+  };
+
+  if (kakaoCopyBtn) kakaoCopyBtn.addEventListener('click', copyKakaoId);
+
+  const kakaoOpenBtn = document.getElementById('kakaoOpenBtn');
+  const openKakaoApp = () => {
+    const ua = navigator.userAgent || '';
+    const android = /Android/i.test(ua);
+    const ios = /iPhone|iPad|iPod/i.test(ua);
+    const scheme = 'kakaotalk://launch';
+
+    if (android) {
+      window.location.href = 'intent://launch#Intent;scheme=kakaotalk;package=com.kakao.talk;end';
+      return;
+    }
+    if (ios) {
+      window.location.href = scheme;
+      return;
+    }
+
+    const frame = document.createElement('iframe');
+    frame.setAttribute('aria-hidden', 'true');
+    frame.tabIndex = -1;
+    frame.style.cssText = 'position:fixed;width:0;height:0;border:0;opacity:0;pointer-events:none';
+    frame.src = scheme;
+    document.body.appendChild(frame);
+    window.setTimeout(() => frame.remove(), 2000);
+  };
+  if (kakaoOpenBtn) kakaoOpenBtn.addEventListener('click', openKakaoApp);
 })();

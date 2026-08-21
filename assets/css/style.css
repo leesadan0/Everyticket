@@ -526,7 +526,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 
 .contact__card {
   background: #fff; border-radius: var(--r-lg); padding: 32px 28px; text-align: center;
-  box-shadow: var(--shadow-lg); color: var(--ink);
+  box-shadow: var(--shadow-lg); color: var(--ink); transition: transform .2s;
 }
 .qr__box {
   width: 128px; height: 128px; margin: 0 auto 16px; border-radius: 28px;
@@ -537,6 +537,95 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .qr__label { font-size: 13px; color: var(--ink-3); font-weight: 700; }
 .qr__name { font-family: var(--font-title); font-size: 24px; color: var(--green-deep); }
 .contact__hint { margin-top: 16px; font-size: 14px; color: var(--ink-2); background: var(--cream-2); padding: 12px 14px; border-radius: var(--r-sm); }
+.contact__card[data-kakao-open] { cursor: pointer; }
+.contact__card[data-kakao-open]:hover { transform: translateY(-2px); }
+
+/* =========================================================
+   카카오톡 문의 모달
+   ========================================================= */
+.kakao-modal {
+  width: min(400px, calc(100vw - 32px));
+  max-width: 400px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  margin: auto;
+}
+.kakao-modal::backdrop {
+  background: rgba(62, 51, 32, .52);
+  backdrop-filter: blur(6px);
+}
+.kakao-modal[open] { animation: kakaoPop .22s ease; }
+@keyframes kakaoPop {
+  from { opacity: 0; transform: translateY(14px) scale(.97); }
+  to { opacity: 1; transform: none; }
+}
+.kakao-modal__panel {
+  position: relative;
+  background: var(--cream);
+  border: 3px solid var(--yellow-deep);
+  border-radius: var(--r-lg);
+  padding: 40px 28px 26px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  color: var(--ink);
+}
+.kakao-modal__close {
+  position: absolute; top: 12px; right: 12px;
+  width: 36px; height: 36px; border-radius: 50%;
+  font-size: 26px; line-height: 1; color: var(--ink-3);
+  background: var(--white); border: 2px solid var(--line);
+}
+.kakao-modal__close:hover { color: var(--ink); border-color: var(--yellow-deep); background: var(--yellow-soft); }
+.kakao-modal__title {
+  font-size: 26px; color: var(--ink); letter-spacing: -.4px;
+}
+.kakao-modal__sub {
+  margin-top: 10px; color: var(--ink-3); font-size: 14.5px; line-height: 1.6;
+}
+.kakao-modal__idbox {
+  margin: 22px 0 20px;
+  background: var(--white);
+  border: 2px solid var(--yellow);
+  border-radius: var(--r);
+  padding: 16px 18px 18px;
+  box-shadow: var(--shadow-sm);
+}
+.kakao-modal__idlabel {
+  font-size: 12.5px; font-weight: 700; color: var(--ink-3);
+}
+.kakao-modal__id {
+  font-family: var(--font-title);
+  font-size: clamp(28px, 7vw, 36px);
+  color: var(--yellow-deep);
+  margin-top: 4px;
+  letter-spacing: .02em;
+  word-break: break-all;
+}
+.kakao-modal__steps {
+  list-style: decimal;
+  text-align: left;
+  margin: 0 2px 22px;
+  padding-left: 1.35em;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.9;
+  font-weight: 600;
+}
+.kakao-modal__personplus {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.35em; height: 1.35em; vertical-align: -3px; margin: 0 2px;
+  color: var(--ink); border: 1.5px solid var(--ink-2); border-radius: 6px;
+  background: var(--white);
+}
+.kakao-modal__personplus svg { display: block; }
+.kakao-modal__btns { display: flex; flex-direction: column; gap: 10px; }
+.kakao-modal__btns .btn { width: 100%; }
+.kakao-modal__btns .btn.is-copied {
+  background: linear-gradient(180deg, #9ED86E, var(--green));
+  color: #fff; border-color: var(--green-deep);
+  box-shadow: 0 6px 0 var(--green-deep);
+}
 
 /* =========================================================
    FOOTER
