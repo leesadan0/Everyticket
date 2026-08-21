@@ -1,0 +1,8 @@
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+netlify.toml
+serve.ps1
+README.md
+DEPLOY.md
