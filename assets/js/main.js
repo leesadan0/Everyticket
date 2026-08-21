@@ -36,15 +36,11 @@
   });
 
   const scrollInquiryForm = () => {
-    const form = document.querySelector('#inquiry .inq');
-    if (!form) return;
-    const headerH = header ? header.offsetHeight : 74;
-    const mobileCta = document.querySelector('.mobile-cta');
-    const ctaH = mobileCta && getComputedStyle(mobileCta).display !== 'none' ? mobileCta.offsetHeight : 0;
-    const usable = window.innerHeight - headerH - ctaH;
-    const top = form.getBoundingClientRect().top + window.scrollY;
-    const gap = Math.max(0, (usable - form.offsetHeight) / 2);
-    window.scrollTo({ top: Math.max(0, top - headerH - gap), behavior: 'smooth' });
+    const mark = document.querySelector('#inquiry .sec-head');
+    if (!mark) return;
+    const headerH = header ? header.getBoundingClientRect().height : 74;
+    const top = mark.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top: Math.max(0, Math.round(top - headerH - 12)), behavior: 'smooth' });
   };
 
   document.addEventListener('click', (e) => {
