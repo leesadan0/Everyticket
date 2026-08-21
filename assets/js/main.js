@@ -297,9 +297,10 @@
 
   /* ---------- 성공내역 페이지 · 크게 보기 ---------- */
   const proofPager = document.getElementById('proofPager');
+  const proofsGrid = document.getElementById('proofsGrid');
   let proofPage = 1;
   const paintProofPage = (scroll) => {
-    const grid = document.getElementById('proofsGrid');
+    const grid = proofsGrid;
     if (!grid) return;
     const items = Array.from(grid.querySelectorAll('.proof'));
     const totalPages = Math.max(1, Math.ceil(items.length / PROOF_PAGE_SIZE));
@@ -314,7 +315,6 @@
     });
     if (scroll) scrollSection('proofs');
   };
-  paintProofPage();
 
   const proofModal = document.getElementById('proofModal');
   const proofModalImg = document.getElementById('proofModalImg');
@@ -329,9 +329,13 @@
   const closeProof = () => {
     if (proofModal && proofModal.open) proofModal.close();
   };
-  document.querySelectorAll('.proof[data-proof]').forEach((btn) => {
-    btn.addEventListener('click', () => openProof(btn.dataset.proof, btn.dataset.proofTitle));
-  });
+  if (proofsGrid) {
+    proofsGrid.addEventListener('click', (e) => {
+      const btn = e.target.closest('.proof[data-proof]');
+      if (!btn) return;
+      openProof(btn.dataset.proof, btn.dataset.proofTitle);
+    });
+  }
   if (proofModal) {
     proofModal.querySelectorAll('[data-proof-close]').forEach((el) => {
       el.addEventListener('click', closeProof);
@@ -340,6 +344,38 @@
       if (e.target === proofModal) closeProof();
     });
   }
+
+  const loadProofs = () => {
+    if (!proofsGrid) return;
+    fetch('assets/data/proofs.json?v=1')
+      .then((res) => (res.ok ? res.json() : Promise.reject()))
+      .then((data) => {
+        const raw = Array.isArray(data.proofs) ? data.proofs : [];
+        const items = raw.slice().sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+        proofsGrid.innerHTML = items.map((p) => {
+          const src = escapeHtml(p.src || '');
+          const title = escapeHtml(p.title || '');
+          const meta = escapeHtml(p.meta || '');
+          const seat = escapeHtml(p.seat || '');
+          return (
+            '<button class="proof" type="button" data-proof="' + src + '" data-proof-title="' + title + '">' +
+              '<span class="proof__img"><img src="' + src + '" alt="' + title + ' 예매완료" loading="lazy"></span>' +
+              '<span class="proof__body">' +
+                '<span class="proof__name">' + title + '</span>' +
+                '<span class="proof__meta">' + meta + '</span>' +
+                '<span class="proof__seat">' + seat + '</span>' +
+              '</span>' +
+            '</button>'
+          );
+        }).join('');
+        proofPage = 1;
+        paintProofPage();
+      })
+      .catch(() => {
+        paintProofPage();
+      });
+  };
+  loadProofs();
 
   const reviewRng = (seed) => {
     let a = seed | 0;
