@@ -293,7 +293,7 @@
     applyShowFilter((active && active.dataset.filter) || 'all');
   }
 
-  /* ---------- 성공후기 페이지 ---------- */
+  /* ---------- 고객 후기 페이지 ---------- */
   const succPager = document.getElementById('succPager');
   const succSearch = document.getElementById('succSearch');
   const succEmpty = document.getElementById('succEmpty');
@@ -327,7 +327,7 @@
     });
   }
 
-  /* ---------- 성공내역 페이지 · 크게 보기 ---------- */
+  /* ---------- 예매 인증 페이지 · 크게 보기 ---------- */
   const proofPager = document.getElementById('proofPager');
   const proofsGrid = document.getElementById('proofsGrid');
   let proofPage = 1;
