@@ -144,7 +144,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   background:
     radial-gradient(900px 380px at 12% 0%, rgba(255,236,150,.95), transparent 62%),
     linear-gradient(180deg, #DFF3F7 0%, #F3F7DE 46%, var(--cream) 100%);
-  padding: 56px 0 0;
+  padding: 40px 0 0;
 }
 /* 장식 요소만 잘라내고, 아래로 걸쳐 나오는 지표 카드는 온전히 보이도록 한다 */
 .hero__sky { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
@@ -176,8 +176,8 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 }
 
 .hero__inner {
-  position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px; align-items: center; padding-bottom: 40px;
+  position: relative; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 40px; align-items: center; padding-bottom: 28px;
 }
 .hero__eyebrow {
   display: inline-block; background: var(--white); border: 2px solid var(--yellow);
@@ -186,7 +186,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   margin-bottom: 18px;
 }
 .hero__title {
-  font-size: clamp(38px, 5.2vw, 62px); line-height: 1.22; color: var(--ink);
+  font-size: clamp(34px, 4.4vw, 52px); line-height: 1.22; color: var(--ink);
   text-shadow: 2px 3px 0 rgba(255,255,255,.9);
 }
 .hero__title em {
@@ -202,21 +202,23 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .hero__badges { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 26px; font-size: 14.5px; color: var(--ink-2); font-weight: 600; }
 .hero__badges li { display: flex; align-items: center; gap: 6px; }
 
-.hero__visual { position: relative; width: 100%; max-width: 480px; margin-left: auto; }
+.hero__visual {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  min-width: 0;
+  margin-left: auto;
+  justify-self: end;
+}
 .hero__visual img {
-  width: 100%; height: auto; border-radius: var(--r-lg);
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: var(--r-lg);
   border: 4px solid var(--white);
   box-shadow: var(--shadow-lg);
-  transform: rotate(1deg);
 }
-.hero__sticker {
-  position: absolute; background: var(--white); border-radius: var(--r-pill);
-  padding: 10px 18px; font-weight: 700; font-size: 14px; box-shadow: var(--shadow);
-  border: 2px solid var(--line);
-}
-.hero__sticker b { font-family: var(--font-title); font-size: 17px; }
-.hero__sticker--1 { top: -14px; left: -10px; color: var(--green-deep); border-color: var(--green); animation: float 5s ease-in-out infinite; }
-.hero__sticker--2 { bottom: -16px; right: -6px; color: var(--yellow-deep); border-color: var(--yellow); animation: float 5s ease-in-out infinite 1.5s; }
 
 /* 지표 */
 .stats {
@@ -569,11 +571,10 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   .nav__cta { text-align: center; margin: 8px 0 0; }
   .hamburger { display: block; }
 
-  .hero { padding-top: 36px; }
-  .hero__inner { grid-template-columns: 1fr; gap: 32px; }
-  .hero__visual { order: -1; max-width: 400px; margin-inline: auto; }
-  .hero__sticker--1 { top: -10px; left: 4px; }
-  .hero__sticker--2 { bottom: -12px; right: 4px; }
+  .hero { padding-top: 28px; }
+  .hero__inner { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .hero__visual { order: -1; max-width: 260px; margin-inline: auto; justify-self: center; }
+  .hero__visual img { max-width: 260px; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 20px 0; transform: translateY(30px); }
   .stats li:nth-child(3)::before { display: none; }
 
@@ -601,9 +602,8 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   .step::after { display: none !important; }
   .topbar__link { display: none; }
   .topbar { font-size: 12.5px; }
-  .hero__visual { max-width: 320px; }
-  .hero__sticker { padding: 8px 14px; font-size: 12.5px; }
-  .hero__sticker b { font-size: 15px; }
+  .hero__visual { max-width: 220px; }
+  .hero__visual img { max-width: 220px; }
   .hero__badges { gap: 6px 12px; font-size: 13px; }
   .btn { width: 100%; }
   .hero__btns { flex-direction: column; }
