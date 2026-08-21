@@ -795,8 +795,6 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .contact h2 { font-size: clamp(28px, 3.6vw, 42px); line-height: 1.32; }
 .contact__desc { margin-top: 18px; color: rgba(255,255,255,.9); font-size: 16.5px; }
 .contact__btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.contact__info { display: flex; flex-wrap: wrap; gap: 10px 26px; margin-top: 26px; font-size: 14.5px; color: rgba(255,255,255,.9); }
-.contact__info b { color: var(--yellow); margin-right: 6px; }
 
 .contact__card {
   background: #fff; border-radius: var(--r-lg); padding: 32px 28px; text-align: center;
