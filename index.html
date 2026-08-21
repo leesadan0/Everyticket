@@ -108,13 +108,13 @@
 
     <nav class="nav" id="nav" aria-label="주요 메뉴">
       <a href="#service">서비스</a>
-      <a href="#inquiry">문의양식</a>
       <a href="#process">이용안내</a>
       <a href="#status">접수현황</a>
       <a href="#proofs">예매 인증</a>
       <a href="#success">고객 후기</a>
       <a href="#why">Why Us</a>
       <a href="#faq">FAQ</a>
+      <a href="#inquiry">문의양식</a>
       <a class="nav__cta" href="#contact" data-kakao-open>상담 신청</a>
     </nav>
 
@@ -210,71 +210,6 @@
         <ul class="card__tags"><li>절차 관리</li><li>기한 대응</li><li>결과 리포트</li></ul>
         <a class="card__link" href="#contact" data-kakao-open>상담 신청 <i aria-hidden="true">→</i></a>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 문의 양식 ===== -->
-<section class="section section--white" id="inquiry" data-inquiry-template>
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="sec-head__tag">INQUIRY</p>
-      <h2 class="sec-head__title">문의는 <em>이 한 장</em>이면 끝</h2>
-      <p class="sec-head__desc">양도인지 댈티인지 고르고, 아는 항목만 채우면 문의 문장이 완성됩니다. 복사해서 카카오톡으로 보내 주세요.</p>
-    </header>
-
-    <div class="inq">
-      <div class="inq__form">
-        <fieldset class="inq__field inq__type">
-          <legend class="inq__label"><i aria-hidden="true">📌</i> 문의 유형</legend>
-          <div class="inq__picks" role="radiogroup" aria-label="문의 유형">
-            <label class="inq__pick">
-              <input type="radio" name="inqType" value="양도">
-              <span>양도</span>
-            </label>
-            <label class="inq__pick">
-              <input type="radio" name="inqType" value="댈티">
-              <span>댈티</span>
-            </label>
-          </div>
-        </fieldset>
-        <label class="inq__field">
-          <span class="inq__label"><i aria-hidden="true">🎤</i> 공연명</span>
-          <input class="inq__input" type="text" id="inqShow" placeholder="예) 2026 임영웅 콘서트" autocomplete="off">
-        </label>
-        <label class="inq__field">
-          <span class="inq__label"><i aria-hidden="true">📅</i> 날짜 · 회차</span>
-          <input class="inq__input" type="text" id="inqDate" placeholder="예) 9월 5일 토요일" autocomplete="off">
-        </label>
-        <label class="inq__field">
-          <span class="inq__label"><i aria-hidden="true">👥</i> 인원</span>
-          <input class="inq__input" type="text" id="inqCount" placeholder="예) 2매 연석" autocomplete="off">
-        </label>
-        <label class="inq__field">
-          <span class="inq__label"><i aria-hidden="true">💺</i> 희망 좌석</span>
-          <input class="inq__input" type="text" id="inqSeat" placeholder="예) 플로어 앞쪽 / 1층 중앙" autocomplete="off">
-        </label>
-        <p class="inq__tip"><span aria-hidden="true">💡</span> 모르는 항목은 비워 두셔도 됩니다. 아는 것만 보내 주세요.</p>
-      </div>
-
-      <div class="inq__preview">
-        <div class="inq__chat">
-          <p class="inq__chat-top"><span class="inq__avatar" aria-hidden="true">🎟️</span> 에브리티켓</p>
-          <div class="inq__bubble">
-            <pre class="inq__text" id="inqText">문의 :
-공연명 :
-날짜 :
-인원 :
-희망좌석 :</pre>
-          </div>
-        </div>
-        <div class="inq__btns">
-          <button class="btn btn--primary" type="button" id="inqCopyBtn">문의 문장 복사</button>
-          <button class="btn btn--kakao" type="button" data-kakao-open>
-            <span class="btn__ico" aria-hidden="true">💬</span> 카카오톡으로 문의
-          </button>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -558,6 +493,71 @@
   </div>
 </section>
 
+<!-- ===== 문의 양식 ===== -->
+<section class="section section--white" id="inquiry" data-inquiry-template>
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-head__tag">INQUIRY</p>
+      <h2 class="sec-head__title">문의는 <em>이 한 장</em>이면 끝</h2>
+      <p class="sec-head__desc">양도인지 댈티인지 고르고, 아는 항목만 채우면 문의 문장이 완성됩니다. 복사해서 카카오톡으로 보내 주세요.</p>
+    </header>
+
+    <div class="inq">
+      <div class="inq__form">
+        <fieldset class="inq__field inq__type">
+          <legend class="inq__label"><i aria-hidden="true">📌</i> 문의 유형</legend>
+          <div class="inq__picks" role="radiogroup" aria-label="문의 유형">
+            <label class="inq__pick">
+              <input type="radio" name="inqType" value="양도">
+              <span>양도</span>
+            </label>
+            <label class="inq__pick">
+              <input type="radio" name="inqType" value="댈티">
+              <span>댈티</span>
+            </label>
+          </div>
+        </fieldset>
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">🎤</i> 공연명</span>
+          <input class="inq__input" type="text" id="inqShow" placeholder="예) 2026 임영웅 콘서트" autocomplete="off">
+        </label>
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">📅</i> 날짜 · 회차</span>
+          <input class="inq__input" type="text" id="inqDate" placeholder="예) 9월 5일 토요일" autocomplete="off">
+        </label>
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">👥</i> 인원</span>
+          <input class="inq__input" type="text" id="inqCount" placeholder="예) 2매 연석" autocomplete="off">
+        </label>
+        <label class="inq__field">
+          <span class="inq__label"><i aria-hidden="true">💺</i> 희망 좌석</span>
+          <input class="inq__input" type="text" id="inqSeat" placeholder="예) 플로어 앞쪽 / 1층 중앙" autocomplete="off">
+        </label>
+        <p class="inq__tip"><span aria-hidden="true">💡</span> 모르는 항목은 비워 두셔도 됩니다. 아는 것만 보내 주세요.</p>
+      </div>
+
+      <div class="inq__preview">
+        <div class="inq__chat">
+          <p class="inq__chat-top"><span class="inq__avatar" aria-hidden="true">🎟️</span> 에브리티켓</p>
+          <div class="inq__bubble">
+            <pre class="inq__text" id="inqText">문의 :
+공연명 :
+날짜 :
+인원 :
+희망좌석 :</pre>
+          </div>
+        </div>
+        <div class="inq__btns">
+          <button class="btn btn--primary" type="button" id="inqCopyBtn">문의 문장 복사</button>
+          <button class="btn btn--kakao" type="button" data-kakao-open>
+            <span class="btn__ico" aria-hidden="true">💬</span> 카카오톡으로 문의
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 문의 CTA ===== -->
 <section class="contact" id="contact">
   <div class="wrap contact__inner">
@@ -595,7 +595,7 @@
     </div>
     <div class="footer__links">
       <div><h4>서비스</h4><a href="#service">티켓팅 대행</a><a href="#service">예약 대행</a><a href="#service">입찰 대행</a></div>
-      <div><h4>안내</h4><a href="#inquiry">문의양식</a><a href="#process">이용 절차</a><a href="#status">접수현황</a><a href="#proofs">예매 인증</a><a href="#success">고객 후기</a><a href="#why">Why Us</a><a href="#faq">FAQ</a></div>
+      <div><h4>안내</h4><a href="#process">이용 절차</a><a href="#status">접수현황</a><a href="#proofs">예매 인증</a><a href="#success">고객 후기</a><a href="#why">Why Us</a><a href="#faq">FAQ</a><a href="#inquiry">문의양식</a></div>
     </div>
     <div class="footer__biz">
       <h4>회사정보</h4>
