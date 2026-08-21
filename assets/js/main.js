@@ -77,10 +77,14 @@
     });
   }
 
-  /* ---------- 누적 성공 건수 (매일 13건, 랜덤 간격) ---------- */
+  /* ---------- 누적 성공 건수 (매일 +1 × 13회, 8시~22시 랜덤) ---------- */
   const SUCCESS_BASE = 12731;
   const SUCCESS_PER_DAY = 13;
   const SUCCESS_START = Date.UTC(2026, 7, 21) - 9 * 3600 * 1000;
+  const DAY_MS = 24 * 3600 * 1000;
+  const WINDOW_START = 8 * 3600 * 1000;
+  const WINDOW_END = 22 * 3600 * 1000;
+  const MIN_GAP = 30 * 60 * 1000;
 
   const mulberry32 = (seed) => {
     let a = seed | 0;
@@ -97,37 +101,45 @@
     return kst.getUTCFullYear() * 10000 + (kst.getUTCMonth() + 1) * 100 + kst.getUTCDate();
   };
 
-  const incrementMinutesForDay = (ymd) => {
+  const incrementOffsetsForDay = (ymd) => {
     const rand = mulberry32(ymd ^ 0x51ed);
-    const startMin = 8 * 60;
-    const endMin = 23 * 60 + 40;
-    const slot = (endMin - startMin) / SUCCESS_PER_DAY;
+    const span = WINDOW_END - WINDOW_START;
     const times = [];
-    for (let i = 0; i < SUCCESS_PER_DAY; i += 1) {
-      times.push(Math.floor(startMin + i * slot + rand() * slot * 0.85));
+    let guard = 0;
+    while (times.length < SUCCESS_PER_DAY && guard < 5000) {
+      guard += 1;
+      const t = WINDOW_START + Math.floor(rand() * span);
+      if (times.some((p) => Math.abs(p - t) < MIN_GAP)) continue;
+      times.push(t);
     }
+    if (times.length < SUCCESS_PER_DAY) {
+      const slot = span / SUCCESS_PER_DAY;
+      times.length = 0;
+      for (let i = 0; i < SUCCESS_PER_DAY; i += 1) {
+        times.push(Math.floor(WINDOW_START + i * slot + rand() * slot * 0.65));
+      }
+    }
+    times.sort((a, b) => a - b);
     return times;
   };
 
   const successAt = (nowMs) => {
-    if (nowMs < SUCCESS_START) return { count: SUCCESS_BASE, nextAt: SUCCESS_START + incrementMinutesForDay(kstYmd(SUCCESS_START))[0] * 60000 };
-    const dayMs = 24 * 3600 * 1000;
-    const fullDays = Math.floor((nowMs - SUCCESS_START) / dayMs);
-    const dayStart = SUCCESS_START + fullDays * dayMs;
-    const times = incrementMinutesForDay(kstYmd(dayStart));
-    const elapsedMin = (nowMs - dayStart) / 60000;
-    let today = 0;
-    let nextMin = null;
-    for (let i = 0; i < times.length; i += 1) {
-      if (elapsedMin >= times[i]) today += 1;
-      else if (nextMin === null) nextMin = times[i];
+    if (nowMs < SUCCESS_START) {
+      return { count: SUCCESS_BASE, nextAt: SUCCESS_START + incrementOffsetsForDay(kstYmd(SUCCESS_START))[0] };
     }
-    let nextAt;
-    if (nextMin !== null) {
-      nextAt = dayStart + nextMin * 60000;
-    } else {
-      const nextDay = dayStart + dayMs;
-      nextAt = nextDay + incrementMinutesForDay(kstYmd(nextDay))[0] * 60000;
+    const fullDays = Math.floor((nowMs - SUCCESS_START) / DAY_MS);
+    const dayStart = SUCCESS_START + fullDays * DAY_MS;
+    const times = incrementOffsetsForDay(kstYmd(dayStart));
+    let today = 0;
+    let nextAt = null;
+    for (let i = 0; i < times.length; i += 1) {
+      const at = dayStart + times[i];
+      if (nowMs >= at) today += 1;
+      else if (nextAt === null) nextAt = at;
+    }
+    if (nextAt === null) {
+      const nextDay = dayStart + DAY_MS;
+      nextAt = nextDay + incrementOffsetsForDay(kstYmd(nextDay))[0];
     }
     return { count: SUCCESS_BASE + fullDays * SUCCESS_PER_DAY + today, nextAt };
   };
@@ -139,11 +151,73 @@
     el.textContent = formatCount(n);
   };
 
+  const spawnPlus = (el) => {
+    const host = el.parentElement;
+    if (!host) return;
+    const plus = document.createElement('em');
+    plus.className = 'stats__plus';
+    plus.textContent = '+1';
+    plus.setAttribute('aria-hidden', 'true');
+    host.appendChild(plus);
+    plus.addEventListener('animationend', () => plus.remove());
+    window.setTimeout(() => plus.remove(), 1000);
+  };
+
   const scheduleSuccessTick = (el) => {
-    const { count, nextAt } = successAt(Date.now());
-    paintSuccess(el, count);
-    const wait = Math.max(1000, nextAt - Date.now() + 80);
-    window.setTimeout(() => scheduleSuccessTick(el), Math.min(wait, 60 * 60 * 1000));
+    let shown = Number(el.dataset.count) || successAt(Date.now()).count;
+
+    const bumpOne = (done) => {
+      const from = shown;
+      const to = shown + 1;
+      if (reduceMotion) {
+        shown = to;
+        paintSuccess(el, to);
+        if (done) done();
+        return;
+      }
+      spawnPlus(el);
+      el.classList.remove('is-bump');
+      void el.offsetWidth;
+      el.classList.add('is-bump');
+      const start = performance.now();
+      const dur = 480;
+      const step = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = formatCount(Math.round(from + (to - from) * eased));
+        if (p < 1) {
+          requestAnimationFrame(step);
+        } else {
+          shown = to;
+          paintSuccess(el, to);
+          el.classList.remove('is-bump');
+          if (done) done();
+        }
+      };
+      requestAnimationFrame(step);
+    };
+
+    const catchUp = (target) => {
+      if (shown >= target) {
+        arm();
+        return;
+      }
+      bumpOne(() => catchUp(target));
+    };
+
+    const arm = () => {
+      const { nextAt } = successAt(Date.now());
+      const wait = Math.max(400, nextAt - Date.now() + 40);
+      window.setTimeout(onTick, Math.min(wait, 10 * 60 * 1000));
+    };
+
+    const onTick = () => {
+      const { count } = successAt(Date.now());
+      if (count > shown) catchUp(count);
+      else arm();
+    };
+
+    arm();
   };
 
   /* ---------- 숫자 카운트업 ---------- */
