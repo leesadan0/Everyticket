@@ -35,6 +35,30 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  const scrollInquiryForm = () => {
+    const form = document.querySelector('#inquiry .inq');
+    if (!form) return;
+    const headerH = header ? header.offsetHeight : 74;
+    const mobileCta = document.querySelector('.mobile-cta');
+    const ctaH = mobileCta && getComputedStyle(mobileCta).display !== 'none' ? mobileCta.offsetHeight : 0;
+    const usable = window.innerHeight - headerH - ctaH;
+    const top = form.getBoundingClientRect().top + window.scrollY;
+    const gap = Math.max(0, (usable - form.offsetHeight) / 2);
+    window.scrollTo({ top: Math.max(0, top - headerH - gap), behavior: 'smooth' });
+  };
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href="#inquiry"]');
+    if (!link) return;
+    e.preventDefault();
+    scrollInquiryForm();
+    if (history.replaceState) history.replaceState(null, '', '#inquiry');
+    else location.hash = 'inquiry';
+  });
+  if (location.hash === '#inquiry') {
+    window.setTimeout(scrollInquiryForm, 0);
+  }
+
   /* ---------- 페이지 ---------- */
   const SHOW_PAGE_SIZE = 9;
   const PROOF_PAGE_SIZE = 6;
