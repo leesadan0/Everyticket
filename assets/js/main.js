@@ -85,20 +85,29 @@
   const tabs = document.querySelectorAll('.tab');
   const showList = document.getElementById('showList');
   const showPager = document.getElementById('showPager');
+  const showSearch = document.getElementById('showSearch');
+  const showEmpty = document.getElementById('showEmpty');
   let showPage = 1;
+
+  const normQ = (s) => String(s || '').trim().toLowerCase().replace(/\s+/g, '');
+  const textMatch = (el, q) => {
+    if (!q) return true;
+    const t = String((el && el.textContent) || '').toLowerCase().replace(/\s+/g, '');
+    return t.indexOf(q) !== -1;
+  };
+  const activeShowFilter = () => {
+    const active = document.querySelector('.tab.is-active');
+    return (active && active.dataset.filter) || 'all';
+  };
 
   const applyShowFilter = (filter) => {
     if (!showList) return;
+    const q = normQ(showSearch && showSearch.value);
     const matches = [];
     showList.querySelectorAll('.show').forEach((show) => {
-      const match = filter === 'all' || show.dataset.status === filter;
+      const match = (filter === 'all' || show.dataset.status === filter) && textMatch(show, q);
       show.classList.toggle('is-hidden', !match);
-      if (match) {
-        matches.push(show);
-        show.style.animation = 'none';
-        void show.offsetWidth;
-        show.style.animation = '';
-      }
+      if (match) matches.push(show);
     });
     const totalPages = Math.max(1, Math.ceil(matches.length / SHOW_PAGE_SIZE));
     if (showPage > totalPages) showPage = totalPages;
@@ -106,6 +115,7 @@
     matches.forEach((show, i) => {
       show.classList.toggle('is-folded', i < start || i >= start + SHOW_PAGE_SIZE);
     });
+    if (showEmpty) showEmpty.hidden = matches.length > 0;
     paintPager(showPager, showPage, totalPages, (p) => {
       showPage = p;
       applyShowFilter(filter);
@@ -125,6 +135,12 @@
       applyShowFilter(tab.dataset.filter);
     });
   });
+  if (showSearch) {
+    showSearch.addEventListener('input', () => {
+      showPage = 1;
+      applyShowFilter(activeShowFilter());
+    });
+  }
 
   const features = window.ET_FEATURES || {};
   const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (ch) => ({
@@ -277,23 +293,37 @@
 
   /* ---------- 성공후기 페이지 ---------- */
   const succPager = document.getElementById('succPager');
+  const succSearch = document.getElementById('succSearch');
+  const succEmpty = document.getElementById('succEmpty');
   let succPage = 1;
   const paintSuccPage = (scroll) => {
     const grid = document.getElementById('successGrid');
     if (!grid) return;
-    const items = Array.from(grid.querySelectorAll('.succ'));
-    const totalPages = Math.max(1, Math.ceil(items.length / SUCC_PAGE_SIZE));
+    const q = normQ(succSearch && succSearch.value);
+    const all = Array.from(grid.querySelectorAll('.succ'));
+    const matches = all.filter((el) => textMatch(el, q));
+    all.forEach((el) => {
+      if (matches.indexOf(el) < 0) el.classList.add('is-hidden');
+    });
+    const totalPages = Math.max(1, Math.ceil(matches.length / SUCC_PAGE_SIZE));
     if (succPage > totalPages) succPage = totalPages;
     const start = (succPage - 1) * SUCC_PAGE_SIZE;
-    items.forEach((el, i) => {
+    matches.forEach((el, i) => {
       el.classList.toggle('is-hidden', i < start || i >= start + SUCC_PAGE_SIZE);
     });
+    if (succEmpty) succEmpty.hidden = matches.length > 0;
     paintPager(succPager, succPage, totalPages, (p) => {
       succPage = p;
       paintSuccPage(true);
     });
     if (scroll) scrollSection('success');
   };
+  if (succSearch) {
+    succSearch.addEventListener('input', () => {
+      succPage = 1;
+      paintSuccPage(false);
+    });
+  }
 
   /* ---------- 성공내역 페이지 · 크게 보기 ---------- */
   const proofPager = document.getElementById('proofPager');

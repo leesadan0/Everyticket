@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="assets/css/style.css?v=31">
+<link rel="stylesheet" href="assets/css/style.css?v=32">
 
 <script type="application/ld+json">
 {
@@ -327,6 +327,12 @@
       <button class="tab" role="tab" aria-selected="false" data-filter="open">접수중</button>
       <button class="tab" role="tab" aria-selected="false" data-filter="soon">오픈예정</button>
     </div>
+    <div class="list-search">
+      <label class="list-search__field">
+        <span class="list-search__icon" aria-hidden="true"></span>
+        <input id="showSearch" type="search" placeholder="공연명 · 아티스트 검색" autocomplete="off" enterkeyhint="search" aria-label="접수현황 검색">
+      </label>
+    </div>
 
     <div class="shows" id="showList">
       <article class="show" data-status="open">
@@ -432,6 +438,7 @@
         <a class="show__btn" href="#contact" data-kakao-open data-show-title="DOMi &amp; JD BECK LIVE IN SEOUL">대행 신청</a>
       </article>
     </div>
+    <p class="list-empty" id="showEmpty" hidden>검색 결과가 없어요. 문의 주시면 목록에 없는 공연도 대행 가능합니다.</p>
     <nav class="pager" id="showPager" aria-label="접수현황 페이지" hidden></nav>
   </div>
 </section>
@@ -460,6 +467,13 @@
       <p class="sec-head__desc">카드를 누르면 고객 후기를 볼 수 있습니다. 이름과 예매번호는 가려 공개합니다.</p>
     </header>
 
+    <div class="list-search">
+      <label class="list-search__field">
+        <span class="list-search__icon" aria-hidden="true"></span>
+        <input id="succSearch" type="search" placeholder="공연명 · 아티스트 검색" autocomplete="off" enterkeyhint="search" aria-label="성공후기 검색">
+      </label>
+    </div>
+
     <div class="success-grid" id="successGrid">
       <article class="succ" data-review="s0" tabindex="0"><div class="succ__top"><h3>이창섭 단독 콘서트</h3><span class="succ__cnt">6X건</span></div><p class="succ__date">오픈 8.26</p><p class="succ__hint">고객 후기</p></article>
       <article class="succ" data-review="s1" tabindex="0"><div class="succ__top"><h3>KO1KEYZ 팬미팅</h3><span class="succ__cnt">6X건</span></div><p class="succ__date">오픈 9.2</p><p class="succ__hint">고객 후기</p></article>
@@ -474,7 +488,7 @@
       <article class="succ" data-review="s10" tabindex="0"><div class="succ__top"><h3>김장훈 밀양 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.24</p><p class="succ__hint">고객 후기</p></article>
       <article class="succ" data-review="s11" tabindex="0"><div class="succ__top"><h3>PENTAGON 서울 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.09</p><p class="succ__hint">고객 후기</p></article>
     </div>
-
+    <p class="list-empty" id="succEmpty" hidden>검색 결과가 없어요.</p>
     <nav class="pager" id="succPager" aria-label="성공후기 페이지" hidden></nav>
   </div>
 </section>
@@ -645,6 +659,6 @@ window.ET_FEATURES = {
   inquiryTemplate: true
 };
 </script>
-<script src="assets/js/main.js?v=39"></script>
+<script src="assets/js/main.js?v=40"></script>
 </body>
 </html>

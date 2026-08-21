@@ -398,7 +398,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 /* =========================================================
    STATUS (접수현황)
    ========================================================= */
-.tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.tabs { display: flex; justify-content: center; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
 .tab {
   padding: 10px 24px; border-radius: var(--r-pill); font-weight: 700; font-size: 15px;
   background: var(--white); border: 2px solid var(--line); color: var(--ink-2);
@@ -408,6 +408,36 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .tab.is-active {
   background: var(--green-deep); border-color: var(--green-deep); color: #fff;
   box-shadow: 0 4px 0 rgba(79,155,54,.35);
+}
+
+.list-search { display: flex; justify-content: center; margin: 0 0 28px; }
+.list-search__field {
+  position: relative;
+  width: min(440px, 100%);
+}
+.list-search__icon {
+  position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  width: 18px; height: 18px; pointer-events: none;
+  background: currentColor;
+  color: var(--ink-3);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='black' d='M10 4a6 6 0 014.47 9.9l4.32 4.31-1.42 1.42-4.31-4.32A6 6 0 1110 4zm0 2a4 4 0 100 8 4 4 0 000-8z'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='black' d='M10 4a6 6 0 014.47 9.9l4.32 4.31-1.42 1.42-4.31-4.32A6 6 0 1110 4zm0 2a4 4 0 100 8 4 4 0 000-8z'/></svg>") center / contain no-repeat;
+}
+.list-search__field input {
+  width: 100%; box-sizing: border-box; height: 48px;
+  padding: 0 18px 0 44px;
+  border: 2px solid var(--line); border-radius: var(--r-pill);
+  background: var(--white); color: var(--ink);
+  font-family: var(--font-body); font-size: 15px; font-weight: 650;
+}
+.list-search__field input::placeholder { color: var(--ink-3); font-weight: 600; }
+.list-search__field input:focus {
+  outline: none; border-color: var(--green-deep);
+  box-shadow: 0 0 0 4px var(--green-soft);
+}
+.list-empty {
+  text-align: center; color: var(--ink-3); font-weight: 700;
+  padding: 4px 12px 28px; margin: 0;
 }
 
 .shows {
