@@ -1055,7 +1055,61 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 @media (max-width: 620px) {
   .section { padding: 68px 0; }
   #service { padding-top: 108px; }
-  .cards, .steps, .whys, .shows, .success-grid, .proofs-grid { grid-template-columns: 1fr; }
+  .cards, .steps, .whys { grid-template-columns: 1fr; }
+  .shows, .success-grid, .proofs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .show { flex-direction: column; }
+  .show__poster-wrap {
+    width: 100%;
+    flex: none;
+    min-height: 0;
+    aspect-ratio: 3 / 4;
+  }
+  .show__body { padding: 8px 9px 10px; gap: 4px; }
+  .show h3 {
+    font-size: 12.5px;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .show__meta { font-size: 11px; gap: 4px; }
+  .show__place {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .show__dates { gap: 4px; }
+  .show__when { font-size: 10.5px; padding: 2px 6px; gap: 3px; }
+  .show__badge { font-size: 10px; padding: 3px 7px; }
+  .show__btn { margin-top: 2px; padding: 6px; font-size: 12px; }
+
+  .proof__img { aspect-ratio: 4 / 3; }
+  .proof__body { padding: 8px 9px 10px; gap: 2px; }
+  .proof__name {
+    font-size: 12.5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .proof__meta, .proof__seat { font-size: 11px; }
+
+  .succ { padding: 12px 11px 13px; }
+  .succ__top { gap: 8px; }
+  .succ h3 { font-size: 13px; }
+  .succ__cnt { font-size: 13px; padding: 2px 8px; }
+  .succ__date { font-size: 12px; margin-top: 6px; }
+  .succ__date .show__dates { gap: 4px; }
+  .succ__date .show__when { padding: 4px 7px; font-size: 11.5px; gap: 4px; }
+  .succ__date .show__when-k { font-size: 11px; }
+  .succ__date .show__when b { font-size: 12px; }
+  .succ__hint { margin-top: 6px; font-size: 11.5px; }
+
   .step::after { display: none !important; }
   .topbar__link { display: none; }
   .topbar { font-size: 12.5px; }
