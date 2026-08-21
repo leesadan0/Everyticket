@@ -198,15 +198,17 @@
   const isStartedShow = (s, today) => {
     const o = parseOpenIso(s);
     if (o && isSoonShow(s, today)) return false;
-    const start = String((s && s.date) || '');
-    if (!start) return false;
-    if (o && start < o) return false;
-    const playAt = String(s.playAt || '').trim();
-    if (playAt) {
-      const t = Date.parse(playAt);
-      if (!isNaN(t)) return Date.now() >= t;
-    }
-    return start < today;
+    const last = String((s && (s.endDate || s.date)) || '').slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(last)) return false;
+    if (o && last < o) return false;
+    const p = last.split('-').map(Number);
+    const prevMs = Date.UTC(p[0], p[1] - 1, p[2]) - 86400000;
+    const prev = new Date(prevMs);
+    const pad = (n) => String(n).padStart(2, '0');
+    const prevDay = prev.getUTCFullYear() + '-' + pad(prev.getUTCMonth() + 1) + '-' + pad(prev.getUTCDate());
+    const cutoff = Date.parse(prevDay + 'T21:00:00+09:00');
+    if (isNaN(cutoff)) return false;
+    return Date.now() >= cutoff;
   };
 
   const loadAutoShows = () => {
