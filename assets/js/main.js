@@ -35,9 +35,57 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  /* ---------- 페이지 ---------- */
+  const SHOW_PAGE_SIZE = 6;
+  const PROOF_PAGE_SIZE = 6;
+  const SUCC_PAGE_SIZE = 9;
+
+  const pageNums = (cur, total) => {
+    if (total <= 7) return Array.from({ length: total }, (_, i) => i + 1);
+    const set = new Set([1, total, cur - 1, cur, cur + 1]);
+    if (cur <= 3) [2, 3, 4].forEach((n) => set.add(n));
+    if (cur >= total - 2) [total - 3, total - 2, total - 1].forEach((n) => set.add(n));
+    return Array.from(set).filter((n) => n >= 1 && n <= total).sort((a, b) => a - b);
+  };
+
+  const paintPager = (nav, page, total, go) => {
+    if (!nav) return;
+    if (total <= 1) {
+      nav.hidden = true;
+      nav.innerHTML = '';
+      return;
+    }
+    nav.hidden = false;
+    const nums = pageNums(page, total);
+    let html = '<button type="button" class="pager__btn" data-go="' + (page - 1) + '"' + (page <= 1 ? ' disabled' : '') + ' aria-label="이전 페이지">‹</button>';
+    let prev = 0;
+    nums.forEach((n) => {
+      if (prev && n > prev + 1) html += '<span class="pager__gap" aria-hidden="true">…</span>';
+      html += '<button type="button" class="pager__btn' + (n === page ? ' is-active' : '') + '" data-go="' + n + '"' + (n === page ? ' aria-current="page"' : '') + ' aria-label="' + n + '페이지">' + n + '</button>';
+      prev = n;
+    });
+    html += '<button type="button" class="pager__btn" data-go="' + (page + 1) + '"' + (page >= total ? ' disabled' : '') + ' aria-label="다음 페이지">›</button>';
+    nav.innerHTML = html;
+    nav.querySelectorAll('[data-go]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        if (btn.disabled) return;
+        const p = Number(btn.getAttribute('data-go'));
+        if (!p || p === page) return;
+        go(p);
+      });
+    });
+  };
+
+  const scrollSection = (id) => {
+    const sec = document.getElementById(id);
+    if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   /* ---------- 접수현황 필터 ---------- */
   const tabs = document.querySelectorAll('.tab');
   const showList = document.getElementById('showList');
+  const showPager = document.getElementById('showPager');
+  let showPage = 1;
 
   const applyShowFilter = (filter) => {
     if (!showList) return;
@@ -52,24 +100,17 @@
         show.style.animation = '';
       }
     });
-    const useFold = filter === 'all' && matches.length > 6;
+    const totalPages = Math.max(1, Math.ceil(matches.length / SHOW_PAGE_SIZE));
+    if (showPage > totalPages) showPage = totalPages;
+    const start = (showPage - 1) * SHOW_PAGE_SIZE;
     matches.forEach((show, i) => {
-      const fold = useFold && i >= 6 && !openMoreExpanded;
-      show.classList.toggle('is-folded', fold);
-      show.classList.toggle('is-unfolded', useFold && i >= 6 && openMoreExpanded);
+      show.classList.toggle('is-folded', i < start || i >= start + SHOW_PAGE_SIZE);
     });
-    if (openMoreBtn) {
-      openMoreBtn.hidden = !useFold;
-      if (!useFold) {
-        openMoreBtn.classList.remove('is-open');
-        openMoreBtn.innerHTML = '더 보기 <i aria-hidden="true">▾</i>';
-      } else {
-        openMoreBtn.classList.toggle('is-open', openMoreExpanded);
-        openMoreBtn.innerHTML = openMoreExpanded
-          ? '접기 <i aria-hidden="true">▾</i>'
-          : '더 보기 <i aria-hidden="true">▾</i>';
-      }
-    }
+    paintPager(showPager, showPage, totalPages, (p) => {
+      showPage = p;
+      applyShowFilter(filter);
+      scrollSection('status');
+    });
   };
 
   tabs.forEach((tab) => {
@@ -80,7 +121,7 @@
       });
       tab.classList.add('is-active');
       tab.setAttribute('aria-selected', 'true');
-      openMoreExpanded = false;
+      showPage = 1;
       applyShowFilter(tab.dataset.filter);
     });
   });
@@ -89,16 +130,6 @@
   const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (ch) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[ch]));
-
-  const openMoreBtn = document.getElementById('openMoreBtn');
-  let openMoreExpanded = false;
-  if (openMoreBtn) {
-    openMoreBtn.addEventListener('click', () => {
-      openMoreExpanded = !openMoreExpanded;
-      const active = document.querySelector('.tab.is-active');
-      applyShowFilter((active && active.dataset.filter) || 'all');
-    });
-  }
 
   const mdLabel = (iso) => {
     const p = String(iso || '').split('-');
@@ -115,7 +146,7 @@
   const placeOf = (s) => {
     const meta = String((s && s.meta) || '');
     const first = meta.split(' · ')[0].trim();
-    if (!first || /^티켓오픈/.test(first)) return '';
+    if (!first || /^티켓오픈/.test(first) || /^티켓팅/.test(first)) return '';
     return first;
   };
 
@@ -127,10 +158,10 @@
     if (place) bits.push('<span class="show__place">' + place + '</span>');
     const dates = [];
     if (o) {
-      dates.push('<span class="show__when show__when--open"><span class="show__when-k">오픈</span><b>' + escapeHtml(mdLabel(o)) + '</b></span>');
+      dates.push('<span class="show__when show__when--open"><span class="show__when-k">티켓팅</span><b>' + escapeHtml(mdLabel(o)) + '</b></span>');
     }
     if (range) {
-      dates.push('<span class="show__when show__when--play"><span class="show__when-k">공연</span><b>' + escapeHtml(range) + '</b></span>');
+      dates.push('<span class="show__when show__when--play"><span class="show__when-k">공연일</span><b>' + escapeHtml(range) + '</b></span>');
     }
     if (dates.length) bits.push('<span class="show__dates">' + dates.join('') + '</span>');
     if (!bits.length) return escapeHtml(String((s && s.meta) || ''));
@@ -139,13 +170,32 @@
 
   const isSoonShow = (s, today) => {
     const o = parseOpenIso(s);
-    if (o) return o > today;
-    return s.kind === 'soon' || s.status === 'soon';
+    if (!o) return s.kind === 'soon' || s.status === 'soon';
+    const openAt = String(s.openAt || '').trim();
+    if (openAt) {
+      const t = Date.parse(openAt);
+      if (!isNaN(t)) return t > Date.now();
+    }
+    return o > today;
+  };
+
+  const isStartedShow = (s, today) => {
+    const o = parseOpenIso(s);
+    if (o && isSoonShow(s, today)) return false;
+    const start = String((s && s.date) || '');
+    if (!start) return false;
+    if (o && start < o) return false;
+    const playAt = String(s.playAt || '').trim();
+    if (playAt) {
+      const t = Date.parse(playAt);
+      if (!isNaN(t)) return Date.now() >= t;
+    }
+    return start < today;
   };
 
   const loadAutoShows = () => {
     if (!features.autoShows || !showList) return;
-    fetch('assets/data/shows.json')
+    fetch('assets/data/shows.json?v=35')
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
         const start = new Date();
@@ -153,16 +203,27 @@
         const pad = (n) => String(n).padStart(2, '0');
         const today = start.getFullYear() + '-' + pad(start.getMonth() + 1) + '-' + pad(start.getDate());
         const raw = Array.isArray(data.shows) ? data.shows : (data.shows && data.shows.value) || [];
+        const seenKey = {};
+        const showKey = (s) => {
+          const t = String(s.title || '').toLowerCase()
+            .replace(/[〈〉<>\[］\[\]「」『』［］]/g, ' ')
+            .replace(/가을냄새|with friends|추가 오픈 안내|티켓오픈 안내|티켓 오픈 안내/g, ' ')
+            .replace(/\s+/g, ' ').trim();
+          return t + '|' + String(s.date || '');
+        };
         const popular = raw.filter((s) => {
           if (!s || !s.title) return false;
           if (s.status === 'done') return false;
-          if (/수급|물량|일정 공개/.test(s.title)) return false;
-          if (!s.meta && !s.date && !s.open) return false;
-          if (s.endDate && s.endDate < today) return false;
-          if (!s.endDate && s.date && s.date < today) return false;
+          if (/토크쇼|토크콘서트|토크\s*콘서트|노콘쇼|토크\s*&|뮤직 토크|발레페스티벌|수급|물량|일정 공개/.test(s.title)) return false;
+          if (!String(s.poster || '').trim()) return false;
+          if (!s.open && !parseOpenIso(s)) return false;
+          if (!s.date) return false;
+          if (isStartedShow(s, today)) return false;
+          const k = showKey(s);
+          if (seenKey[k]) return false;
+          seenKey[k] = true;
           return true;
         });
-        renderSuccess(popular);
         const opened = popular.filter((s) => !isSoonShow(s, today)).sort((a, b) => {
           return (a.date || '9999').localeCompare(b.date || '9999') || a.title.localeCompare(b.title, 'ko');
         });
@@ -172,6 +233,7 @@
           return ao.localeCompare(bo) || (a.date || '').localeCompare(b.date || '') || a.title.localeCompare(b.title, 'ko');
         });
         const ordered = opened.concat(soonList);
+        renderSuccess(ordered);
         if (!ordered.length) return;
         const cardHtml = (s, i) => {
           const soon = isSoonShow(s, today);
@@ -199,7 +261,7 @@
           );
         };
         showList.innerHTML = ordered.map(cardHtml).join('');
-        openMoreExpanded = false;
+        showPage = 1;
         const active = document.querySelector('.tab.is-active');
         applyShowFilter((active && active.dataset.filter) || 'all');
       })
@@ -213,24 +275,69 @@
     applyShowFilter((active && active.dataset.filter) || 'all');
   }
 
-  /* ---------- 성공후기 더 보기 ---------- */
-  const moreBtn = document.getElementById('moreBtn');
-  let succExpanded = false;
-  const paintSuccMore = () => {
+  /* ---------- 성공후기 페이지 ---------- */
+  const succPager = document.getElementById('succPager');
+  let succPage = 1;
+  const paintSuccPage = (scroll) => {
     const grid = document.getElementById('successGrid');
-    if (!moreBtn || !grid) return;
-    const extra = grid.querySelectorAll('.succ.is-extra');
-    extra.forEach((el) => el.classList.toggle('is-hidden', !succExpanded));
-    moreBtn.classList.toggle('is-open', succExpanded);
-    moreBtn.hidden = extra.length === 0;
-    moreBtn.innerHTML = succExpanded
-      ? '성공후기 접기 <i aria-hidden="true">▾</i>'
-      : '성공후기 더 보기 <i aria-hidden="true">▾</i>';
+    if (!grid) return;
+    const items = Array.from(grid.querySelectorAll('.succ'));
+    const totalPages = Math.max(1, Math.ceil(items.length / SUCC_PAGE_SIZE));
+    if (succPage > totalPages) succPage = totalPages;
+    const start = (succPage - 1) * SUCC_PAGE_SIZE;
+    items.forEach((el, i) => {
+      el.classList.toggle('is-hidden', i < start || i >= start + SUCC_PAGE_SIZE);
+    });
+    paintPager(succPager, succPage, totalPages, (p) => {
+      succPage = p;
+      paintSuccPage(true);
+    });
+    if (scroll) scrollSection('success');
   };
-  if (moreBtn) {
-    moreBtn.addEventListener('click', () => {
-      succExpanded = !succExpanded;
-      paintSuccMore();
+
+  /* ---------- 성공내역 페이지 · 크게 보기 ---------- */
+  const proofPager = document.getElementById('proofPager');
+  let proofPage = 1;
+  const paintProofPage = (scroll) => {
+    const grid = document.getElementById('proofsGrid');
+    if (!grid) return;
+    const items = Array.from(grid.querySelectorAll('.proof'));
+    const totalPages = Math.max(1, Math.ceil(items.length / PROOF_PAGE_SIZE));
+    if (proofPage > totalPages) proofPage = totalPages;
+    const start = (proofPage - 1) * PROOF_PAGE_SIZE;
+    items.forEach((el, i) => {
+      el.classList.toggle('is-hidden', i < start || i >= start + PROOF_PAGE_SIZE);
+    });
+    paintPager(proofPager, proofPage, totalPages, (p) => {
+      proofPage = p;
+      paintProofPage(true);
+    });
+    if (scroll) scrollSection('proofs');
+  };
+  paintProofPage();
+
+  const proofModal = document.getElementById('proofModal');
+  const proofModalImg = document.getElementById('proofModalImg');
+  const proofModalTitle = document.getElementById('proofModalTitle');
+  const openProof = (src, title) => {
+    if (!proofModal || !proofModalImg) return;
+    proofModalImg.src = src;
+    proofModalImg.alt = (title || '예매완료') + ' 화면';
+    if (proofModalTitle) proofModalTitle.textContent = title || '예매완료';
+    if (typeof proofModal.showModal === 'function') proofModal.showModal();
+  };
+  const closeProof = () => {
+    if (proofModal && proofModal.open) proofModal.close();
+  };
+  document.querySelectorAll('.proof[data-proof]').forEach((btn) => {
+    btn.addEventListener('click', () => openProof(btn.dataset.proof, btn.dataset.proofTitle));
+  });
+  if (proofModal) {
+    proofModal.querySelectorAll('[data-proof-close]').forEach((el) => {
+      el.addEventListener('click', closeProof);
+    });
+    proofModal.addEventListener('click', (e) => {
+      if (e.target === proofModal) closeProof();
     });
   }
 
@@ -290,44 +397,150 @@
   const reviewKeySeed = (key) => key.split('').reduce((h, ch) => (h * 33 + ch.charCodeAt(0)) | 0, 7);
   const EMO = ['', '', '', ' ㅠㅠ', ' ㅎㅎ', ' 🙏', ' 👍', ' ✨', ' 🥹', ' 😭', ' 🔥'];
   const DELTA = [
-    '오픈 전에 선착순으로 넣어주셔서 편했어요.',
-    '댈티 신청하니까 바로 선착순으로 넣어주심.',
-    '오픈 전이라 대리티켓팅으로 미리 넣어달라고 했습니다.',
-    '희망 구역 말씀드렸더니 선착순으로 넣어주셨어요.',
-    '혼자 넣으면 놓칠까 봐 선착순 대행 맡겼어요.',
-    '오픈 전에 접수만 해두면 된다길래 바로 신청했습니다.',
-    '선착순으로 넣어주시고 카톡으로 확인해주심.',
-    '오픈 전에 미리 넣어두니까 마음 놓였어요.',
-    '대리티켓팅으로 선착순 넣어달라고 했고 바로 됐습니다.',
-    '원하는 회차 말해드렸더니 선착순으로 넣어주셨어요.',
-    '오픈 전에 넣어두라고 하셔서 댈티로 맡겼습니다.',
-    '선착순이라 빨리 넣어달라고 했더니 바로 처리해주심.'
+    '선예매 전에 접수해 두니까 오픈 때 안 떨렸어요.',
+    '멤버십 선예매 회차로 넣어달라고 했고 바로 받아주심.',
+    '오픈 전날 밤에 신청했는데 다음날 오전에 선착순 넣어주셨어요.',
+    '희망 회차만 적어서 보냈더니 선예매 때 넣어주심.',
+    '팬클럽 선예매라 혼자 못 넣겠어서 댈티 맡겼습니다.',
+    '일반 오픈 전에 선예매로 먼저 넣어주셔서 편했어요.',
+    '오픈 10분 전에 카톡 오길래 바로 확인했습니다.',
+    '선착순 대행이라 대기만 하면 돼서 마음이 놓였어요.',
+    '원하는 날짜 두 개 적어줬더니 가능한 쪽으로 넣어주심.',
+    '선예매 창 뜨자마자 넣어주신 것 같아요. 속도 빠르심.',
+    '오픈 당일 출근이라 미리 맡겨뒀습니다.',
+    '대리티켓팅 처음인데 넣는 타이밍만 맞춰주시면 됐어요.',
+    '선예매 대상자 인증까지 알려주셔서 헤매지 않았어요.',
+    '회차 선택 고민됐는데 상황 보고 넣어주신다고 하셔서 맡겼습니다.',
+    '오픈 전에 접수만 해두면 된다길래 바로 신청했어요.',
+    '카톡이 짧고 필요한 말만 하셔서 오히려 믿음 갔습니다.',
+    '선예매 실패할까 봐 맡겼는데 들어가서 다행이에요.',
+    '친구랑 같이 갈 회차로 넣어달라고 했고 그대로 됐습니다.',
+    '오픈 알림 뜨기 전에 이미 넣어두신 상태였어요.',
+    '댈티로 선예매 넣었고 결과 캡처도 바로 보내주심.',
+    '혼자 넣다 터질 것 같아서 이번엔 맡겼습니다.',
+    '선예매 시간이 평일이라 대행 안 했으면 못 넣었을 듯요.',
+    '오픈 직후 확인했더니 이미 접수된 상태라 안심했어요.',
+    '희망 조건만 말하고 나머지는 맡겼습니다.',
+    '선예매·일반예매 둘 다 넣어달라고 했더니 일정 나눠서 해주심.',
+    '오픈 전 대기만 해두니까 당일에 신경 안 써도 됐어요.',
+    '대리티켓팅으로 넣어달라고 한 뒤 카톡으로 결과만 받았습니다.',
+    '선착순이라 빨리 넣어달라고 했더니 바로 처리해주셨어요.',
+    '오픈 전에 넣어두라고 하셔서 그대로 따라갔습니다.',
+    '선예매 창이 밀릴 줄 알았는데 미리 넣어주셔서 됐어요.',
+    '회차 바꾸고 싶다고 했더니 가능한 범위에서 맞춰주심.',
+    '오픈 아침이라 폰 못 보는데 대신 넣어주셨어요.',
+    '멤버십 선예매만 되는 회차라 인증 방법까지 적어주심.',
+    '댈티 신청하고 대기열 신경 안 써도 돼서 편했습니다.',
+    '오픈 전에 선착순으로 넣어주셔서 당일엔 확인만 했어요.',
+    '희망 회차가 두 개인데 먼저 열리는 쪽으로 넣어주셨어요.',
+    '선예매 끝나고 일반도 넣어준다고 하셔서 그대로 부탁했습니다.',
+    '오픈 전 카톡 한 통이면 끝이라 다음에 또 맡길 듯요.',
+    '혼자 예매 연습하다 포기하고 대행 맡겼어요.',
+    '선예매 시간에 회의라서 미리 접수해 뒀습니다.',
+    '넣는 순간 캡처 보내주셔서 기다린 보람 있었어요.',
+    '오픈 직전 확인 메시지 주셔서 놓치지 않았습니다.',
+    '선착순 대행이라 설명 길지 않고 바로 진행됐어요.',
+    '원하는 날만 말하고 좌석은 되는 대로 부탁드렸습니다.',
+    '선예매 대상인지 헷갈렸는데 되는 일정으로 안내해주심.',
+    '오픈 전에 넣어두니까 당일 스트레스가 없었어요.',
+    '댈티로 넣었고 실패하면 연락 준다고 해서 기다렸습니다.',
+    '선예매 창 뜨는 시간 정확히 알려주셔서 좋았어요.',
+    '오픈 전날 신청했는데도 받아주셔서 감사합니다.',
+    '대리티켓팅으로 선예매 넣었고 회차도 맞아요.'
   ];
   const MOVE = [
-    '오픈 끝나고 아이디옮기기로 양도 받았습니다.',
-    '아옮이라 사기 걱정됐는데 예매내역 바로 인증해주심.',
-    '양도로 연석 구했습니다. 아이디 안전하게 옮겨주셨어요.',
+    '오픈 지나서 아옮으로 양도 받았습니다. 예매내역 먼저 보여주심.',
+    '아이디옮기기라 걱정됐는데 로그인 전 인증이 확실했어요.',
+    '양도로 연석 구했습니다. 계정 넘기는 순서도 짧게 알려주심.',
+    '아옮 처음인데 예매화면 가리고 보여주셔서 안심됐어요.',
+    '오픈 끝난 자리라 아옮으로 진행했고 인계가 깔끔했습니다.',
+    '아이디 옮겨주신 뒤 바로 로그인까지 확인해주셨어요.',
+    '양도 문의했더니 가능한 좌석만 말씀해주셔서 믿음 갔습니다.',
+    '아옮으로 두 장 부탁드렸고 연석으로 받았습니다.',
+    '예매내역 워터마크 찍힌 거 보고 나서 진행했어요.',
     '아이디옮기기 중간중간 상황 공유돼서 답답하지 않았어요.',
-    '아옮 처음인데 로그인이랑 일정도 짧게 알려주심.',
-    '양도 자리 그대로 받아서 연석으로 갑니다.',
-    '아이디 옮겨주신 뒤 예매화면 가리고 보여주셔서 안심됐어요.',
-    '아옮으로 두 장 부탁드렸고 그대로 됐습니다.',
-    '양도 문의했는데 가능한 좌석만 솔직하게 말씀해주셨어요.',
-    '아이디옮기기 끝나고 바로 로그인까지 확인해주심.',
-    '오픈 지난 자리라 아옮으로 진행했고 계정 인계가 깔끔했어요.',
-    '양도 좌석 인증 먼저 받고 아이디옮기기 했습니다.'
+    '양도 자리 그대로 받아서 일정만 맞추면 됐습니다.',
+    '오픈 놓쳐서 아옮으로 알아봤는데 되는 자리만 안내해주심.',
+    '계정 넘기기 전에 예매 확인을 먼저 해서 사기 느낌이 없었어요.',
+    '아옮으로 받았고 아이디 비밀번호 바꾸는 것도 같이 봐주심.',
+    '양도 좌석 인증 받고 나서 아이디옮기기 했습니다.',
+    '오픈 지난 티켓이라 아옮만 된다고 하셔서 그대로 진행했어요.',
+    '아이디 인계가 몇 분 안 걸렸어요. 설명도 짧고 명확함.',
+    '연석으로 달라고 했더니 되는 것만 골라서 보여주셨어요.',
+    '아옮 끝나고 예매내역이 제 계정으로 넘어온 거 확인했습니다.',
+    '양도 처음인데 단계별로 카톡 주셔서 따라가기 쉬웠어요.',
+    '오픈 끝나고 남은 자리 아옮으로 알아봐 달라고 했습니다.',
+    '아이디옮기기라 개인정보 걱정됐는데 필요한 것만 받으심.',
+    '양도로 한 장 더 구했고 기존 예매랑 날짜 맞춰주셨어요.',
+    '아옮으로 진행하니까 현장 수령 걱정이 줄었어요.',
+    '예매자 이름 바꾸는 게 아니라 아이디 통째로 넘기는 거라 편했습니다.',
+    '오픈 실패한 뒤로 아옮만 알아봤는데 가능하다고 하심.',
+    '양도 좌석 사진 먼저 주시고 원하면 진행하자고 하셨어요.',
+    '아이디 옮겨주신 다음 제가 비번 바꾸니까 끝났어요.',
+    '아옮 후기 보고 신청했는데 실제로도 인증이 먼저였습니다.',
+    '오픈 지난 연석을 아옮으로 받았어요. 일정 맞아서 다행.',
+    '양도 가능한지 먼저 물어봤는데 바로 된다고 답 왔습니다.',
+    '아이디옮기기 도중 화면 공유 없이 캡처로만 진행돼서 부담 적었어요.',
+    '아옮으로 두 명분 받았고 자리 붙어 있습니다.',
+    '오픈 때 못 넣어서 아옮으로 넘겼더니 그날 저녁에 됐어요.',
+    '양도 절차가 간단해서 다음에도 오픈 놓치면 여기로 할 듯요.',
+    '아이디 인계 전에 예매번호 가린 인증을 보내주셨어요.',
+    '아옮이라 사기 걱정 많았는데 단계가 정해져 있어서 괜찮았어요.',
+    '오픈 끝난 공연도 아옮으로 구해져서 놀랐습니다.',
+    '양도로 받은 뒤 예매내역이 바로 보여서 안심했어요.',
+    '아이디옮기기 끝나고 로그아웃까지 확인해 달라고 하심.',
+    '아옮으로 구했는데 좌석 등급이 말한 거랑 같았어요.',
+    '오픈 놓친 회차 아옮으로 다시 알아봐 주셨습니다.',
+    '양도 문의만 했는데 가능한 날짜를 먼저 찍어주셨어요.',
+    '아이디 넘기는 시간이 짧아서 출근 전에 끝났습니다.',
+    '아옮 첫 거래인데 예매내역 인증이 빨라서 믿음 갔습니다.',
+    '오픈 이후 취소표 기다리다 아옮으로 바꿨어요.',
+    '양도 자리 연석인지 먼저 확인해 주셔서 좋았습니다.',
+    '아이디옮기기 후 제가 바로 비번·메일 바꿨어요.',
+    '아옮으로 받았고 공연일 전까지 연락도 짧게 유지됐습니다.',
+    '오픈 지난 티켓 아옮으로 구했습니다. 절차가 깔끔해요.'
   ];
   const COMMON = [
     '답장이 빨라서 좋았습니다.',
-    '말은 짧고 일만 정확하게 해주십니다.',
-    '예약금 안내 미리 딱 잘라주셔서 편했어요.',
+    '말은 짧은데 할 일은 정확하게 해주십니다.',
+    '예약금 안내를 먼저 딱 잘라주셔서 편했어요.',
     '인증 한 번에 끝나서 좋음.',
     '다음에도 여기로 맡길 듯요.',
     '자리 만족합니다.',
-    '진짜 도움 됐어요.',
     '상담이 부담 없어서 편했습니다.',
     '진행이 투명해서 믿음이 갔어요.',
-    '감사합니다.'
+    '카톡이 밀리지 않아서 기다림이 없었어요.',
+    '질문 두 개만 했는데 바로 답 왔습니다.',
+    '불필요한 말 없이 진행만 해주셔서 좋았어요.',
+    '시간 맞춰 연락 주셔서 감사합니다.',
+    '설명보다 결과로 보여주시는 스타일이에요.',
+    '밤에 보냈는데도 답 와서 놀랐습니다.',
+    '다음 공연도 여기로 넣을 생각입니다.',
+    '금액·일정 안내가 한눈에 들어왔어요.',
+    '재문의했을 때도 같은 내용으로 답해주심.',
+    '진행 중이라는 말만 짧게 주셔서 오히려 좋았습니다.',
+    '친구 소개로 왔는데 후기랑 같았어요.',
+    '첫 이용인데 헤매지 않게 순서만 적어주심.',
+    '기다리라는 말 없이 되는/안 되는 걸 바로 말해주셨어요.',
+    '카톡 톤이 부담 없어서 계속 묻기 편했습니다.',
+    '공연 전에도 한 번 더 확인해주셔서 안심됐어요.',
+    '같은 실수 안 하게 주의사항만 짧게 적어주심.',
+    '처리 속도가 체감으로 빨랐어요.',
+    '다음에 선예매 있으면 또 맡기겠습니다.',
+    '후기 보고 왔는데 과장 없이 그 정도였습니다.',
+    '연락 텀이 길지 않아서 불안하지 않았어요.',
+    '필요한 정보만 받아서 개인정보 걱정이 줄었습니다.',
+    '결론부터 말씀해주셔서 결정이 빨랐어요.',
+    '응대가 기계적이지 않고 짧게 사람 같았습니다.',
+    '실패하면 바로 말한대서 기다릴 수 있었어요.',
+    '진행 끝나면 캡처로 마무리해주셔서 깔끔함.',
+    '같은 질문 두 번 안 하셔도 되게 메모해주심.',
+    '다음 오픈도 알림처럼 한 줄 남겨주셨어요.',
+    '가격 문의했을 때 숨기지 않고 바로 답했습니다.',
+    '주말에도 답 와서 일정 맞추기 쉬웠어요.',
+    '말투가 과장 없어서 신뢰가 갔습니다.',
+    '한 번 맡기니 다음부터는 더 짧게 끝나네요.',
+    '감사합니다. 이번 공연 잘 보고 오겠습니다.'
   ];
 
   const parseOpenIso = (s) => {
@@ -368,6 +581,87 @@
     return offs;
   };
 
+  const FAN_TALK = [
+    { re: /임영웅/, nick: ['영웅이', '영웅님'], fandom: ['영웅시대'] },
+    { re: /PLAVE|플레이브/i, nick: ['플리', '플레이브'], fandom: ['플리'] },
+    { re: /NCT\s*127/, nick: ['엔시티', '127'], fandom: ['엔시티즌'] },
+    { re: /NCT\s*DREAM/, nick: ['드림이', '엔시티 드림'], fandom: ['시즈니'] },
+    { re: /영탁/, nick: ['탁이', '영탁이'], fandom: [] },
+    { re: /성시경/, nick: ['시경이', '시경님'], fandom: [] },
+    { re: /&TEAM|＆TEAM/, nick: ['앤팀'], fandom: ['루네'] },
+    { re: /이성경/, nick: ['성경이', '성경언냐'], fandom: ['반짝이들'] },
+    { re: /HYUNJAE/, nick: ['현재', '현재형'], fandom: ['더비'] },
+    { re: /이하이|LEEHI/i, nick: ['하이야', '이하이'], fandom: [] },
+    { re: /크러쉬|CRUSH/i, nick: ['크러쉬'], fandom: [] },
+    { re: /이창섭/, nick: ['창섭이', '창섭'], fandom: [] },
+    { re: /TAEMIN|태민/, nick: ['태민이', '태민'], fandom: ['샤이니'] },
+    { re: /10CM/, nick: ['십센치'], fandom: [] },
+    { re: /PENTAGON|펜타곤/i, nick: ['펜타곤'], fandom: ['유니버스'] },
+    { re: /ifeye/i, nick: ['이프아이'], fandom: [] },
+    { re: /izna/i, nick: ['이즈나'], fandom: [] },
+    { re: /INFINITE/, nick: ['인피니트'], fandom: ['인스피릿'] },
+    { re: /WHIB/, nick: ['휘브'], fandom: [] },
+    { re: /이준호/, nick: ['준호', '준호씨'], fandom: [] },
+    { re: /전유진/, nick: ['유진이'], fandom: [] },
+    { re: /KO1KEYZ/i, nick: ['코이키즈'], fandom: [] },
+    { re: /소수빈/, nick: ['수빈이', '소수빈'], fandom: [] },
+    { re: /존박/, nick: ['존박'], fandom: [] },
+    { re: /조민규/, nick: ['민규', '조민규'], fandom: [] },
+    { re: /김윤아/, nick: ['윤아', '김윤아'], fandom: [] },
+    { re: /마룬\s*5|Maroon/i, nick: ['마룬5'], fandom: [] },
+    { re: /KEY B-day|KEYdult/, nick: ['키', '키니'], fandom: ['샤이니'] },
+    { re: /한지우|HAN JI WOO/i, nick: ['지우'], fandom: [] },
+    { re: /하루 첫 팬콘서트/, nick: ['하루'], fandom: [] },
+    { re: /장윤정/, nick: ['윤정이', '장윤정'], fandom: [] },
+    { re: /김건모/, nick: ['건모', '김건모'], fandom: [] },
+    { re: /김장훈/, nick: ['장훈이', '김장훈'], fandom: [] },
+    { re: /윤종신/, nick: ['종신이', '윤종신'], fandom: [] },
+    { re: /적재/, nick: ['적재'], fandom: [] },
+    { re: /Silica Gel|실리카겔/i, nick: ['실리카겔'], fandom: [] },
+    { re: /거니|g0nny/i, nick: ['거니'], fandom: [] },
+    { re: /이승철/, nick: ['승철이', '이승철'], fandom: [] },
+    { re: /포레스텔라|FORESTELLA/i, nick: ['포레스텔라'], fandom: [] },
+    { re: /미스트롯/, nick: ['미스트롯'], fandom: [] }
+  ];
+
+  const artistTalk = (title) => {
+    const t = String(title || '');
+    for (let i = 0; i < FAN_TALK.length; i += 1) {
+      if (FAN_TALK[i].re.test(t)) return FAN_TALK[i];
+    }
+    const cleaned = t.replace(/^\d{4}\s*/, '').replace(/^\[[^\]]+\]\s*/, '');
+    const m = cleaned.match(/([A-Za-z][A-Za-z0-9 .&'-]{1,24}|[가-힣]{2,8})/);
+    const name = m ? m[1].trim() : '';
+    if (!name || name.length > 12) return { nick: [], fandom: [] };
+    return { nick: [name], fandom: [] };
+  };
+
+  const talkLine = (soon, talk, rng) => {
+    const nicks = (talk && talk.nick) || [];
+    const fans = (talk && talk.fandom) || [];
+    const n = nicks.length ? nicks[Math.floor(rng() * nicks.length)] : '';
+    const f = fans.length ? fans[Math.floor(rng() * fans.length)] : '';
+    const delta = [
+      n && n + ' 보려고 선예매 맡겼어요.',
+      n && n + ' 직관 가려고 댈티 했습니다.',
+      f && f + ' 선예매라 혼자 못 넣겠어서 맡겼어요.',
+      n && '오픈 때 ' + n + ' 티켓 넣으려고 미리 접수했습니다.',
+      f && f + '들 몰릴 것 같아서 댈티로 넣었어요.',
+      n && n + ' 회차로 넣어달라고 했더니 바로 받아주심.'
+    ].filter(Boolean);
+    const move = [
+      n && '오픈 놓쳐서 ' + n + ' 아옮으로 구했습니다.',
+      n && n + ' 자리 아옮으로 받았어요.',
+      f && f + ' 친구랑 연석 아옮으로 맞췄어요.',
+      n && n + ' 보러 가려고 양도 받았습니다.',
+      f && f + '끼리 가기로 해서 아옮 문의했어요.',
+      n && n + ' 연석으로 달라고 했더니 되는 것만 보여주심.'
+    ].filter(Boolean);
+    const pool = soon ? delta : move;
+    if (!pool.length) return '';
+    return pool[Math.floor(rng() * pool.length)];
+  };
+
   const makeReviews = (key, show, todayIso, soon, names) => {
     const rng = reviewRng(0x51ed ^ reviewKeySeed(key));
     const surNext = (names && names.surRot) ? names.surRot : () => pick(rng, SUR);
@@ -405,6 +699,9 @@
     const used = {};
     const items = [];
     const pool = soon ? DELTA : MOVE;
+    const poolRot = makeRotator(rng, pool);
+    const commonRot = makeRotator(rng, COMMON);
+    const usedText = {};
     for (let i = 0; i < n; i += 1) {
       let name = surNext() + '*' + givenNext();
       let guard = 0;
@@ -415,11 +712,33 @@
       used[name] = true;
       const date = addDays(a[0], a[1], a[2], Math.min(span, offs[i]));
       const stars = rng() < 0.03 ? 3 : rng() < 0.15 ? 4 : 5;
-      const bits = [pick(rng, pool)];
-      if (rng() < 0.7) bits.push(pick(rng, COMMON));
+      let main = poolRot();
+      let tguard = 0;
+      while (usedText[main] && tguard < 8) {
+        main = poolRot();
+        tguard += 1;
+      }
+      usedText[main] = true;
+      const bits = [main];
+      const talk = artistTalk(show && show.title);
+      if (rng() < 0.42) {
+        const line = talkLine(soon, talk, rng);
+        if (line && !usedText[line]) {
+          bits.unshift(line);
+          usedText[line] = true;
+        }
+      }
+      if (rng() < 0.62) {
+        let extra = commonRot();
+        if (extra !== main) bits.push(extra);
+      }
+      if (rng() < 0.22) {
+        let extra2 = commonRot();
+        if (bits.indexOf(extra2) < 0) bits.push(extra2);
+      }
       let text = bits.join(' ');
       const emo = pick(rng, EMO);
-      if (emo && rng() < 0.5 && text.indexOf(emo.trim()) < 0) text += emo;
+      if (emo && rng() < 0.38 && text.indexOf(emo.trim()) < 0) text += emo;
       items.push({ name: name, date: date, stars: stars, text: text });
     }
     items.sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name, 'ko'));
@@ -428,15 +747,18 @@
 
   const REVIEWS = {};
 
-  const cardDate = (s, soon) => {
+  const cardDateHtml = (s) => {
     const o = parseOpenIso(s);
+    const range = dateRangeLabel(s);
+    const bits = [];
     if (o) {
-      const p = o.split('-');
-      return (soon ? '오픈 예정 ' : '오픈 ') + Number(p[1]) + '.' + Number(p[2]);
+      bits.push('<span class="show__when show__when--open"><span class="show__when-k">티켓팅</span><b>' + escapeHtml(mdLabel(o)) + '</b></span>');
     }
-    if (soon) return '오픈 예정';
-    if (s.date) return s.date.replace(/-/g, '.');
-    return '오픈 예정';
+    if (range) {
+      bits.push('<span class="show__when show__when--play"><span class="show__when-k">공연일</span><b>' + escapeHtml(range) + '</b></span>');
+    }
+    if (!bits.length) return escapeHtml(String((s && s.meta) || ''));
+    return '<span class="show__dates">' + bits.join('') + '</span>';
   };
 
   const renderSuccess = (shows) => {
@@ -445,25 +767,12 @@
     const start = new Date();
     start.setHours(0, 0, 0, 0);
     const todayIso = start.getFullYear() + '-' + pad2(start.getMonth() + 1) + '-' + pad2(start.getDate());
-    const fresh = (shows || []).filter((s) => s && s.title && openFresh(parseOpenIso(s), todayIso));
-    const opened = fresh.filter((s) => !isSoonShow(s, todayIso)).sort((a, b) => {
-      return (a.date || parseOpenIso(a) || '9999').localeCompare(b.date || parseOpenIso(b) || '9999') || a.title.localeCompare(b.title, 'ko');
-    });
-    const soonAll = fresh.filter((s) => isSoonShow(s, todayIso)).sort((a, b) => {
-      const ao = parseOpenIso(a) || a.date || '9999';
-      const bo = parseOpenIso(b) || b.date || '9999';
-      return ao.localeCompare(bo) || (a.date || '').localeCompare(b.date || '') || a.title.localeCompare(b.title, 'ko');
-    });
     const pageRng = reviewRng(0x7a11 ^ Number(todayIso.replace(/-/g, '')));
     const surRot = makeRotator(pageRng, SUR);
-    let soonCap = soonAll.length;
-    if (soonAll.length >= 15) soonCap = 12 + Math.floor(pageRng() * 4);
-    else if (soonAll.length >= 5) soonCap = 5 + Math.floor(pageRng() * (soonAll.length - 4));
-    const soonList = soonAll.slice(0, soonCap);
-    const list = opened.concat(soonList);
+    const list = (shows || []).filter((s) => s && s.title);
     if (!list.length) return;
     Object.keys(REVIEWS).forEach((k) => { delete REVIEWS[k]; });
-    succExpanded = false;
+    succPage = 1;
     grid.innerHTML = list.map((s, i) => {
       const soon = isSoonShow(s, todayIso);
       const key = 's' + i;
@@ -473,18 +782,17 @@
       });
       const n = REVIEWS[key].length;
       const badge = soon ? (n + '건') : (Math.max(1, Math.floor(n / 10)) + 'X건');
-      const extra = i >= Math.max(opened.length, 6) ? ' is-extra is-hidden' : '';
       const kind = soon ? ' succ--soon' : ' succ--move';
       const hint = soon ? '댈티 후기' : '아옮 후기';
       return (
-        '<article class="succ' + kind + extra + '" data-review="' + key + '" tabindex="0">' +
+        '<article class="succ' + kind + '" data-review="' + key + '" tabindex="0">' +
           '<div class="succ__top"><h3>' + escapeHtml(s.title) + '</h3><span class="succ__cnt">' + badge + '</span></div>' +
-          '<p class="succ__date">' + escapeHtml(cardDate(s, soon)) + '</p>' +
+          '<p class="succ__date">' + cardDateHtml(s) + '</p>' +
           '<p class="succ__hint">' + hint + '</p>' +
         '</article>'
       );
     }).join('');
-    paintSuccMore();
+    paintSuccPage();
   };
 
   const seedFallbackReviews = () => {
@@ -499,14 +807,14 @@
       const key = el.getAttribute('data-review');
       const title = (el.querySelector('h3') && el.querySelector('h3').textContent) || key;
       const dateText = (el.querySelector('.succ__date') && el.querySelector('.succ__date').textContent) || '';
-      const soon = /오픈\s*예정/.test(dateText) || /티켓오픈/.test(dateText);
-      const meta = /오픈\s+\d/.test(dateText) ? dateText.replace('오픈 예정', '티켓오픈').replace('오픈', '티켓오픈') : dateText;
+      const soon = /티켓팅\s*예정/.test(dateText) || /오픈\s*예정/.test(dateText) || /티켓오픈/.test(dateText);
+      const meta = dateText;
       REVIEWS[key] = makeReviews(key + title, { title: title, meta: meta, view: 2400 }, todayIso, soon, {
         surRot: surRot,
         givenRot: makeRotator(reviewRng(0x9e37 ^ reviewKeySeed(key + title)), GIVEN)
       });
     });
-    paintSuccMore();
+    paintSuccPage();
   };
 
   seedFallbackReviews();

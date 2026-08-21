@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="assets/css/style.css?v=25">
+<link rel="stylesheet" href="assets/css/style.css?v=31">
 
 <script type="application/ld+json">
 {
@@ -111,7 +111,8 @@
       <a href="#inquiry">문의양식</a>
       <a href="#process">이용안내</a>
       <a href="#status">접수현황</a>
-      <a href="#success">성공내역</a>
+      <a href="#proofs">성공내역</a>
+      <a href="#success">성공후기</a>
       <a href="#why">이용 이유</a>
       <a href="#faq">자주 묻는 질문</a>
       <a class="nav__cta" href="#contact" data-kakao-open>상담 신청</a>
@@ -317,7 +318,7 @@
   <div class="wrap">
     <header class="sec-head">
       <p class="sec-head__tag">STATUS</p>
-      <h2 class="sec-head__title">지금 <em>접수 중인 공연</em></h2>
+      <h2 class="sec-head__title">지금 <em>접수 중인 공연·팬미팅</em></h2>
       <p class="sec-head__desc">찾는 공연이 없다면 문의해 주세요. 목록에 없는 공연도 대행 가능합니다.</p>
     </header>
 
@@ -431,9 +432,119 @@
         <a class="show__btn" href="#contact" data-kakao-open data-show-title="DOMi &amp; JD BECK LIVE IN SEOUL">대행 신청</a>
       </article>
     </div>
-    <div class="more-wrap">
-      <button class="btn btn--outline" id="openMoreBtn">더 보기 <i aria-hidden="true">▾</i></button>
+    <nav class="pager" id="showPager" aria-label="접수현황 페이지" hidden></nav>
+  </div>
+</section>
+
+<!-- ===== 티켓팅 성공내역 ===== -->
+<section class="section section--white" id="proofs">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-head__tag">PROOF</p>
+      <h2 class="sec-head__title">최근 <em>티켓팅 성공 내역</em></h2>
+      <p class="sec-head__desc">실제 예매완료 화면입니다. 카드를 누르면 크게 볼 수 있습니다. 이름·예매번호는 가려 공개합니다.</p>
+    </header>
+
+    <div class="proofs-grid" id="proofsGrid">
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/nct127-sep19.jpg" data-proof-title="NCT 127 THE REDLINE">
+        <span class="proof__img"><img src="assets/img/proofs/recent/nct127-sep19.jpg" alt="NCT 127 5TH TOUR THE REDLINE 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">NCT 127 THE REDLINE</span>
+          <span class="proof__meta">2026.09.19 · KSPO DOME</span>
+          <span class="proof__seat">VIP 스탠딩 Floor RED구역</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/nct127-sep18.jpg" data-proof-title="NCT 127 THE REDLINE">
+        <span class="proof__img"><img src="assets/img/proofs/recent/nct127-sep18.jpg" alt="NCT 127 5TH TOUR THE REDLINE 9.18 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">NCT 127 THE REDLINE</span>
+          <span class="proof__meta">2026.09.18 · KSPO DOME</span>
+          <span class="proof__seat">스탠딩 Floor RED구역</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/day6-decade-finale.jpg" data-proof-title="DAY6 The DECADE FINALE">
+        <span class="proof__img"><img src="assets/img/proofs/recent/day6-decade-finale.jpg" alt="DAY6 The DECADE FINALE 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">DAY6 The DECADE FINALE</span>
+          <span class="proof__meta">2026.07.03 · KSPO DOME</span>
+          <span class="proof__seat">Floor S4구역</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/nct-wish.jpg" data-proof-title="NCT WISH INTO THE WISH">
+        <span class="proof__img"><img src="assets/img/proofs/recent/nct-wish.jpg" alt="NCT WISH INTO THE WISH 앙코르 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">NCT WISH INTO THE WISH</span>
+          <span class="proof__meta">2026.04.19 · KSPO DOME</span>
+          <span class="proof__seat">스탠딩 Floor S구역</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/parkhyoshin.jpg" data-proof-title="박효신 LIVE A &amp; E 2026">
+        <span class="proof__img"><img src="assets/img/proofs/recent/parkhyoshin.jpg" alt="박효신 LIVE A and E 2026 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">박효신 LIVE A &amp; E 2026</span>
+          <span class="proof__meta">2026.04.11 · 인천문학경기장</span>
+          <span class="proof__seat">Floor &amp;6구역 1열</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/bts-arirang.jpg" data-proof-title="BTS WORLD TOUR ARIRANG">
+        <span class="proof__img"><img src="assets/img/proofs/recent/bts-arirang.jpg" alt="BTS WORLD TOUR ARIRANG 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">BTS WORLD TOUR ARIRANG</span>
+          <span class="proof__meta">2026.04.09 · 고양종합운동장</span>
+          <span class="proof__seat">FLOOR W_F10구역 7열</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/straykids-fanmeeting.jpg" data-proof-title="Stray Kids 6TH FANMEETING">
+        <span class="proof__img"><img src="assets/img/proofs/recent/straykids-fanmeeting.jpg" alt="Stray Kids 6TH FANMEETING 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">Stray Kids 6TH FANMEETING</span>
+          <span class="proof__meta">2026.04.04 · INSPIRE ARENA</span>
+          <span class="proof__seat">예매완료</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/kiss-of-life.jpg" data-proof-title="KISS OF LIFE DEJA VU">
+        <span class="proof__img"><img src="assets/img/proofs/recent/kiss-of-life.jpg" alt="KISS OF LIFE DEJA VU 서울 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">KISS OF LIFE DEJA VU</span>
+          <span class="proof__meta">2026.03.29 · 블루스퀘어</span>
+          <span class="proof__seat">1층 B구역 2열</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/nct-dream.jpg" data-proof-title="NCT DREAM THE DREAM SHOW 4">
+        <span class="proof__img"><img src="assets/img/proofs/recent/nct-dream.jpg" alt="NCT DREAM THE DREAM SHOW 4 FINALE 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">NCT DREAM THE DREAM SHOW 4</span>
+          <span class="proof__meta">2026.03.28 · KSPO DOME</span>
+          <span class="proof__seat">VIP 스탠딩 Floor FUTURE구역</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/tws-fanmeeting.jpg" data-proof-title="TWS 2ND FANMEETING 42:CLUB">
+        <span class="proof__img"><img src="assets/img/proofs/recent/tws-fanmeeting.jpg" alt="TWS 2ND FANMEETING 42 CLUB 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">TWS 2ND FANMEETING 42:CLUB</span>
+          <span class="proof__meta">2026 · 티켓링크 라이브 아레나</span>
+          <span class="proof__seat">FLOOR D구역</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/kickflip.jpg" data-proof-title="KickFlip FAN-CON">
+        <span class="proof__img"><img src="assets/img/proofs/recent/kickflip.jpg" alt="KickFlip FAN-CON 서울 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">KickFlip FAN-CON</span>
+          <span class="proof__meta">2026.01.17 · 블루스퀘어</span>
+          <span class="proof__seat">1층 B구역 4열</span>
+        </span>
+      </button>
+      <button class="proof" type="button" data-proof="assets/img/proofs/recent/baekhyun.jpg" data-proof-title="BAEKHYUN Reverie [dot.]">
+        <span class="proof__img"><img src="assets/img/proofs/recent/baekhyun.jpg" alt="백현 WORLD TOUR Reverie 예매완료" loading="lazy"></span>
+        <span class="proof__body">
+          <span class="proof__name">BAEKHYUN Reverie [dot.]</span>
+          <span class="proof__meta">2026.01.03 · KSPO DOME</span>
+          <span class="proof__seat">VIP 스탠딩 Floor B구역</span>
+        </span>
+      </button>
     </div>
+
+    <nav class="pager" id="proofPager" aria-label="성공내역 페이지" hidden></nav>
   </div>
 </section>
 
@@ -453,17 +564,15 @@
       <article class="succ" data-review="s3" tabindex="0"><div class="succ__top"><h3>한지우 팬미팅</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">오픈 8.26</p><p class="succ__hint">고객 후기</p></article>
       <article class="succ" data-review="s4" tabindex="0"><div class="succ__top"><h3>포레스텔라 인천 콘서트</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">오픈 예정</p><p class="succ__hint">고객 후기</p></article>
       <article class="succ" data-review="s5" tabindex="0"><div class="succ__top"><h3>10CM 팬콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.09</p><p class="succ__hint">고객 후기</p></article>
-      <article class="succ is-extra is-hidden" data-review="s6" tabindex="0"><div class="succ__top"><h3>ELLEGARDEN 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 9.1</p><p class="succ__hint">고객 후기</p></article>
-      <article class="succ is-extra is-hidden" data-review="s7" tabindex="0"><div class="succ__top"><h3>소수빈 단독공연</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.24</p><p class="succ__hint">고객 후기</p></article>
-      <article class="succ is-extra is-hidden" data-review="s8" tabindex="0"><div class="succ__top"><h3>H△G 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.24</p><p class="succ__hint">고객 후기</p></article>
-      <article class="succ is-extra is-hidden" data-review="s9" tabindex="0"><div class="succ__top"><h3>AKANE 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.31</p><p class="succ__hint">고객 후기</p></article>
-      <article class="succ is-extra is-hidden" data-review="s10" tabindex="0"><div class="succ__top"><h3>김장훈 밀양 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.24</p><p class="succ__hint">고객 후기</p></article>
-      <article class="succ is-extra is-hidden" data-review="s11" tabindex="0"><div class="succ__top"><h3>PENTAGON 서울 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.09</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s6" tabindex="0"><div class="succ__top"><h3>ELLEGARDEN 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 9.1</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s7" tabindex="0"><div class="succ__top"><h3>소수빈 단독공연</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.24</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s8" tabindex="0"><div class="succ__top"><h3>H△G 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.24</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s9" tabindex="0"><div class="succ__top"><h3>AKANE 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.31</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s10" tabindex="0"><div class="succ__top"><h3>김장훈 밀양 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">오픈 8.24</p><p class="succ__hint">고객 후기</p></article>
+      <article class="succ" data-review="s11" tabindex="0"><div class="succ__top"><h3>PENTAGON 서울 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2026.10.09</p><p class="succ__hint">고객 후기</p></article>
     </div>
 
-    <div class="more-wrap">
-      <button class="btn btn--outline" id="moreBtn">성공후기 더 보기 <i aria-hidden="true">▾</i></button>
-    </div>
+    <nav class="pager" id="succPager" aria-label="성공후기 페이지" hidden></nav>
   </div>
 </section>
 
@@ -560,7 +669,7 @@
     </div>
     <div class="footer__links">
       <div><h4>서비스</h4><a href="#service">티켓팅 대행</a><a href="#service">예약 대행</a><a href="#service">입찰 대행</a></div>
-      <div><h4>안내</h4><a href="#process">이용 절차</a><a href="#status">접수현황</a><a href="#success">성공내역</a><a href="#faq">자주 묻는 질문</a></div>
+      <div><h4>안내</h4><a href="#process">이용 절차</a><a href="#status">접수현황</a><a href="#proofs">성공내역</a><a href="#success">성공후기</a><a href="#faq">자주 묻는 질문</a></div>
     </div>
     <div class="footer__biz">
       <h4>회사정보</h4>
@@ -602,13 +711,24 @@
   </div>
 </dialog>
 
+<dialog class="proof-modal" id="proofModal" aria-labelledby="proofModalTitle">
+  <div class="proof-modal__panel">
+    <button class="proof-modal__close" type="button" data-proof-close aria-label="닫기">×</button>
+    <p class="proof-modal__kicker">TICKETING PROOF</p>
+    <h2 class="proof-modal__title" id="proofModalTitle">예매완료</h2>
+    <img class="proof-modal__img" id="proofModalImg" alt="예매완료 화면">
+  </div>
+</dialog>
+
 <dialog class="review-modal" id="reviewModal" aria-labelledby="reviewModalTitle">
   <div class="review-modal__panel">
     <button class="review-modal__close" type="button" data-review-close aria-label="닫기">×</button>
-    <p class="review-modal__kicker">CUSTOMER REVIEW</p>
-    <h2 class="review-modal__title" id="reviewModalTitle">고객 후기</h2>
-    <p class="review-modal__sub" id="reviewModalSub">이름과 예매정보는 일부만 공개합니다.</p>
-    <div class="review-list" id="reviewList"></div>
+    <div class="review-modal__body">
+      <p class="review-modal__kicker">CUSTOMER REVIEW</p>
+      <h2 class="review-modal__title" id="reviewModalTitle">고객 후기</h2>
+      <p class="review-modal__sub" id="reviewModalSub">이름과 예매정보는 일부만 공개합니다.</p>
+      <div class="review-list" id="reviewList"></div>
+    </div>
   </div>
 </dialog>
 
@@ -622,6 +742,6 @@ window.ET_FEATURES = {
   inquiryTemplate: true
 };
 </script>
-<script src="assets/js/main.js?v=23"></script>
+<script src="assets/js/main.js?v=37"></script>
 </body>
 </html>
