@@ -347,16 +347,16 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 /* =========================================================
    PROCESS
    ========================================================= */
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: s; }
+.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; counter-reset: s; }
 .step {
   position: relative; background: var(--cream); border-radius: var(--r-lg);
-  padding: 30px 24px; border: 3px solid var(--cream-2); text-align: center;
+  padding: 26px 14px; border: 3px solid var(--cream-2); text-align: center;
   transition: transform .25s, border-color .25s;
 }
 .step:hover { transform: translateY(-6px); border-color: var(--yellow); }
 .step:not(:last-child)::after {
-  content: '›'; position: absolute; top: 50%; right: -18px; transform: translateY(-50%);
-  font-size: 34px; color: var(--yellow-deep); font-family: var(--font-title); z-index: 2;
+  content: '›'; position: absolute; top: 50%; right: -14px; transform: translateY(-50%);
+  font-size: 28px; color: var(--yellow-deep); font-family: var(--font-title); z-index: 2;
 }
 .step__num {
   display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 1.4px;
@@ -367,8 +367,8 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   background: var(--white); display: grid; place-items: center; font-size: 32px;
   border: 3px solid var(--yellow); box-shadow: var(--shadow-sm);
 }
-.step h3 { font-size: 20px; margin-bottom: 8px; }
-.step p { font-size: 14.5px; color: var(--ink-2); }
+.step h3 { font-size: 17px; line-height: 1.4; margin-bottom: 8px; }
+.step p { font-size: 13.5px; color: var(--ink-2); }
 .step b { color: var(--green-deep); }
 
 .process__note {
@@ -582,7 +582,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
    ========================================================= */
 @media (max-width: 1080px) {
   .cards, .steps, .whys { grid-template-columns: repeat(2, 1fr); }
-  .step:nth-child(2)::after { display: none; }
+  .step:nth-child(2n)::after { display: none; }
   .success-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
