@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="assets/css/style.css?v=33">
+<link rel="stylesheet" href="assets/css/style.css?v=34">
 
 <script type="application/ld+json">
 {
@@ -183,11 +183,24 @@
     <header class="sec-head">
       <p class="sec-head__tag">INQUIRY</p>
       <h2 class="sec-head__title">문의는 <em>이 한 장</em>이면 끝</h2>
-      <p class="sec-head__desc">네 가지만 채우면 문의 문장이 완성됩니다. 복사해서 카카오톡으로 보내 주세요.</p>
+      <p class="sec-head__desc">양도인지 댈티인지 고르고, 아는 항목만 채우면 문의 문장이 완성됩니다. 복사해서 카카오톡으로 보내 주세요.</p>
     </header>
 
     <div class="inq">
       <div class="inq__form">
+        <fieldset class="inq__field inq__type">
+          <legend class="inq__label"><i aria-hidden="true">📌</i> 문의 유형</legend>
+          <div class="inq__picks" role="radiogroup" aria-label="문의 유형">
+            <label class="inq__pick">
+              <input type="radio" name="inqType" value="양도">
+              <span>양도</span>
+            </label>
+            <label class="inq__pick">
+              <input type="radio" name="inqType" value="댈티">
+              <span>댈티</span>
+            </label>
+          </div>
+        </fieldset>
         <label class="inq__field">
           <span class="inq__label"><i aria-hidden="true">🎤</i> 공연명</span>
           <input class="inq__input" type="text" id="inqShow" placeholder="예) 2026 임영웅 콘서트" autocomplete="off">
@@ -211,7 +224,8 @@
         <div class="inq__chat">
           <p class="inq__chat-top"><span class="inq__avatar" aria-hidden="true">🎟️</span> 에브리티켓</p>
           <div class="inq__bubble">
-            <pre class="inq__text" id="inqText">공연명 :
+            <pre class="inq__text" id="inqText">문의 :
+공연명 :
 날짜 :
 인원 :
 희망좌석 :</pre>
@@ -654,6 +668,6 @@ window.ET_FEATURES = {
   inquiryTemplate: true
 };
 </script>
-<script src="assets/js/main.js?v=42"></script>
+<script src="assets/js/main.js?v=43"></script>
 </body>
 </html>

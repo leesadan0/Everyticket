@@ -1211,16 +1211,23 @@
     { label: '인원', el: document.getElementById('inqCount') },
     { label: '희망좌석', el: document.getElementById('inqSeat') }
   ];
+  const inqTypeVal = () => {
+    const picked = document.querySelector('input[name="inqType"]:checked');
+    return picked ? picked.value : '';
+  };
 
   const buildInquiry = () => {
     if (!inqText) return;
-    inqText.textContent = inqFields
-      .map((f) => f.label + ' : ' + ((f.el && f.el.value) || '').trim())
-      .join('\n');
+    inqText.textContent = ['문의 : ' + inqTypeVal()].concat(
+      inqFields.map((f) => f.label + ' : ' + ((f.el && f.el.value) || '').trim())
+    ).join('\n');
   };
 
   inqFields.forEach((f) => {
     if (f.el) f.el.addEventListener('input', buildInquiry);
+  });
+  document.querySelectorAll('input[name="inqType"]').forEach((el) => {
+    el.addEventListener('change', buildInquiry);
   });
   buildInquiry();
 
