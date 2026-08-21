@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 구매한 도메인으로 바꿔주세요
+Sitemap: https://everyticket.kr/sitemap.xml

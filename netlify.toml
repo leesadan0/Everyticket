@@ -1,0 +1,32 @@
+# Netlify 배포 설정 (빌드 도구 없는 정적 사이트)
+[build]
+  publish = "."
+  command = ""
+
+# 로컬 개발용 스크립트는 배포에서 제외
+[build.processing]
+  skip_processing = false
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# www 로 들어와도 기본 도메인으로 통일 (도메인 연결 후 주석 해제)
+# [[redirects]]
+#   from = "https://www.everyticket.kr/*"
+#   to = "https://everyticket.kr/:splat"
+#   status = 301
+#   force = true

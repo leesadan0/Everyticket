@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에브리티켓 | 티켓 양도 · 대리예매 · 선예매 전문</title>
+<meta name="description" content="에브리티켓은 콘서트·공연 티켓 대리예매, 양도, 선예매를 전문으로 하는 업계 최고의 예약 대행 서비스입니다. 성공 시 후불결제, 실패 시 예약금 전액 환불.">
+
+<!-- 아래 everyticket.kr 부분은 구매한 도메인으로 모두 바꿔주세요 -->
+<link rel="canonical" href="https://everyticket.kr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="에브리티켓">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://everyticket.kr/">
+<meta property="og:title" content="에브리티켓 | 티켓 양도 · 대리예매 · 선예매 전문">
+<meta property="og:description" content="양도 · 대리예매 · 선예매 문의 — 성공 시 후불결제, 실패 시 예약금 전액 환불">
+<meta property="og:image" content="https://everyticket.kr/assets/img/hero-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎟️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "에브리티켓",
+  "alternateName": "EveryTicket",
+  "description": "콘서트·공연 티켓 양도, 대리예매, 선예매를 전문으로 하는 온라인 예약 대행 서비스",
+  "url": "https://everyticket.kr/",
+  "image": "https://everyticket.kr/assets/img/hero-banner.png",
+  "areaServed": { "@type": "Country", "name": "대한민국" },
+  "priceRange": "₩₩",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 티켓팅 대행" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 예약 대행" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 입찰 대행" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "온라인 신청 대행" } }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "수수료는 어떻게 결제하나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "먼저 대행 수수료의 30%를 예약금으로 예치하시고, 예매에 성공하면 남은 70%를 후불로 결제하시면 됩니다. 실패한 경우 예약금은 전액 환불해 드립니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "어떤 정보를 알려드려야 하나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "공연명, 희망 날짜와 회차, 인원, 선호 좌석(플로어/VIP/지정석 등), 예매처 계정 정보가 필요합니다. 상담 시 순서대로 안내해 드립니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "티켓 오픈 얼마 전까지 신청해야 하나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "티켓 오픈 최소 24시간 전 신청을 권장합니다. 인기 공연은 조기 마감될 수 있으니 오픈 공지가 뜨는 즉시 문의해 주세요." }
+    },
+    {
+      "@type": "Question",
+      "name": "목록에 없는 공연도 신청할 수 있나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "가능합니다. 콘서트뿐 아니라 뮤지컬, 팬미팅, 내한 공연, 스포츠 경기, 전시 등 온라인 선착순 예매라면 대부분 대행할 수 있습니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "여러 좌석을 한 번에 신청할 수 있나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "네, 연석과 다구역 동시 진행 모두 가능합니다. 인원과 좌석 조건을 알려주시면 최적의 방식으로 안내해 드립니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "개인정보는 안전하게 관리되나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "대행 목적 외에는 절대 사용하지 않으며, 업무가 종료되면 즉시 폐기합니다. 예매 완료 후 계정 비밀번호 변경을 권장드립니다." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">본문 바로가기</a>
+
+<!-- ===== 상단 알림 바 ===== -->
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <span class="topbar__dot" aria-hidden="true"></span>
+    <p>카카오톡 상담 <b>24시간 연중무휴</b> · 성공 시에만 수수료를 받습니다</p>
+    <a class="topbar__link" href="#contact">지금 문의하기 →</a>
+  </div>
+</div>
+
+<!-- ===== 헤더 ===== -->
+<header class="header" id="header">
+  <div class="wrap header__inner">
+    <a class="logo" href="#top" aria-label="에브리티켓 홈">
+      <span class="logo__ticket" aria-hidden="true">
+        <svg viewBox="0 0 40 28" width="40" height="28"><rect x="1" y="1" width="38" height="26" rx="7" fill="#FFCE3D" stroke="#E0A612" stroke-width="2"/><circle cx="13" cy="13" r="2.4" fill="#4A3A1E"/><circle cx="27" cy="13" r="2.4" fill="#4A3A1E"/><path d="M15 19q5 4 10 0" stroke="#4A3A1E" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      </span>
+      <span class="logo__text">에브리<em>티켓</em></span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="주요 메뉴">
+      <a href="#service">서비스</a>
+      <a href="#process">이용안내</a>
+      <a href="#status">접수현황</a>
+      <a href="#success">성공내역</a>
+      <a href="#why">이용 이유</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a class="nav__cta" href="#contact">상담 신청</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== 히어로 ===== -->
+<section class="hero" id="top">
+  <div class="hero__sky" aria-hidden="true">
+    <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+    <span class="conf f1"></span><span class="conf f2"></span><span class="conf f3"></span>
+    <span class="conf f4"></span><span class="conf f5"></span><span class="conf f6"></span>
+  </div>
+
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">업계 최고의 전문업체 · 모든 티켓 서비스</p>
+      <h1 class="hero__title">
+        원하는 좌석,<br>
+        <em>에브리티켓</em>이<br>
+        대신 잡아드립니다
+      </h1>
+      <p class="hero__desc">
+        콘서트 · 공연 · 팬미팅 · 뮤지컬까지.<br>
+        <b>양도 · 대리예매 · 선예매</b>를 한 곳에서 해결하세요.
+      </p>
+
+      <div class="hero__btns">
+        <a class="btn btn--primary" href="#contact">
+          <span class="btn__ico" aria-hidden="true">💬</span> 카카오톡 무료 상담
+        </a>
+        <a class="btn btn--ghost" href="#status">접수 중인 공연 보기</a>
+      </div>
+
+      <ul class="hero__badges">
+        <li><span aria-hidden="true">🔒</span> 성공 시 후불결제</li>
+        <li><span aria-hidden="true">↩️</span> 실패 시 예약금 100% 환불</li>
+        <li><span aria-hidden="true">⏱️</span> 평균 응답 5분</li>
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <img src="assets/img/hero-banner.png" alt="에브리티켓 - 업계 최고의 전문업체, 모든 티켓 서비스. 양도·대리예매·선예매 문의" width="1024" height="691">
+      <div class="hero__sticker hero__sticker--1">성공률 <b>98%</b></div>
+      <div class="hero__sticker hero__sticker--2">24시 상담 <b>OPEN</b></div>
+    </div>
+  </div>
+
+  <!-- 지표 -->
+  <div class="wrap">
+    <ul class="stats">
+      <li><strong data-count="1200" data-suffix="+">0</strong><span>누적 성공 건수</span></li>
+      <li><strong data-count="98" data-suffix="%">0</strong><span>티켓팅 성공률</span></li>
+      <li><strong data-count="24" data-suffix="시간">0</strong><span>연중무휴 상담</span></li>
+      <li><strong data-count="7" data-suffix="년">0</strong><span>업계 운영 경력</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 서비스 ===== -->
+<section class="section section--cream" id="service">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-head__tag">SERVICE</p>
+      <h2 class="sec-head__title">에브리티켓의 <em>대표 서비스</em></h2>
+      <p class="sec-head__desc">온라인에서 선착순으로 이루어지는 모든 예약 업무를 전담 대행합니다.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card card--yellow">
+        <div class="card__ico" aria-hidden="true">🎫</div>
+        <h3>온라인 티켓팅 대행</h3>
+        <p>콘서트 · 공연 · 팬미팅 · 뮤지컬 예매를 전문 인력이 대신 진행합니다. 선예매부터 일반예매, 플로어·VIP 좌석까지 폭넓게 지원합니다.</p>
+        <ul class="card__tags"><li>선예매</li><li>일반예매</li><li>플로어/VIP</li></ul>
+        <a class="card__link" href="#contact">상담 신청 <i aria-hidden="true">→</i></a>
+      </article>
+
+      <article class="card card--green">
+        <div class="card__ico" aria-hidden="true">📅</div>
+        <h3>온라인 예약 대행</h3>
+        <p>선착순으로 마감되는 숙박, 캠핑장, 공연장, 티켓 오픈 등 모든 온라인 예약 업무를 전담합니다. 높은 성공률로 만족을 최우선에 둡니다.</p>
+        <ul class="card__tags"><li>숙박·캠핑</li><li>클래스</li><li>한정 예약</li></ul>
+        <a class="card__link" href="#contact">상담 신청 <i aria-hidden="true">→</i></a>
+      </article>
+
+      <article class="card card--sky">
+        <div class="card__ico" aria-hidden="true">📊</div>
+        <h3>온라인 입찰 대행</h3>
+        <p>클라이언트를 대신해 온라인 입찰 과정에 참여하고 절차를 관리합니다. 경쟁이 치열한 환경에서 고객의 이익을 최대한 보호합니다.</p>
+        <ul class="card__tags"><li>절차 관리</li><li>기한 대응</li><li>결과 리포트</li></ul>
+        <a class="card__link" href="#contact">상담 신청 <i aria-hidden="true">→</i></a>
+      </article>
+
+      <article class="card card--orange">
+        <div class="card__ico" aria-hidden="true">📝</div>
+        <h3>온라인 신청 대행</h3>
+        <p>병원 예약, 수강 신청, 교육 신청, 병무청 입대 절차 등 복잡한 온라인 신청을 간소화합니다. 정확성과 신뢰성으로 시간의 가치를 지켜드립니다.</p>
+        <ul class="card__tags"><li>병원 예약</li><li>수강 신청</li><li>입대 신청</li></ul>
+        <a class="card__link" href="#contact">상담 신청 <i aria-hidden="true">→</i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 이용 절차 ===== -->
+<section class="section section--white" id="process">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-head__tag">PROCESS</p>
+      <h2 class="sec-head__title">신청부터 완료까지 <em>단 4단계</em></h2>
+      <p class="sec-head__desc">복잡한 절차 없이, 카카오톡 한 번이면 시작됩니다.</p>
+    </header>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num">STEP 01</span>
+        <div class="step__ico" aria-hidden="true">💬</div>
+        <h3>상담 신청</h3>
+        <p>카카오톡 채널로 원하는 공연과 날짜, 좌석 조건을 알려주세요. 24시간 연중무휴로 상담해 드립니다.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">STEP 02</span>
+        <div class="step__ico" aria-hidden="true">🔐</div>
+        <h3>예약금 예치</h3>
+        <p>대행 수수료의 <b>30%</b>만 예약금으로 예치합니다. 실패 시에는 예약금을 <b>전액 환불</b>해 드립니다.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">STEP 03</span>
+        <div class="step__ico" aria-hidden="true">⚡</div>
+        <h3>대행 착수</h3>
+        <p>요청하신 조건에 맞춰 전문 인력이 예매를 진행합니다. 진행 상황은 실시간으로 안내드립니다.</p>
+      </li>
+      <li class="step">
+        <span class="step__num">STEP 04</span>
+        <div class="step__ico" aria-hidden="true">🎉</div>
+        <h3>결과 안내 · 후불결제</h3>
+        <p>성공 결과를 안내드린 뒤 남은 수수료를 결제합니다. <b>성공했을 때만</b> 잔액을 받습니다.</p>
+      </li>
+    </ol>
+
+    <p class="process__note">
+      <span aria-hidden="true">💡</span> 실패하면 수수료가 발생하지 않습니다. 예약금은 100% 돌려드립니다.
+    </p>
+  </div>
+</section>
+
+<!-- ===== 접수현황 ===== -->
+<section class="section section--cream" id="status">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-head__tag">STATUS</p>
+      <h2 class="sec-head__title">지금 <em>접수 중인 공연</em></h2>
+      <p class="sec-head__desc">찾는 공연이 없다면 문의해 주세요. 목록에 없는 공연도 대행 가능합니다.</p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="접수 상태 필터">
+      <button class="tab is-active" role="tab" aria-selected="true" data-filter="all">전체</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="open">접수중</button>
+      <button class="tab" role="tab" aria-selected="false" data-filter="done">대행성공</button>
+    </div>
+
+    <div class="shows" id="showList">
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>2025 RIIZE CONCERT TOUR [RIIZING LOUD] IN SEOUL</h3>
+        <p class="show__meta">서울 · 콘서트</p>
+        <a class="show__btn" href="#contact">대행 신청</a>
+      </article>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>2026 ZEROBASEONE WORLD TOUR [HERE&amp;NOW] ENCORE</h3>
+        <p class="show__meta">서울 · 앵콜 콘서트</p>
+        <a class="show__btn" href="#contact">대행 신청</a>
+      </article>
+      <article class="show" data-status="open">
+        <span class="show__badge show__badge--open">접수중</span>
+        <h3>2025-26 ONEW WORLD TOUR [ONEW THE LIVE]</h3>
+        <p class="show__meta">서울 · 월드투어</p>
+        <a class="show__btn" href="#contact">대행 신청</a>
+      </article>
+      <article class="show" data-status="done">
+        <span class="show__badge show__badge--done">대행성공</span>
+        <h3>IVE WORLD TOUR ‘SHOW WHAT I AM’</h3>
+        <p class="show__meta">아이브 · 월드투어</p>
+        <a class="show__btn show__btn--ghost" href="#success">성공내역 보기</a>
+      </article>
+      <article class="show" data-status="done">
+        <span class="show__badge show__badge--done">대행성공</span>
+        <h3>2025 PLAVE Asia Tour [DASH: Quantum Leap] 앙콘</h3>
+        <p class="show__meta">플레이브 · 아시아투어</p>
+        <a class="show__btn show__btn--ghost" href="#success">성공내역 보기</a>
+      </article>
+      <article class="show" data-status="done">
+        <span class="show__badge show__badge--done">대행성공</span>
+        <h3>Stray Kids World Tour</h3>
+        <p class="show__meta">스트레이키즈 · 월드투어</p>
+        <a class="show__btn show__btn--ghost" href="#success">성공내역 보기</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 성공내역 ===== -->
+<section class="section section--white" id="success">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="sec-head__tag">SUCCESS</p>
+      <h2 class="sec-head__title">쌓여가는 <em>성공 내역</em></h2>
+      <p class="sec-head__desc">실제로 진행한 대행 결과를 그대로 공개합니다.</p>
+    </header>
+
+    <div class="success-grid" id="successGrid">
+      <article class="succ"><div class="succ__top"><h3>프로미스나인 콘서트</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2025.12.27</p></article>
+      <article class="succ"><div class="succ__top"><h3>쿱스민큐 CXM 콘서트</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2025.12.16</p></article>
+      <article class="succ"><div class="succ__top"><h3>제로베이스원 콘서트</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2025.10.14</p></article>
+      <article class="succ"><div class="succ__top"><h3>도영 콘서트</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2025.09.23</p></article>
+      <article class="succ"><div class="succ__top"><h3>세븐틴 인천 콘서트</h3><span class="succ__cnt">8X건</span></div><p class="succ__date">2025.09.05</p></article>
+      <article class="succ"><div class="succ__top"><h3>임영웅 인천 콘서트</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2025.09.01</p></article>
+      <article class="succ is-hidden"><div class="succ__top"><h3>추영우 팬미팅</h3><span class="succ__cnt">3X건</span></div><p class="succ__date">2025.08.29</p></article>
+      <article class="succ is-hidden"><div class="succ__top"><h3>몬스타엑스 콘서트</h3><span class="succ__cnt">4X건</span></div><p class="succ__date">2025.08.27</p></article>
+      <article class="succ is-hidden"><div class="succ__top"><h3>호시노 겐 내한</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2025.08.27</p></article>
+      <article class="succ is-hidden"><div class="succ__top"><h3>투바투 고척 콘서트</h3><span class="succ__cnt">6X건</span></div><p class="succ__date">2025.08.04</p></article>
+      <article class="succ is-hidden"><div class="succ__top"><h3>태민 팬미팅</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2025.08.04</p></article>
+      <article class="succ is-hidden"><div class="succ__top"><h3>임윤찬 리사이틀</h3><span class="succ__cnt">2X건</span></div><p class="succ__date">2025.08.04</p></article>
+    </div>
+
+    <div class="more-wrap">
+      <button class="btn btn--outline" id="moreBtn">성공내역 더 보기 <i aria-hidden="true">▾</i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 왜 에브리티켓 ===== -->
+<section class="section section--band" id="why">
+  <div class="wrap">
+    <header class="sec-head sec-head--light">
+      <p class="sec-head__tag">WHY US</p>
+      <h2 class="sec-head__title">왜 <em>에브리티켓</em>일까요?</h2>
+      <p class="sec-head__desc">고객이 손해 볼 일이 없도록 시스템을 만들었습니다.</p>
+    </header>
+
+    <div class="whys">
+      <div class="why"><div class="why__ico" aria-hidden="true">🛡️</div><h3>실패하면 0원</h3><p>성공 시에만 수수료를 청구하고, 실패 시 예약금은 전액 환불합니다.</p></div>
+      <div class="why"><div class="why__ico" aria-hidden="true">👥</div><h3>전담 인력 배정</h3><p>공연별 전담 인력이 여러 회선으로 동시에 예매를 진행합니다.</p></div>
+      <div class="why"><div class="why__ico" aria-hidden="true">🔔</div><h3>실시간 진행 안내</h3><p>티켓 오픈 전후 진행 상황과 결과를 바로 알려드립니다.</p></div>
+      <div class="why"><div class="why__ico" aria-hidden="true">🤫</div><h3>개인정보 철저 보호</h3><p>제공해 주신 정보는 대행 목적 외 사용하지 않으며 완료 후 폐기합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section section--cream" id="faq">
+  <div class="wrap wrap--narrow">
+    <header class="sec-head">
+      <p class="sec-head__tag">FAQ</p>
+      <h2 class="sec-head__title">자주 묻는 <em>질문</em></h2>
+    </header>
+
+    <div class="faq">
+      <details class="faq__item" open>
+        <summary>수수료는 어떻게 결제하나요?</summary>
+        <div class="faq__body"><p>먼저 대행 수수료의 30%를 예약금으로 예치하시고, 예매에 성공하면 남은 70%를 후불로 결제하시면 됩니다. 실패한 경우 예약금은 전액 환불해 드립니다.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>어떤 정보를 알려드려야 하나요?</summary>
+        <div class="faq__body"><p>공연명, 희망 날짜와 회차, 인원, 선호 좌석(플로어/VIP/지정석 등), 예매처 계정 정보가 필요합니다. 상담 시 순서대로 안내해 드립니다.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>티켓 오픈 얼마 전까지 신청해야 하나요?</summary>
+        <div class="faq__body"><p>티켓 오픈 <b>최소 24시간 전</b> 신청을 권장합니다. 인기 공연은 조기 마감될 수 있으니 오픈 공지가 뜨는 즉시 문의해 주세요.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>목록에 없는 공연도 신청할 수 있나요?</summary>
+        <div class="faq__body"><p>가능합니다. 콘서트뿐 아니라 뮤지컬, 팬미팅, 내한 공연, 스포츠 경기, 전시 등 온라인 선착순 예매라면 대부분 대행할 수 있습니다.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>여러 좌석을 한 번에 신청할 수 있나요?</summary>
+        <div class="faq__body"><p>네, 연석과 다구역 동시 진행 모두 가능합니다. 인원과 좌석 조건을 알려주시면 최적의 방식으로 안내해 드립니다.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary>개인정보는 안전하게 관리되나요?</summary>
+        <div class="faq__body"><p>대행 목적 외에는 절대 사용하지 않으며, 업무가 종료되면 즉시 폐기합니다. 예매 완료 후 계정 비밀번호 변경을 권장드립니다.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 문의 CTA ===== -->
+<section class="contact" id="contact">
+  <div class="wrap contact__inner">
+    <div class="contact__copy">
+      <p class="contact__tag">CONTACT</p>
+      <h2>놓치고 싶지 않은 공연,<br>지금 바로 상담하세요</h2>
+      <p class="contact__desc">카카오톡 채널로 문의하시면 평균 5분 이내에 답변드립니다.<br>상담은 무료이며, 24시간 연중무휴로 운영됩니다.</p>
+      <div class="contact__btns">
+        <a class="btn btn--kakao" href="#" data-placeholder="kakao">
+          <span class="btn__ico" aria-hidden="true">💬</span> 카카오톡 채널 상담
+        </a>
+        <a class="btn btn--outline-light" href="#status">접수 공연 확인</a>
+      </div>
+      <ul class="contact__info">
+        <li><b>상담 시간</b> 24시간 연중무휴</li>
+        <li><b>평균 응답</b> 5분 이내</li>
+        <li><b>결제 방식</b> 성공 시 후불결제</li>
+      </ul>
+    </div>
+
+    <div class="contact__card">
+      <div class="qr">
+        <div class="qr__box" aria-hidden="true">💛</div>
+        <p class="qr__label">카카오톡 채널</p>
+        <p class="qr__name">@에브리티켓</p>
+      </div>
+      <p class="contact__hint">채널 추가 후 “공연명 + 날짜”만 보내주세요.<br>나머지는 저희가 안내해 드립니다.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== 푸터 ===== -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <span class="logo__text logo__text--light">에브리<em>티켓</em></span>
+      <p>업계 최고의 전문업체, 모든 티켓 서비스<br>양도 · 대리예매 · 선예매 문의</p>
+    </div>
+    <div class="footer__links">
+      <div><h4>서비스</h4><a href="#service">티켓팅 대행</a><a href="#service">예약 대행</a><a href="#service">입찰 대행</a><a href="#service">신청 대행</a></div>
+      <div><h4>안내</h4><a href="#process">이용 절차</a><a href="#status">접수현황</a><a href="#success">성공내역</a><a href="#faq">자주 묻는 질문</a></div>
+    </div>
+    <div class="footer__biz">
+      <p>상호명 : 에브리티켓</p>
+      <p>사업자등록번호 : 000-00-00000</p>
+      <p>대표번호 : 카카오톡 채널 상담</p>
+    </div>
+  </div>
+  <div class="wrap footer__bottom">
+    <p>Copyright © 에브리티켓 All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- 모바일 하단 고정 CTA -->
+<div class="mobile-cta">
+  <a class="mobile-cta__btn mobile-cta__btn--ghost" href="#status">접수현황</a>
+  <a class="mobile-cta__btn mobile-cta__btn--main" href="#contact">💬 카카오톡 상담</a>
+</div>
+
+<button class="to-top" id="toTop" aria-label="맨 위로">▲</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
