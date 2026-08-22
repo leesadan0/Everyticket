@@ -420,7 +420,7 @@
 
   const loadProofs = () => {
     if (!proofsGrid) return;
-    fetch('assets/data/proofs.json?v=2')
+    fetch('assets/data/proofs.json?v=3')
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
         const raw = Array.isArray(data.proofs) ? data.proofs : [];
