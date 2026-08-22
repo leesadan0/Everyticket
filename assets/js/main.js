@@ -123,7 +123,7 @@
   const scrollSection = (id) => scrollToAnchor(id);
 
   /* ---------- 접수현황 필터 ---------- */
-  const tabs = document.querySelectorAll('.tab');
+  const tabs = document.querySelectorAll('#status .tab');
   const showList = document.getElementById('showList');
   const showPager = document.getElementById('showPager');
   const showSearch = document.getElementById('showSearch');
@@ -137,7 +137,7 @@
     return t.indexOf(q) !== -1;
   };
   const activeShowFilter = () => {
-    const active = document.querySelector('.tab.is-active');
+    const active = document.querySelector('#status .tab.is-active');
     return (active && active.dataset.filter) || 'all';
   };
 
@@ -321,16 +321,16 @@
         };
         showList.innerHTML = ordered.map(cardHtml).join('');
         showPage = 1;
-        const active = document.querySelector('.tab.is-active');
+        const active = document.querySelector('#status .tab.is-active');
         applyShowFilter((active && active.dataset.filter) || 'all');
       })
       .catch(() => {
-        const active = document.querySelector('.tab.is-active');
+        const active = document.querySelector('#status .tab.is-active');
         applyShowFilter((active && active.dataset.filter) || 'all');
       });
   };
   if (showList) {
-    const active = document.querySelector('.tab.is-active');
+    const active = document.querySelector('#status .tab.is-active');
     applyShowFilter((active && active.dataset.filter) || 'all');
   }
 
@@ -338,15 +338,24 @@
   const succPager = document.getElementById('succPager');
   const succSearch = document.getElementById('succSearch');
   const succEmpty = document.getElementById('succEmpty');
+  const succTabs = document.querySelectorAll('#succTabs .tab');
   let succPage = 1;
+  const activeSuccKind = () => {
+    const active = document.querySelector('#succTabs .tab.is-active');
+    return (active && active.dataset.kind) || 'all';
+  };
   const paintSuccPage = (scroll) => {
     const grid = document.getElementById('successGrid');
     if (!grid) return;
     const q = normQ(succSearch && succSearch.value);
+    const kind = activeSuccKind();
     const all = Array.from(grid.querySelectorAll('.succ'));
-    const matches = all.filter((el) => textMatch(el, q));
+    const matches = all.filter((el) => {
+      const k = el.getAttribute('data-kind') || (el.classList.contains('succ--soon') ? 'delta' : 'move');
+      return (kind === 'all' || k === kind) && textMatch(el, q);
+    });
     all.forEach((el) => {
-      if (matches.indexOf(el) < 0) el.classList.add('is-hidden');
+      el.classList.toggle('is-hidden', matches.indexOf(el) < 0);
     });
     const totalPages = Math.max(1, Math.ceil(matches.length / SUCC_PAGE_SIZE));
     if (succPage > totalPages) succPage = totalPages;
@@ -361,6 +370,18 @@
     });
     if (scroll) scrollSection('success');
   };
+  succTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      succTabs.forEach((t) => {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      succPage = 1;
+      paintSuccPage(false);
+    });
+  });
   if (succSearch) {
     succSearch.addEventListener('input', () => {
       succPage = 1;
@@ -896,7 +917,7 @@
       const kind = soon ? ' succ--soon' : ' succ--move';
       const hint = soon ? '댈티 후기' : '아옮 후기';
       return (
-        '<article class="succ' + kind + '" data-review="' + key + '" tabindex="0">' +
+        '<article class="succ' + kind + '" data-review="' + key + '" data-kind="' + (soon ? 'delta' : 'move') + '" tabindex="0">' +
           '<div class="succ__top"><h3>' + escapeHtml(s.title) + '</h3><span class="succ__cnt">' + badge + '</span></div>' +
           '<p class="succ__date">' + cardDateHtml(s) + '</p>' +
           '<p class="succ__hint">' + hint + '</p>' +
