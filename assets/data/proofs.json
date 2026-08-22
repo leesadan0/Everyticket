@@ -15,11 +15,74 @@
       "seat": "스탠딩 Floor RED구역"
     },
     {
+      "date": "2026-09-13",
+      "title": "PLAVE KEEP IT MANIC 인천",
+      "src": "assets/img/proofs/plave-keep-it-manic.jpg",
+      "meta": "2026.09.13 · 인천문학경기장",
+      "seat": "VIP석 Floor층 F7구역 20열"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "BIGBANG WORLD TOUR 고양",
+      "src": "assets/img/proofs/bigbang-goyang.jpg",
+      "meta": "2026.08.21–23 · 고양종합운동장",
+      "seat": "플로어 R석 FLOOR F2구역, F4구역"
+    },
+    {
+      "date": "2026-08-01",
+      "title": "뮤지컬 디어 에반 핸슨",
+      "src": "assets/img/proofs/dear-evan-hansen.jpg",
+      "meta": "2026.08.01–11.01 · 충무아트센터",
+      "seat": "1층 B구역 1열"
+    },
+    {
+      "date": "2026-07-18",
+      "title": "장경민 숲의 소음",
+      "src": "assets/img/proofs/jangkyungmin.jpg",
+      "meta": "2026.07.18–19 · CJ아지트 광흥창",
+      "seat": "VVIP석 A구역"
+    },
+    {
       "date": "2026-07-03",
       "title": "DAY6 The DECADE FINALE",
       "src": "assets/img/proofs/recent/day6-decade-finale.jpg",
       "meta": "2026.07.03 · KSPO DOME",
       "seat": "Floor S4구역"
+    },
+    {
+      "date": "2026-06-27",
+      "title": "최유리 팬 콘서트 2026",
+      "src": "assets/img/proofs/choiyuree.jpg",
+      "meta": "2026.06.27 · NOL 씨어터 합정",
+      "seat": "1층 1열"
+    },
+    {
+      "date": "2026-06-12",
+      "title": "ALPHA DRIVE ONE STAR ROAD",
+      "src": "assets/img/proofs/alphadriveone-star-road.jpg",
+      "meta": "2026.06.12 · 인스파이어 아레나",
+      "seat": "Floor층 F1구역 5열"
+    },
+    {
+      "date": "2026-06-07",
+      "title": "N.Flying Awesome Stage 부산",
+      "src": "assets/img/proofs/nflying-awesome-stage.jpg",
+      "meta": "2026.06.07 · 벡스코 오디토리움",
+      "seat": "R석 1층 E구역"
+    },
+    {
+      "date": "2026-05-23",
+      "title": "홍이삭 콘서트 Sway",
+      "src": "assets/img/proofs/hongisaac-sway.jpg",
+      "meta": "2026.05.23–25 · 티켓링크 1975 씨어터",
+      "seat": "전석 B구역"
+    },
+    {
+      "date": "2026-05-03",
+      "title": "WONPIL Unfiltered",
+      "src": "assets/img/proofs/wonpil-unfiltered.jpg",
+      "meta": "2026.05.03 · 잠실실내체육관",
+      "seat": "3층 6열"
     },
     {
       "date": "2026-04-19",
