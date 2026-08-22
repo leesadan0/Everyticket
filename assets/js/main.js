@@ -35,24 +35,48 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  const scrollInquiryForm = () => {
-    const mark = document.querySelector('#inquiry .sec-head');
-    if (!mark) return;
+  /* ---------- 섹션 앵커 이동 ---------- */
+  const ANCHOR_GAP = 12;
+
+  /* transform(등장 효과)에 영향받지 않는 문서 기준 위치 */
+  const docTop = (el) => {
+    let y = 0;
+    for (let node = el; node; node = node.offsetParent) y += node.offsetTop;
+    return y;
+  };
+
+  const scrollToAnchor = (id) => {
+    if (!id || id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return true;
+    }
+    const sec = document.getElementById(id);
+    if (!sec) return false;
+    const mark = sec.querySelector('.sec-head, .contact__copy') || sec;
     const headerH = header ? header.getBoundingClientRect().height : 74;
-    const top = mark.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top: Math.max(0, Math.round(top - headerH - 12)), behavior: 'smooth' });
+    const top = docTop(mark) - headerH - ANCHOR_GAP;
+    window.scrollTo({ top: Math.max(0, Math.round(top)), behavior: 'smooth' });
+    return true;
   };
 
   document.addEventListener('click', (e) => {
-    const link = e.target.closest('a[href="#inquiry"]');
-    if (!link) return;
+    const link = e.target.closest('a[href^="#"]');
+    if (!link || link.classList.contains('skip-link')) return;
+    if (link.hasAttribute('data-kakao-open')) return;
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return;
+    const id = decodeURIComponent(href.slice(1));
+    if (id !== 'top' && !document.getElementById(id)) return;
     e.preventDefault();
-    scrollInquiryForm();
-    if (history.replaceState) history.replaceState(null, '', '#inquiry');
-    else location.hash = 'inquiry';
+    scrollToAnchor(id);
+    if (history.replaceState) history.replaceState(null, '', '#' + id);
+    else location.hash = id;
   });
-  if (location.hash === '#inquiry') {
-    window.setTimeout(scrollInquiryForm, 0);
+
+  if (location.hash) {
+    const landing = () => scrollToAnchor(decodeURIComponent(location.hash.slice(1)));
+    window.setTimeout(landing, 0);
+    window.addEventListener('load', () => window.setTimeout(landing, 0), { once: true });
   }
 
   /* ---------- 페이지 ---------- */
@@ -96,10 +120,7 @@
     });
   };
 
-  const scrollSection = (id) => {
-    const sec = document.getElementById(id);
-    if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  const scrollSection = (id) => scrollToAnchor(id);
 
   /* ---------- 접수현황 필터 ---------- */
   const tabs = document.querySelectorAll('.tab');
