@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-08-25T14:54:43",
+    "generated":  "2026-08-25T20:11:39",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  true,
     "shows":  [
@@ -88,30 +88,6 @@
                       "view":  93000
                   },
                   {
-                      "date":  "2026-09-12",
-                      "endDate":  "2026-09-12",
-                      "title":  "2026 크러쉬 팬미팅 〈ZZINBOMBTING : CRUSH FARM〉",
-                      "meta":  "명화라이브홀 · 9.12",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-20",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011974_p.gif",
-                      "view":  87999
-                  },
-                  {
-                      "date":  "2026-09-26",
-                      "endDate":  "2026-09-27",
-                      "title":  "Silica Gel Asia Tour 〈Syn.THE.Size: Ballad of You〉 in Seoul",
-                      "meta":  "KSPO DOME · 9.26-9.27",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-06-05",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007703_p.gif",
-                      "view":  87998
-                  },
-                  {
                       "date":  "2026-10-09",
                       "endDate":  "2026-10-11",
                       "title":  "2026 GHOST 페스티벌",
@@ -121,7 +97,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-15",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009992_p.gif",
-                      "view":  87997
+                      "view":  87999
                   },
                   {
                       "date":  "2026-09-12",
@@ -133,19 +109,31 @@
                       "source":  "interpark",
                       "open":  "2026-08-10",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010722_p.gif",
-                      "view":  87996
+                      "view":  87998
                   },
                   {
-                      "date":  "2026-10-03",
-                      "endDate":  "2026-10-03",
-                      "title":  "이성경 ［똑똑★반짝이들］ 2026 FANMEETING",
-                      "meta":  "스카이아트홀 · 10.3",
+                      "date":  "2026-09-26",
+                      "endDate":  "2026-09-27",
+                      "title":  "Silica Gel Asia Tour 〈Syn.THE.Size: Ballad of You〉 in Seoul",
+                      "meta":  "KSPO DOME · 9.26-9.27",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-06-05",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007703_p.gif",
+                      "view":  87997
+                  },
+                  {
+                      "date":  "2026-09-12",
+                      "endDate":  "2026-09-12",
+                      "title":  "2026 크러쉬 팬미팅 〈ZZINBOMBTING : CRUSH FARM〉",
+                      "meta":  "명화라이브홀 · 9.12",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
                       "open":  "2026-08-20",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011243_p.gif",
-                      "view":  87995
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011974_p.gif",
+                      "view":  87996
                   },
                   {
                       "date":  "2026-09-11",
@@ -157,19 +145,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-05",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011367_p.gif",
-                      "view":  87994
-                  },
-                  {
-                      "date":  "2026-10-04",
-                      "endDate":  "2026-10-04",
-                      "title":  "［고양］ 2026 씨야 20주년 전국 투어 콘서트 : THE FAN",
-                      "meta":  "킨텍스 제2전시장 10홀 · 10.4",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-25",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012400_p.gif",
-                      "view":  87993
+                      "view":  87995
                   },
                   {
                       "date":  "2026-10-02",
@@ -181,7 +157,43 @@
                       "source":  "interpark",
                       "open":  "2026-08-21",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012206_p.gif",
+                      "view":  87994
+                  },
+                  {
+                      "date":  "2026-12-12",
+                      "endDate":  "2026-12-12",
+                      "title":  "WHO ASKED？ TOUR DOMi ＆ JD BECK LIVE IN SEOUL",
+                      "meta":  "공감센터 공감홀 · 12.12",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-25",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012221_p.gif",
+                      "view":  87993
+                  },
+                  {
+                      "date":  "2026-10-03",
+                      "endDate":  "2026-10-03",
+                      "title":  "이성경 ［똑똑★반짝이들］ 2026 FANMEETING",
+                      "meta":  "스카이아트홀 · 10.3",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-20",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011243_p.gif",
                       "view":  87992
+                  },
+                  {
+                      "date":  "2026-10-04",
+                      "endDate":  "2026-10-04",
+                      "title":  "［고양］ 2026 씨야 20주년 전국 투어 콘서트 : THE FAN",
+                      "meta":  "킨텍스 제2전시장 10홀 · 10.4",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-25",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012400_p.gif",
+                      "view":  87991
                   },
                   {
                       "date":  "2026-10-03",
@@ -193,7 +205,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-30",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010980_p.gif",
-                      "view":  87991
+                      "view":  87990
                   },
                   {
                       "date":  "2026-09-05",
@@ -205,7 +217,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-28",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010473_p.gif",
-                      "view":  87990
+                      "view":  87989
                   },
                   {
                       "date":  "2026-08-29",
@@ -217,7 +229,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-29",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008404_p.gif",
-                      "view":  87989
+                      "view":  87988
                   },
                   {
                       "date":  "2026-09-26",
@@ -229,7 +241,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-20",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008115_p.gif",
-                      "view":  87988
+                      "view":  87987
                   },
                   {
                       "date":  "2026-10-03",
@@ -241,7 +253,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-18",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007670_p.gif",
-                      "view":  87987
+                      "view":  87986
                   },
                   {
                       "date":  "2026-09-05",
@@ -253,7 +265,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-06",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011195_p.gif",
-                      "view":  87986
+                      "view":  87985
                   },
                   {
                       "date":  "2027-01-27",
@@ -265,7 +277,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-19",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011315_p.gif",
-                      "view":  87985
+                      "view":  87984
                   },
                   {
                       "date":  "2026-12-05",
@@ -277,7 +289,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-05",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010352_p.gif",
-                      "view":  87984
+                      "view":  87983
                   },
                   {
                       "date":  "2026-08-29",
@@ -289,7 +301,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-06",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010239_p.gif",
-                      "view":  87983
+                      "view":  87982
                   },
                   {
                       "date":  "2026-10-17",
@@ -301,7 +313,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-12",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010721_p.gif",
-                      "view":  87982
+                      "view":  87981
                   },
                   {
                       "date":  "2026-09-19",
@@ -313,7 +325,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-14",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011785_p.gif",
-                      "view":  87981
+                      "view":  87980
                   },
                   {
                       "date":  "2026-09-03",
@@ -325,7 +337,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-21",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011731_p.gif",
-                      "view":  87980
+                      "view":  87979
                   },
                   {
                       "date":  "2026-12-03",
@@ -337,7 +349,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-20",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011116_p.gif",
-                      "view":  87979
+                      "view":  87978
                   },
                   {
                       "date":  "2026-09-05",
@@ -349,7 +361,7 @@
                       "source":  "interpark",
                       "open":  "2026-03-10",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26004504_p.gif",
-                      "view":  87978
+                      "view":  87977
                   },
                   {
                       "date":  "2026-09-19",
@@ -361,7 +373,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-30",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009383_p.gif",
-                      "view":  87977
+                      "view":  87976
                   },
                   {
                       "date":  "2026-09-12",
@@ -373,7 +385,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-14",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011916_p.gif",
-                      "view":  87976
+                      "view":  87975
                   },
                   {
                       "date":  "2026-10-26",
@@ -385,7 +397,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-04",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010154_p.gif",
-                      "view":  87975
+                      "view":  87974
                   },
                   {
                       "date":  "2026-09-12",
@@ -397,7 +409,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-11",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011525_p.gif",
-                      "view":  87974
+                      "view":  87973
                   },
                   {
                       "date":  "2026-09-19",
@@ -409,7 +421,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-28",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010264_p.gif",
-                      "view":  87973
+                      "view":  87972
                   },
                   {
                       "date":  "2026-09-11",
@@ -421,7 +433,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-05",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011047_p.gif",
-                      "view":  87972
+                      "view":  87971
                   },
                   {
                       "date":  "2026-08-29",
@@ -433,7 +445,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-30",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010675_p.gif",
-                      "view":  87971
+                      "view":  87970
                   },
                   {
                       "date":  "2026-10-03",
@@ -445,7 +457,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-21",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012121_p.gif",
-                      "view":  87970
+                      "view":  87969
                   },
                   {
                       "date":  "2026-12-12",
@@ -457,7 +469,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-18",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011556_p.gif",
-                      "view":  87969
+                      "view":  87968
                   },
                   {
                       "date":  "2026-12-05",
@@ -469,7 +481,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-21",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009919_p.gif",
-                      "view":  87968
+                      "view":  87967
                   },
                   {
                       "date":  "2026-09-05",
@@ -481,7 +493,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-03",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010698_p.gif",
-                      "view":  87967
+                      "view":  87966
                   },
                   {
                       "date":  "2026-11-11",
@@ -493,7 +505,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-05",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010322_p.gif",
-                      "view":  87966
+                      "view":  87965
                   },
                   {
                       "date":  "2026-08-29",
@@ -505,7 +517,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-29",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010571_p.gif",
-                      "view":  87965
+                      "view":  87964
                   },
                   {
                       "date":  "2026-10-17",
@@ -517,7 +529,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-24",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010474_p.gif",
-                      "view":  87964
+                      "view":  87963
                   },
                   {
                       "date":  "2026-12-06",
@@ -529,7 +541,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-16",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009565_p.gif",
-                      "view":  87963
+                      "view":  87962
                   },
                   {
                       "date":  "2026-10-03",
@@ -541,7 +553,7 @@
                       "source":  "interpark",
                       "open":  "2026-04-02",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26004771_p.gif",
-                      "view":  87962
+                      "view":  87961
                   },
                   {
                       "date":  "2027-01-07",
@@ -553,7 +565,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-29",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008451_p.gif",
-                      "view":  87961
+                      "view":  87960
                   },
                   {
                       "date":  "2026-10-07",
@@ -565,7 +577,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-18",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006903_p.gif",
-                      "view":  87960
+                      "view":  87959
                   },
                   {
                       "date":  "2026-12-22",
@@ -577,7 +589,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-15",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010060_p.gif",
-                      "view":  87959
+                      "view":  87958
                   },
                   {
                       "date":  "2026-08-29",
@@ -589,7 +601,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-29",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006786_p.gif",
-                      "view":  87958
+                      "view":  87957
                   },
                   {
                       "date":  "2026-11-28",
@@ -601,7 +613,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-03",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010681_p.gif",
-                      "view":  87957
+                      "view":  87956
                   },
                   {
                       "date":  "2026-08-29",
@@ -613,7 +625,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-29",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009013_p.gif",
-                      "view":  87956
+                      "view":  87955
                   },
                   {
                       "date":  "2026-10-04",
@@ -625,7 +637,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-15",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007834_p.gif",
-                      "view":  87955
+                      "view":  87954
                   },
                   {
                       "date":  "2026-10-24",
@@ -637,7 +649,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-08",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008033_p.gif",
-                      "view":  87954
+                      "view":  87953
                   },
                   {
                       "date":  "2026-10-11",
@@ -649,7 +661,7 @@
                       "source":  "interpark",
                       "open":  "2026-05-21",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26005759_p.gif",
-                      "view":  87953
+                      "view":  87952
                   },
                   {
                       "date":  "2026-11-19",
@@ -661,7 +673,7 @@
                       "source":  "interpark",
                       "open":  "2026-05-26",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006756_p.gif",
-                      "view":  87952
+                      "view":  87951
                   },
                   {
                       "date":  "2026-09-05",
@@ -673,7 +685,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-06",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011393_p.gif",
-                      "view":  87951
+                      "view":  87950
                   },
                   {
                       "date":  "2026-10-02",
@@ -685,7 +697,7 @@
                       "source":  "interpark",
                       "open":  "2026-04-15",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26004944_p.gif",
-                      "view":  87950
+                      "view":  87949
                   },
                   {
                       "date":  "2026-10-24",
@@ -697,7 +709,7 @@
                       "source":  "interpark",
                       "open":  "2026-05-18",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006739_p.gif",
-                      "view":  87949
+                      "view":  87948
                   },
                   {
                       "date":  "2026-10-18",
@@ -709,7 +721,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-03",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009086_p.gif",
-                      "view":  87948
+                      "view":  87947
                   },
                   {
                       "date":  "2026-09-19",
@@ -721,7 +733,7 @@
                       "source":  "interpark",
                       "open":  "2026-03-16",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26003199_p.gif",
-                      "view":  87947
+                      "view":  87946
                   },
                   {
                       "date":  "2026-10-28",
@@ -733,7 +745,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-18",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011727_p.gif",
-                      "view":  87946
+                      "view":  87945
                   },
                   {
                       "date":  "2026-10-09",
@@ -745,7 +757,7 @@
                       "source":  "ticketlink",
                       "open":  "2026-08-26",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_2/cs_poster_0813.jpg",
-                      "view":  13597
+                      "view":  13804
                   },
                   {
                       "date":  "2026-11-07",
@@ -762,14 +774,14 @@
                   {
                       "date":  "2026-09-18",
                       "endDate":  "2026-09-20",
-                      "title":  "2026-27 TAEMIN WORLD TOUR 〈LiMiNaL〉 in SEOUL",
+                      "title":  "2026-27 TAEMIN WORLD TOUR LiMiNaL in SEOUL",
                       "meta":  "잠실실내체육관 · 9.18-9.20",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "yes24",
                       "open":  "2026-08-10",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260807/20260807-59646_1.jpg",
-                      "view":  11628
+                      "view":  11486
                   },
                   {
                       "date":  "2026-10-17",
@@ -781,7 +793,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-24",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260821/20260821-59841.jpg",
-                      "view":  5497
+                      "view":  5530
                   },
                   {
                       "date":  "2026-10-03",
@@ -793,7 +805,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-12",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202607/20260731/20260731-59422.jpg",
-                      "view":  5426
+                      "view":  5444
                   },
                   {
                       "date":  "2026-10-17",
@@ -805,7 +817,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-19",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
-                      "view":  5135
+                      "view":  5144
                   },
                   {
                       "date":  "2026-09-20",
@@ -817,7 +829,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-20",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260814/20260814-59766.jpg",
-                      "view":  5007
+                      "view":  5101
                   },
                   {
                       "date":  "2026-10-24",
@@ -829,7 +841,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-31",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012327_p.gif",
-                      "view":  4882
+                      "view":  4997
                   },
                   {
                       "date":  "2026-11-07",
@@ -841,19 +853,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-31",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260818/20260818-59781.jpg",
-                      "view":  4620
-                  },
-                  {
-                      "date":  "2026-10-09",
-                      "endDate":  "2026-10-11",
-                      "title":  "2026 10CM FAN CONCERT 〈THE MISSING TRACKS〉 사라진 곡들의 행방",
-                      "meta":  "올림픽공원 올림픽홀 · 10.9-10.11",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-24",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011325_p.gif",
-                      "view":  4451
+                      "view":  4637
                   },
                   {
                       "date":  "2026-10-09",
@@ -865,7 +865,19 @@
                       "source":  "yes24",
                       "open":  "2026-08-12",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59698.jpg",
-                      "view":  4425
+                      "view":  4520
+                  },
+                  {
+                      "date":  "2026-10-09",
+                      "endDate":  "2026-10-11",
+                      "title":  "2026 10CM FAN CONCERT 〈THE MISSING TRACKS〉 사라진 곡들의 행방",
+                      "meta":  "올림픽공원 올림픽홀 · 10.9-10.11",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-24",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011325_p.gif",
+                      "view":  4506
                   },
                   {
                       "date":  "2026-10-09",
@@ -877,7 +889,7 @@
                       "source":  "interpark",
                       "open":  "2026-09-08",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011526_p.gif",
-                      "view":  4033
+                      "view":  4177
                   },
                   {
                       "date":  "2026-10-04",
@@ -889,7 +901,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-26",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260813/20260813-59746.jpg",
-                      "view":  3926
+                      "view":  3966
                   },
                   {
                       "date":  "2026-12-20",
@@ -901,7 +913,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-19",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260810/20260810-59669.jpg",
-                      "view":  3709
+                      "view":  3715
                   },
                   {
                       "date":  "2026-11-20",
@@ -913,19 +925,7 @@
                       "source":  "yes24",
                       "open":  "2026-09-01",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260820/20260820-59840.png",
-                      "view":  3322
-                  },
-                  {
-                      "date":  "2026-11-28",
-                      "endDate":  "2026-11-28",
-                      "title":  "엘르가든 내한공연 ELLEGARDEN ‘Bad For Education Tour II (2026)’",
-                      "meta":  "YES24 LIVE HALL · 11.28",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-09-01",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260818/20260818-59771.jpg",
-                      "view":  3111
+                      "view":  3337
                   },
                   {
                       "date":  "2026-10-10",
@@ -937,19 +937,19 @@
                       "source":  "yes24",
                       "open":  "2026-08-27",
                       "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202608/20260821/20260821-2b1f6645-d394-4161-b6f8-a368733ba382.jpg",
-                      "view":  3027
+                      "view":  3165
                   },
                   {
-                      "date":  "2026-12-12",
-                      "endDate":  "2026-12-12",
-                      "title":  "WHO ASKED？ TOUR DOMi ＆ JD BECK LIVE IN SEOUL",
-                      "meta":  "공감센터 공감홀 · 12.12",
+                      "date":  "2026-11-28",
+                      "endDate":  "2026-11-28",
+                      "title":  "엘르가든 내한공연 ELLEGARDEN ‘Bad For Education Tour II (2026)’",
+                      "meta":  "YES24 LIVE HALL · 11.28",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-25",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012221_p.gif",
-                      "view":  2629
+                      "source":  "yes24",
+                      "open":  "2026-09-01",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260818/20260818-59771.jpg",
+                      "view":  3130
                   },
                   {
                       "date":  "2026-10-11",
@@ -961,7 +961,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-12",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260812/20260812-59681.jpg",
-                      "view":  2485
+                      "view":  2492
                   },
                   {
                       "date":  "2026-10-31",
@@ -973,7 +973,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-27",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012230_p.gif",
-                      "view":  2274
+                      "view":  2295
                   },
                   {
                       "date":  "2026-09-18",
@@ -985,7 +985,7 @@
                       "source":  "ticketlink",
                       "open":  "2026-08-26",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_10/main0820.jpg",
-                      "view":  1961
+                      "view":  2065
                   },
                   {
                       "date":  "2026-10-10",
@@ -997,7 +997,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-13",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
-                      "view":  1894
+                      "view":  1897
                   },
                   {
                       "date":  "2026-09-23",
@@ -1009,7 +1009,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-27",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011422_p.gif",
-                      "view":  1451
+                      "view":  1498
                   },
                   {
                       "date":  "2026-10-13",
@@ -1021,19 +1021,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-28",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012402_p.gif",
-                      "view":  982
-                  },
-                  {
-                      "date":  "2026-10-17",
-                      "endDate":  "2026-10-17",
-                      "title":  "2026 윤종신 전국투어 콘서트 수원",
-                      "meta":  "경기아트센터 대극장 · 10.17",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "ticketlink",
-                      "open":  "2026-08-25",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_1/SW_poster_0822.jpg",
-                      "view":  846
+                      "view":  1053
                   },
                   {
                       "date":  "2026-10-11",
@@ -1045,55 +1033,31 @@
                       "source":  "ticketlink",
                       "open":  "2026-08-31",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_4/pst_0820_1642.jpg",
-                      "view":  834
+                      "view":  867
                   },
                   {
-                      "date":  "2026-10-31",
-                      "endDate":  "2026-10-31",
-                      "title":  "2026 윤종신 전국투어 콘서트 〈가을냄새〉 부산",
-                      "meta":  "소향씨어터 우리은행홀 · 10.31",
+                      "date":  "2026-11-01",
+                      "endDate":  "2026-11-01",
+                      "title":  "2026 김장훈 전국투어 콘서트 : 원맨쇼 - 원주",
+                      "meta":  "원주 백운아트홀 · 11.1",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-25",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012285_p.gif",
-                      "view":  721
-                  },
-                  {
-                      "date":  "2026-10-31",
-                      "endDate":  "2026-10-31",
-                      "title":  "［인천］2026 씨야 20주년 전국 투어 콘서트 : THE FAN",
-                      "meta":  "인천남동체육관 · 10.31",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-25",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012403_p.gif",
-                      "view":  698
+                      "source":  "ticketlink",
+                      "open":  "2026-08-27",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_10/kjh_wonju_pst0825.jpg",
+                      "view":  604
                   },
                   {
                       "date":  "2026-12-08",
                       "endDate":  "2026-12-08",
                       "title":  "슬로우다이브 내한공연",
-                      "meta":  "KBS아레나 · 12.8",
+                      "meta":  "KBS 아레나 · 12.8",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
                       "open":  "2026-08-28",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012276_p.gif",
-                      "view":  552
-                  },
-                  {
-                      "date":  "2026-11-20",
-                      "endDate":  "2026-11-22",
-                      "title":  "WONDERLIVET 2026 (원더리벳 2026)​",
-                      "meta":  "KINTEX HALL 7/8/9/10 · 11.20-11.22",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "ticketlink",
-                      "open":  "2026-09-01",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_4/pst_0820(1).jpg",
-                      "view":  539
+                      "view":  592
                   },
                   {
                       "date":  "2026-09-12",
@@ -1105,31 +1069,19 @@
                       "source":  "interpark",
                       "open":  "2026-08-27",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011954_p.gif",
-                      "view":  449
+                      "view":  570
                   },
                   {
-                      "date":  "2026-09-04",
-                      "endDate":  "2026-09-12",
-                      "title":  "2026 모두페스티벌",
-                      "meta":  "봉산문화회관 가온홀 · 9.4-9.12",
+                      "date":  "2026-10-31",
+                      "endDate":  "2026-10-31",
+                      "title":  "[데뷔 60주년 기념공연］ 2026 남진 전국투어 콘서트 - 원주",
+                      "meta":  "원주 백운아트홀 · 10.31",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "ticketlink",
-                      "open":  "2026-08-24",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_10/pst_0821a.jpg",
-                      "view":  444
-                  },
-                  {
-                      "date":  "2026-09-03",
-                      "endDate":  "2026-09-03",
-                      "title":  "2026 모두페스티벌 개막공연-음악서사극",
-                      "meta":  "봉산문화회관 가온홀 · 9.3",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "ticketlink",
-                      "open":  "2026-08-24",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_6/mope_p_0820.jpg",
-                      "view":  432
+                      "open":  "2026-08-27",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_3/nj_wonju_pst0825.jpg",
+                      "view":  545
                   }
               ]
 }
