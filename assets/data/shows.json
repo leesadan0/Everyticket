@@ -1,7 +1,7 @@
 {
-    "generated":  "2026-08-22T05:22:05",
+    "generated":  "2026-08-25T14:54:43",
     "source":  "interpark,ticketlink,yes24,melon",
-    "melon":  false,
+    "melon":  true,
     "shows":  [
                   {
                       "date":  "2026-09-04",
@@ -88,18 +88,6 @@
                       "view":  93000
                   },
                   {
-                      "date":  "2026-09-26",
-                      "endDate":  "2026-09-27",
-                      "title":  "Silica Gel Asia Tour 〈Syn.THE.Size: Ballad of You〉 in Seoul",
-                      "meta":  "KSPO DOME · 9.26-9.27",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-06-05",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007703_p.gif",
-                      "view":  87999
-                  },
-                  {
                       "date":  "2026-09-12",
                       "endDate":  "2026-09-12",
                       "title":  "2026 크러쉬 팬미팅 〈ZZINBOMBTING : CRUSH FARM〉",
@@ -109,18 +97,30 @@
                       "source":  "interpark",
                       "open":  "2026-08-20",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011974_p.gif",
-                      "view":  87998
+                      "view":  87999
                   },
                   {
-                      "date":  "2026-09-11",
-                      "endDate":  "2026-09-20",
-                      "title":  "2026 적재 LIVE SESSION : in s c ap e",
-                      "meta":  "얼터(alter.) · 9.11-9.20",
+                      "date":  "2026-09-26",
+                      "endDate":  "2026-09-27",
+                      "title":  "Silica Gel Asia Tour 〈Syn.THE.Size: Ballad of You〉 in Seoul",
+                      "meta":  "KSPO DOME · 9.26-9.27",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
-                      "open":  "2026-08-05",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011367_p.gif",
+                      "open":  "2026-06-05",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007703_p.gif",
+                      "view":  87998
+                  },
+                  {
+                      "date":  "2026-10-09",
+                      "endDate":  "2026-10-11",
+                      "title":  "2026 GHOST 페스티벌",
+                      "meta":  "파주 임진각평화누리 · 10.9-10.11",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-07-15",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009992_p.gif",
                       "view":  87997
                   },
                   {
@@ -148,6 +148,30 @@
                       "view":  87995
                   },
                   {
+                      "date":  "2026-09-11",
+                      "endDate":  "2026-09-20",
+                      "title":  "2026 적재 LIVE SESSION : in s c ap e",
+                      "meta":  "얼터(alter.) · 9.11-9.20",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-05",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011367_p.gif",
+                      "view":  87994
+                  },
+                  {
+                      "date":  "2026-10-04",
+                      "endDate":  "2026-10-04",
+                      "title":  "［고양］ 2026 씨야 20주년 전국 투어 콘서트 : THE FAN",
+                      "meta":  "킨텍스 제2전시장 10홀 · 10.4",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-25",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012400_p.gif",
+                      "view":  87993
+                  },
+                  {
                       "date":  "2026-10-02",
                       "endDate":  "2026-10-04",
                       "title":  "2026 윤종신 전국투어 콘서트 〈가을냄새〉 서울",
@@ -157,19 +181,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-21",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012206_p.gif",
-                      "view":  87994
-                  },
-                  {
-                      "date":  "2026-10-09",
-                      "endDate":  "2026-10-11",
-                      "title":  "2026 GHOST 페스티벌",
-                      "meta":  "파주 임진각평화누리 · 10.9-10.11",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-07-15",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009992_p.gif",
-                      "view":  87993
+                      "view":  87992
                   },
                   {
                       "date":  "2026-10-03",
@@ -181,7 +193,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-30",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010980_p.gif",
-                      "view":  87992
+                      "view":  87991
                   },
                   {
                       "date":  "2026-09-05",
@@ -193,7 +205,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-28",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010473_p.gif",
-                      "view":  87991
+                      "view":  87990
                   },
                   {
                       "date":  "2026-08-29",
@@ -205,7 +217,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-29",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008404_p.gif",
-                      "view":  87990
+                      "view":  87989
                   },
                   {
                       "date":  "2026-09-26",
@@ -217,7 +229,7 @@
                       "source":  "interpark",
                       "open":  "2026-07-20",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008115_p.gif",
-                      "view":  87989
+                      "view":  87988
                   },
                   {
                       "date":  "2026-10-03",
@@ -229,7 +241,7 @@
                       "source":  "interpark",
                       "open":  "2026-06-18",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007670_p.gif",
-                      "view":  87988
+                      "view":  87987
                   },
                   {
                       "date":  "2026-09-05",
@@ -241,7 +253,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-06",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011195_p.gif",
-                      "view":  87987
+                      "view":  87986
                   },
                   {
                       "date":  "2027-01-27",
@@ -253,7 +265,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-19",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011315_p.gif",
-                      "view":  87986
+                      "view":  87985
                   },
                   {
                       "date":  "2026-12-05",
@@ -265,7 +277,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-05",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010352_p.gif",
-                      "view":  87985
+                      "view":  87984
                   },
                   {
                       "date":  "2026-08-29",
@@ -277,7 +289,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-06",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010239_p.gif",
-                      "view":  87984
+                      "view":  87983
                   },
                   {
                       "date":  "2026-10-17",
@@ -289,7 +301,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-12",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010721_p.gif",
-                      "view":  87983
+                      "view":  87982
                   },
                   {
                       "date":  "2026-09-19",
@@ -301,7 +313,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-14",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011785_p.gif",
-                      "view":  87982
+                      "view":  87981
                   },
                   {
                       "date":  "2026-09-03",
@@ -313,7 +325,7 @@
                       "source":  "interpark",
                       "open":  "2026-08-21",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011731_p.gif",
-                      "view":  87981
+                      "view":  87980
                   },
                   {
                       "date":  "2026-12-03",
@@ -325,18 +337,6 @@
                       "source":  "interpark",
                       "open":  "2026-08-20",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011116_p.gif",
-                      "view":  87980
-                  },
-                  {
-                      "date":  "2026-09-19",
-                      "endDate":  "2026-09-20",
-                      "title":  "2026 Asia Top Artist Festival",
-                      "meta":  "한강난지공원 · 9.19-9.20",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-07-30",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009383_p.gif",
                       "view":  87979
                   },
                   {
@@ -352,15 +352,15 @@
                       "view":  87978
                   },
                   {
-                      "date":  "2026-09-12",
-                      "endDate":  "2026-09-12",
-                      "title":  "2026 HYUNJAE 1st FANMEETING ［The Present for you］",
-                      "meta":  "코엑스아티움 우리은행홀 · 9.12",
+                      "date":  "2026-09-19",
+                      "endDate":  "2026-09-20",
+                      "title":  "2026 Asia Top Artist Festival",
+                      "meta":  "한강난지공원 · 9.19-9.20",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
-                      "open":  "2026-08-21",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011954_p.gif",
+                      "open":  "2026-07-30",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009383_p.gif",
                       "view":  87977
                   },
                   {
@@ -745,7 +745,7 @@
                       "source":  "ticketlink",
                       "open":  "2026-08-26",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_2/cs_poster_0813.jpg",
-                      "view":  12385
+                      "view":  13597
                   },
                   {
                       "date":  "2026-11-07",
@@ -769,103 +769,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-10",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260807/20260807-59646_1.jpg",
-                      "view":  11495
-                  },
-                  {
-                      "date":  "2026-10-03",
-                      "endDate":  "2026-10-04",
-                      "title":  "XMF(Xnterstellar Music Festival) 2026",
-                      "meta":  "인천 파라다이스시티 컬처파크 · 10.3-10.4",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-12",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202607/20260731/20260731-59422.jpg",
-                      "view":  5322
-                  },
-                  {
-                      "date":  "2026-10-04",
-                      "endDate":  "2026-10-04",
-                      "title":  "2026 HAN JI WOO 1ST FANMEETING 「SCENE #1: First moment」",
-                      "meta":  "서울 마포구 와우산로29가길 15 구름아래소극장 · 10.4",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-26",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260813/20260813-59746.jpg",
-                      "view":  3671
-                  },
-                  {
-                      "date":  "2026-12-20",
-                      "endDate":  "2026-12-20",
-                      "title":  "카와사키 타카야 내한공연 KAWASAKI TAKAYA LIVE IN SEOUL 2026",
-                      "meta":  "예스24 라이브홀 · 12.20",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-19",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260810/20260810-59669.jpg",
-                      "view":  3421
-                  },
-                  {
-                      "date":  "2026-10-17",
-                      "endDate":  "2026-10-17",
-                      "title":  "[부산] 2026 하루 첫 팬콘서트[오늘, 하루 : 처음 들려주는 이야기]",
-                      "meta":  "벡스코 오디토리움 · 10.17",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-19",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
-                      "view":  3078
-                  },
-                  {
-                      "date":  "2026-10-09",
-                      "endDate":  "2026-10-11",
-                      "title":  "2026 10CM FAN CONCERT 〈THE MISSING TRACKS〉 사라진 곡들의 행방",
-                      "meta":  "올림픽공원 올림픽홀 · 10.9-10.11",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-24",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011325_p.gif",
-                      "view":  3071
-                  },
-                  {
-                      "date":  "2026-11-28",
-                      "endDate":  "2026-11-28",
-                      "title":  "엘르가든 내한공연 ELLEGARDEN ‘Bad For Education Tour II (2026)’",
-                      "meta":  "YES24 LIVE HALL · 11.28",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-09-01",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260818/20260818-59771.jpg",
-                      "view":  2916
-                  },
-                  {
-                      "date":  "2026-09-20",
-                      "endDate":  "2026-09-20",
-                      "title":  "한지상 콘서트 [I’M ALIVE]",
-                      "meta":  "SA HALL · 9.20",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-20",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260814/20260814-59766.jpg",
-                      "view":  2897
-                  },
-                  {
-                      "date":  "2026-10-24",
-                      "endDate":  "2026-10-25",
-                      "title":  "2026 소수빈 단독공연 〈늘 그래왔던 것처럼 앞으로도〉",
-                      "meta":  "올림픽공원 올림픽홀 · 10.24-10.25",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-31",
-                      "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/2026081917000432.jpg",
-                      "view":  2765
+                      "view":  11628
                   },
                   {
                       "date":  "2026-10-17",
@@ -877,7 +781,55 @@
                       "source":  "yes24",
                       "open":  "2026-08-24",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260821/20260821-59841.jpg",
-                      "view":  2702
+                      "view":  5497
+                  },
+                  {
+                      "date":  "2026-10-03",
+                      "endDate":  "2026-10-04",
+                      "title":  "XMF(Xnterstellar Music Festival) 2026",
+                      "meta":  "인천 파라다이스시티 컬처파크 · 10.3-10.4",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "yes24",
+                      "open":  "2026-08-12",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202607/20260731/20260731-59422.jpg",
+                      "view":  5426
+                  },
+                  {
+                      "date":  "2026-10-17",
+                      "endDate":  "2026-10-17",
+                      "title":  "[부산] 2026 하루 첫 팬콘서트[오늘, 하루 : 처음 들려주는 이야기]",
+                      "meta":  "벡스코 오디토리움 · 10.17",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "yes24",
+                      "open":  "2026-08-19",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
+                      "view":  5135
+                  },
+                  {
+                      "date":  "2026-09-20",
+                      "endDate":  "2026-09-20",
+                      "title":  "한지상 콘서트 [I’M ALIVE]",
+                      "meta":  "SA HALL · 9.20",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "yes24",
+                      "open":  "2026-08-20",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260814/20260814-59766.jpg",
+                      "view":  5007
+                  },
+                  {
+                      "date":  "2026-10-24",
+                      "endDate":  "2026-10-25",
+                      "title":  "2026 소수빈 단독공연 〈늘 그래왔던 것처럼 앞으로도〉",
+                      "meta":  "올림픽공원 올림픽홀 · 10.24-10.25",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-31",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012327_p.gif",
+                      "view":  4882
                   },
                   {
                       "date":  "2026-11-07",
@@ -889,19 +841,19 @@
                       "source":  "yes24",
                       "open":  "2026-08-31",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260818/20260818-59781.jpg",
-                      "view":  2438
+                      "view":  4620
                   },
                   {
-                      "date":  "2026-10-11",
+                      "date":  "2026-10-09",
                       "endDate":  "2026-10-11",
-                      "title":  "〈Shi Shi [ The Taste Of… ] World Tour in Seoul〉",
-                      "meta":  "예스24 원더로크홀 · 10.11",
+                      "title":  "2026 10CM FAN CONCERT 〈THE MISSING TRACKS〉 사라진 곡들의 행방",
+                      "meta":  "올림픽공원 올림픽홀 · 10.9-10.11",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-12",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260812/20260812-59681.jpg",
-                      "view":  2400
+                      "source":  "interpark",
+                      "open":  "2026-08-24",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011325_p.gif",
+                      "view":  4451
                   },
                   {
                       "date":  "2026-10-09",
@@ -913,7 +865,7 @@
                       "source":  "yes24",
                       "open":  "2026-08-12",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59698.jpg",
-                      "view":  2398
+                      "view":  4425
                   },
                   {
                       "date":  "2026-10-09",
@@ -925,43 +877,31 @@
                       "source":  "interpark",
                       "open":  "2026-09-08",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011526_p.gif",
-                      "view":  2139
+                      "view":  4033
                   },
                   {
-                      "date":  "2026-10-10",
-                      "endDate":  "2026-10-10",
-                      "title":  "[서울] 2026 하루 첫 팬콘서트[오늘, 하루 : 처음 들려주는 이야기]",
-                      "meta":  "세종대학교 대양홀 · 10.10",
+                      "date":  "2026-10-04",
+                      "endDate":  "2026-10-04",
+                      "title":  "2026 HAN JI WOO 1ST FANMEETING 「SCENE #1: First moment」",
+                      "meta":  "서울 마포구 와우산로29가길 15 구름아래소극장 · 10.4",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "yes24",
-                      "open":  "2026-08-13",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
-                      "view":  1882
+                      "open":  "2026-08-26",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260813/20260813-59746.jpg",
+                      "view":  3926
                   },
                   {
-                      "date":  "2026-10-31",
-                      "endDate":  "2026-10-31",
-                      "title":  "에버블루 페스티벌 in 대구",
-                      "meta":  "대구 엑스코 5층 컨벤션홀 · 10.31",
+                      "date":  "2026-12-20",
+                      "endDate":  "2026-12-20",
+                      "title":  "카와사키 타카야 내한공연 KAWASAKI TAKAYA LIVE IN SEOUL 2026",
+                      "meta":  "예스24 라이브홀 · 12.20",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-27",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012230_p.gif",
-                      "view":  1728
-                  },
-                  {
-                      "date":  "2026-12-12",
-                      "endDate":  "2026-12-12",
-                      "title":  "WHO ASKED？ TOUR DOMi ＆ JD BECK LIVE IN SEOUL",
-                      "meta":  "공감센터 공감홀 · 12.12",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-25",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012221_p.gif",
-                      "view":  1454
+                      "source":  "yes24",
+                      "open":  "2026-08-19",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260810/20260810-59669.jpg",
+                      "view":  3709
                   },
                   {
                       "date":  "2026-11-20",
@@ -973,7 +913,19 @@
                       "source":  "yes24",
                       "open":  "2026-09-01",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260820/20260820-59840.png",
-                      "view":  1453
+                      "view":  3322
+                  },
+                  {
+                      "date":  "2026-11-28",
+                      "endDate":  "2026-11-28",
+                      "title":  "엘르가든 내한공연 ELLEGARDEN ‘Bad For Education Tour II (2026)’",
+                      "meta":  "YES24 LIVE HALL · 11.28",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "yes24",
+                      "open":  "2026-09-01",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260818/20260818-59771.jpg",
+                      "view":  3111
                   },
                   {
                       "date":  "2026-10-10",
@@ -985,19 +937,67 @@
                       "source":  "yes24",
                       "open":  "2026-08-27",
                       "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202608/20260821/20260821-2b1f6645-d394-4161-b6f8-a368733ba382.jpg",
-                      "view":  799
+                      "view":  3027
                   },
                   {
-                      "date":  "2026-11-08",
-                      "endDate":  "2026-11-08",
-                      "title":  "2026 김장훈 전국투어 콘서트 : 원맨쇼 - 밀양",
-                      "meta":  "밀양아리랑아트센터 대공연장 · 11.8",
+                      "date":  "2026-12-12",
+                      "endDate":  "2026-12-12",
+                      "title":  "WHO ASKED？ TOUR DOMi ＆ JD BECK LIVE IN SEOUL",
+                      "meta":  "공감센터 공감홀 · 12.12",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-25",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012221_p.gif",
+                      "view":  2629
+                  },
+                  {
+                      "date":  "2026-10-11",
+                      "endDate":  "2026-10-11",
+                      "title":  "〈Shi Shi [ The Taste Of… ] World Tour in Seoul〉",
+                      "meta":  "예스24 원더로크홀 · 10.11",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "yes24",
+                      "open":  "2026-08-12",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260812/20260812-59681.jpg",
+                      "view":  2485
+                  },
+                  {
+                      "date":  "2026-10-31",
+                      "endDate":  "2026-10-31",
+                      "title":  "에버블루 페스티벌 in 대구",
+                      "meta":  "대구 엑스코 5층 컨벤션홀 · 10.31",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-27",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012230_p.gif",
+                      "view":  2274
+                  },
+                  {
+                      "date":  "2026-09-18",
+                      "endDate":  "2026-09-20",
+                      "title":  "2026 평화누리 피크닉 페스티벌",
+                      "meta":  "임진각 평화누리 · 9.18-9.20",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "ticketlink",
-                      "open":  "2026-08-24",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_3/main0821(4).jpg",
-                      "view":  651
+                      "open":  "2026-08-26",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_10/main0820.jpg",
+                      "view":  1961
+                  },
+                  {
+                      "date":  "2026-10-10",
+                      "endDate":  "2026-10-10",
+                      "title":  "[서울] 2026 하루 첫 팬콘서트[오늘, 하루 : 처음 들려주는 이야기]",
+                      "meta":  "세종대학교 대양홀 · 10.10",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "yes24",
+                      "open":  "2026-08-13",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
+                      "view":  1894
                   },
                   {
                       "date":  "2026-09-23",
@@ -1009,43 +1009,43 @@
                       "source":  "interpark",
                       "open":  "2026-08-27",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011422_p.gif",
-                      "view":  554
+                      "view":  1451
                   },
                   {
-                      "date":  "2026-10-17",
-                      "endDate":  "2026-10-17",
-                      "title":  "[부산] 2026 장윤정 라이브 콘서트 〈THE MASTER〉",
-                      "meta":  "KBS부산홀 · 10.17",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-06",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202607/20260729/20260729-59486.jpg",
-                      "view":  507
-                  },
-                  {
-                      "date":  "2026-09-12",
-                      "endDate":  "2026-09-12",
-                      "title":  "JANGYEEUN FANMEETING 〈WHISPER of YEEUN〉",
-                      "meta":  "온맘씨어터 · 9.12",
+                      "date":  "2026-10-13",
+                      "endDate":  "2026-10-13",
+                      "title":  "Freddie Gibbs 프레디 깁스 첫 내한공연",
+                      "meta":  "현대카드 언더스테이지 · 10.13",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
-                      "open":  "2026-08-24",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012291_p.gif",
-                      "view":  477
+                      "open":  "2026-08-28",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012402_p.gif",
+                      "view":  982
                   },
                   {
                       "date":  "2026-10-17",
                       "endDate":  "2026-10-17",
-                      "title":  "2026 윤종신 전국투어 콘서트 〈가을냄새〉 수원",
+                      "title":  "2026 윤종신 전국투어 콘서트 수원",
                       "meta":  "경기아트센터 대극장 · 10.17",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "interpark",
+                      "source":  "ticketlink",
                       "open":  "2026-08-25",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012261_p.gif",
-                      "view":  426
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_1/SW_poster_0822.jpg",
+                      "view":  846
+                  },
+                  {
+                      "date":  "2026-10-11",
+                      "endDate":  "2026-10-11",
+                      "title":  "2026 SF9 LIVE FANTASY #6 축몽(十年逐夢)",
+                      "meta":  "KBS아레나 · 10.11",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "ticketlink",
+                      "open":  "2026-08-31",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_4/pst_0820_1642.jpg",
+                      "view":  834
                   },
                   {
                       "date":  "2026-10-31",
@@ -1057,19 +1057,79 @@
                       "source":  "interpark",
                       "open":  "2026-08-25",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012285_p.gif",
-                      "view":  412
+                      "view":  721
                   },
                   {
-                      "date":  "2026-10-10",
-                      "endDate":  "2026-10-10",
-                      "title":  "2026 윤종신 전국투어 콘서트 〈가을냄새〉 인천",
-                      "meta":  "인천문화예술회관 대공연장 · 10.10",
+                      "date":  "2026-10-31",
+                      "endDate":  "2026-10-31",
+                      "title":  "［인천］2026 씨야 20주년 전국 투어 콘서트 : THE FAN",
+                      "meta":  "인천남동체육관 · 10.31",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
                       "open":  "2026-08-25",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012293_p.gif",
-                      "view":  345
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012403_p.gif",
+                      "view":  698
+                  },
+                  {
+                      "date":  "2026-12-08",
+                      "endDate":  "2026-12-08",
+                      "title":  "슬로우다이브 내한공연",
+                      "meta":  "KBS아레나 · 12.8",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-28",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012276_p.gif",
+                      "view":  552
+                  },
+                  {
+                      "date":  "2026-11-20",
+                      "endDate":  "2026-11-22",
+                      "title":  "WONDERLIVET 2026 (원더리벳 2026)​",
+                      "meta":  "KINTEX HALL 7/8/9/10 · 11.20-11.22",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "ticketlink",
+                      "open":  "2026-09-01",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_4/pst_0820(1).jpg",
+                      "view":  539
+                  },
+                  {
+                      "date":  "2026-09-12",
+                      "endDate":  "2026-09-12",
+                      "title":  "2026 HYUNJAE 1st FANMEETING ［The Present for you］",
+                      "meta":  "코엑스아티움 우리은행홀 · 9.12",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-27",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011954_p.gif",
+                      "view":  449
+                  },
+                  {
+                      "date":  "2026-09-04",
+                      "endDate":  "2026-09-12",
+                      "title":  "2026 모두페스티벌",
+                      "meta":  "봉산문화회관 가온홀 · 9.4-9.12",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "ticketlink",
+                      "open":  "2026-08-24",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_10/pst_0821a.jpg",
+                      "view":  444
+                  },
+                  {
+                      "date":  "2026-09-03",
+                      "endDate":  "2026-09-03",
+                      "title":  "2026 모두페스티벌 개막공연-음악서사극",
+                      "meta":  "봉산문화회관 가온홀 · 9.3",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "ticketlink",
+                      "open":  "2026-08-24",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_6/mope_p_0820.jpg",
+                      "view":  432
                   }
               ]
 }

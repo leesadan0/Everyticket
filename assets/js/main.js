@@ -254,7 +254,7 @@
 
   const loadAutoShows = () => {
     if (!features.autoShows || !showList) return;
-    fetch('assets/data/shows.json?v=35')
+    fetch('assets/data/shows.json?v=36')
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
         const start = new Date();
@@ -277,6 +277,8 @@
           if (!String(s.poster || '').trim()) return false;
           if (!s.open && !parseOpenIso(s)) return false;
           if (!s.date) return false;
+          const view = Number(s.view);
+          if (!isNaN(view) && view > 0 && view < 500) return false;
           if (isStartedShow(s, today)) return false;
           const k = showKey(s);
           if (seenKey[k]) return false;
