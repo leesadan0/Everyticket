@@ -881,13 +881,19 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   margin-top: 10px; color: var(--ink-3); font-size: 14.5px; line-height: 1.6;
 }
 .kakao-modal__idbox {
+  display: block;
+  width: 100%;
   margin: 22px 0 20px;
   background: var(--white);
   border: 2px solid var(--yellow);
   border-radius: var(--r);
   padding: 16px 18px 18px;
   box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
+.kakao-modal__idbox:hover { border-color: var(--yellow-deep); background: var(--cream-2); }
 .kakao-modal__idlabel {
   font-size: 12.5px; font-weight: 700; color: var(--ink-3);
 }
@@ -897,7 +903,6 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   color: var(--yellow-deep);
   margin-top: 4px;
   letter-spacing: .02em;
-  word-break: break-all;
 }
 .kakao-modal__steps {
   list-style: decimal;
@@ -909,13 +914,7 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
   line-height: 1.9;
   font-weight: 600;
 }
-.kakao-modal__personplus {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 1.35em; height: 1.35em; vertical-align: -3px; margin: 0 2px;
-  color: var(--ink); border: 1.5px solid var(--ink-2); border-radius: 6px;
-  background: var(--white);
-}
-.kakao-modal__personplus svg { display: block; }
+.kakao-modal__steps a { color: var(--green-deep); text-decoration: underline; text-underline-offset: 2px; }
 .kakao-modal__btns { display: flex; flex-direction: column; gap: 10px; }
 .kakao-modal__btns .btn { width: 100%; }
 .kakao-modal__btns .btn.is-copied {

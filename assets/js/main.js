@@ -1258,12 +1258,7 @@
 
   /* ---------- 카카오톡 문의 모달 ---------- */
   const kakaoModal = document.getElementById('kakaoModal');
-  const kakaoCopyBtn = document.getElementById('kakaoCopyBtn');
-  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'ticket411';
-
-  document.querySelectorAll('[data-kakao-id-text]').forEach((el) => {
-    el.textContent = kakaoId;
-  });
+  const kakaoChatUrl = (kakaoModal && kakaoModal.dataset.kakaoChat) || 'https://pf.kakao.com/_zIgSX/chat';
 
   const openKakaoModal = () => {
     if (!kakaoModal || typeof kakaoModal.showModal !== 'function') return;
@@ -1365,9 +1360,6 @@
     });
   }
 
-  if (kakaoCopyBtn) {
-    kakaoCopyBtn.addEventListener('click', () => copyText(kakaoId, kakaoCopyBtn, '아이디가 복사되었습니다'));
-  }
   if (inqCopyBtn) {
     inqCopyBtn.addEventListener('click', () => {
       copyText((inqText && inqText.textContent) || '', inqCopyBtn, '문의 문장이 복사되었습니다');
@@ -1375,28 +1367,10 @@
   }
 
   const kakaoOpenBtn = document.getElementById('kakaoOpenBtn');
-  const openKakaoApp = () => {
-    const ua = navigator.userAgent || '';
-    const android = /Android/i.test(ua);
-    const ios = /iPhone|iPad|iPod/i.test(ua);
-    const scheme = 'kakaotalk://launch';
-
-    if (android) {
-      window.location.href = 'intent://launch#Intent;scheme=kakaotalk;package=com.kakao.talk;end';
-      return;
-    }
-    if (ios) {
-      window.location.href = scheme;
-      return;
-    }
-
-    const frame = document.createElement('iframe');
-    frame.setAttribute('aria-hidden', 'true');
-    frame.tabIndex = -1;
-    frame.style.cssText = 'position:fixed;width:0;height:0;border:0;opacity:0;pointer-events:none';
-    frame.src = scheme;
-    document.body.appendChild(frame);
-    window.setTimeout(() => frame.remove(), 2000);
+  const kakaoHeroBtn = document.getElementById('kakaoHeroBtn');
+  const openKakaoChat = () => {
+    window.open(kakaoChatUrl, '_blank', 'noopener,noreferrer');
   };
-  if (kakaoOpenBtn) kakaoOpenBtn.addEventListener('click', openKakaoApp);
+  if (kakaoOpenBtn) kakaoOpenBtn.addEventListener('click', openKakaoChat);
+  if (kakaoHeroBtn) kakaoHeroBtn.addEventListener('click', openKakaoChat);
 })();
