@@ -1365,8 +1365,30 @@
     });
   }
 
+  const kakaoIdBox = document.getElementById('kakaoIdBox');
+  const flashIdBox = () => {
+    if (!kakaoIdBox) return;
+    const label = kakaoIdBox.querySelector('.kakao-modal__idlabel');
+    const prev = label ? label.textContent : '';
+    if (label) label.textContent = '아이디가 복사되었습니다';
+    kakaoIdBox.classList.add('is-copied');
+    window.setTimeout(() => {
+      if (label) label.textContent = prev;
+      kakaoIdBox.classList.remove('is-copied');
+    }, 1800);
+  };
+
   if (kakaoCopyBtn) {
-    kakaoCopyBtn.addEventListener('click', () => copyText(kakaoId, kakaoCopyBtn, '아이디가 복사되었습니다'));
+    kakaoCopyBtn.addEventListener('click', () => {
+      copyText(kakaoId, kakaoCopyBtn, '아이디가 복사되었습니다');
+      flashIdBox();
+    });
+  }
+  if (kakaoIdBox) {
+    kakaoIdBox.addEventListener('click', () => {
+      copyText(kakaoId);
+      flashIdBox();
+    });
   }
   if (inqCopyBtn) {
     inqCopyBtn.addEventListener('click', () => {
