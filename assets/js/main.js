@@ -254,7 +254,7 @@
 
   const loadAutoShows = () => {
     if (!features.autoShows || !showList) return;
-    fetch('assets/data/shows.json?v=36')
+    fetch('assets/data/shows.json?v=37')
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
         const start = new Date();
@@ -276,9 +276,11 @@
           if (/토크쇼|토크콘서트|토크\s*콘서트|노콘쇼|토크\s*&|뮤직 토크|발레페스티벌|수급|물량|일정 공개/.test(s.title)) return false;
           if (!String(s.poster || '').trim()) return false;
           if (!s.open && !parseOpenIso(s)) return false;
-          if (!s.date) return false;
+          const soon = isSoonShow(s, today);
+          if (!s.date && !soon) return false;
           const view = Number(s.view);
-          if (!isNaN(view) && view > 0 && view < 500) return false;
+          const hot = s.isHot === true || s.isHot === 'true' || s.isHot === 1;
+          if (!hot && !isNaN(view) && view > 0 && view < 500) return false;
           if (isStartedShow(s, today)) return false;
           const k = showKey(s);
           if (seenKey[k]) return false;
