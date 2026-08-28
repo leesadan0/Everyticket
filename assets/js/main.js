@@ -254,7 +254,7 @@
 
   const loadAutoShows = () => {
     if (!features.autoShows || !showList) return;
-    fetch('assets/data/shows.json?v=37')
+    fetch('assets/data/shows.json?v=38')
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
         const start = new Date();
@@ -273,7 +273,7 @@
         const popular = raw.filter((s) => {
           if (!s || !s.title) return false;
           if (s.status === 'done') return false;
-          if (/토크쇼|토크콘서트|토크\s*콘서트|노콘쇼|토크\s*&|뮤직 토크|발레페스티벌|수급|물량|일정 공개/.test(s.title)) return false;
+          if (/뮤지컬|연극|전시|오페라|토크쇼|토크콘서트|토크\s*콘서트|노콘쇼|토크\s*&|뮤직 토크|발레페스티벌|수급|물량|일정 공개/.test(s.title)) return false;
           if (!String(s.poster || '').trim()) return false;
           if (!s.open && !parseOpenIso(s)) return false;
           const soon = isSoonShow(s, today);
@@ -287,7 +287,7 @@
           seenKey[k] = true;
           return true;
         });
-        const opened = popular.filter((s) => !isSoonShow(s, today)).sort((a, b) => {
+        const opened = popular.filter((s) => !isSoonShow(s, today) && s.date).sort((a, b) => {
           return (a.date || '9999').localeCompare(b.date || '9999') || a.title.localeCompare(b.title, 'ko');
         });
         const soonList = popular.filter((s) => isSoonShow(s, today)).sort((a, b) => {
@@ -295,8 +295,9 @@
           const bo = parseOpenIso(b) || b.date || '9999';
           return ao.localeCompare(bo) || (a.date || '').localeCompare(b.date || '') || a.title.localeCompare(b.title, 'ko');
         });
-        const ordered = opened.concat(soonList);
-        renderSuccess(ordered);
+        const soonDated = soonList.filter((s) => s.date);
+        renderSuccess(opened.concat(soonList));
+        const ordered = opened.concat(soonDated);
         if (!ordered.length) return;
         const cardHtml = (s, i) => {
           const soon = isSoonShow(s, today);
