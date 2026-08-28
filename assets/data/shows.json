@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-08-28T20:02:39",
+    "generated":  "2026-08-28T21:00:39",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  true,
     "shows":  [
@@ -626,18 +626,6 @@
                       "open":  "2026-07-15",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010060_p.gif",
                       "view":  87955
-                  },
-                  {
-                      "date":  "2026-08-29",
-                      "endDate":  "2026-08-29",
-                      "title":  "2026 무명전설 전국투어 콘서트 - 부산",
-                      "meta":  "벡스코 제1전시장 1홀 · 8.29",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-06-29",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006786_p.gif",
-                      "view":  87954
                   },
                   {
                       "date":  "2026-11-28",
