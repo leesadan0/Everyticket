@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-09-02T20:01:21",
+    "generated":  "2026-09-02T21:00:04",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  false,
     "shows":  [
@@ -379,20 +379,6 @@
                       "openAt":  "2026-08-27T20:00:14+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011367_p.gif",
                       "view":  87980,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-09-03",
-                      "endDate":  "2026-09-03",
-                      "title":  "78LIVE - 양정훈",
-                      "meta":  "엠피엠지 2층 LOUNGE M. · 9.3",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-21",
-                      "openAt":  "2026-08-21T20:00:14+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011731_p.gif",
-                      "view":  87979,
                       "isHot":  true
                   },
                   {
