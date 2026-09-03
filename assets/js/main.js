@@ -1260,7 +1260,7 @@
   /* ---------- 카카오톡 문의 모달 ---------- */
   const kakaoModal = document.getElementById('kakaoModal');
   const kakaoCopyBtn = document.getElementById('kakaoCopyBtn');
-  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'ticket411';
+  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'ticket407';
 
   document.querySelectorAll('[data-kakao-id-text]').forEach((el) => {
     el.textContent = kakaoId;
