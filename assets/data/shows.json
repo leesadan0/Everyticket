@@ -1,22 +1,8 @@
 {
-    "generated":  "2026-09-03T21:00:03",
+    "generated":  "2026-09-04T20:02:24",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  true,
     "shows":  [
-                  {
-                      "date":  "2026-09-04",
-                      "endDate":  "2026-09-06",
-                      "title":  "2026 임영웅 콘서트 ［IM HERO - THE STADIUM 2］",
-                      "meta":  "고양종합운동장 주경기장 · 9.4-9.6",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-07-16",
-                      "openAt":  "2026-07-16T00:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009868_p.gif",
-                      "view":  99999,
-                      "isHot":  true
-                  },
                   {
                       "date":  "2026-09-12",
                       "endDate":  "2026-09-13",
@@ -102,20 +88,6 @@
                       "isHot":  true
                   },
                   {
-                      "date":  "2026-09-26",
-                      "endDate":  "2026-09-27",
-                      "title":  "2026 Redoor 단독콘서트 〈Memory〉",
-                      "meta":  "올림픽공원 올림픽 홀 · 9.26-9.27",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-28",
-                      "openAt":  "2026-08-28T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012498_p.gif",
-                      "view":  87999,
-                      "isHot":  true
-                  },
-                  {
                       "date":  "2026-10-03",
                       "endDate":  "2026-10-04",
                       "title":  "［서울］ 최유리 콘서트 2026 : 머무름",
@@ -126,21 +98,49 @@
                       "open":  "2026-09-02",
                       "openAt":  "2026-09-02T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012515_p.gif",
+                      "view":  87999,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-12-05",
+                      "endDate":  "2026-12-05",
+                      "title":  "RETRORIRON LIVE IN SEOUL - ENCORE",
+                      "meta":  "NOL 씨어터 합정 동양생명홀 · 12.5",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-09-04",
+                      "openAt":  "2026-09-04T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012552_p.gif",
                       "view":  87998,
                       "isHot":  true
                   },
                   {
-                      "date":  "2026-10-09",
-                      "endDate":  "2026-10-09",
-                      "title":  "요우시 내한공연 (Yo-Sea Asia Tour 2026 - Minimum Band Set)",
-                      "meta":  "KT\u0026G 상상마당 홍대 라이브홀 · 10.9",
+                      "date":  "2026-09-26",
+                      "endDate":  "2026-09-27",
+                      "title":  "2026 Redoor 단독콘서트 〈Memory〉",
+                      "meta":  "올림픽공원 올림픽 홀 · 9.26-9.27",
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
-                      "open":  "2026-09-03",
-                      "openAt":  "2026-09-03T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012710_p.gif",
+                      "open":  "2026-08-28",
+                      "openAt":  "2026-08-28T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012498_p.gif",
                       "view":  87997,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-10-17",
+                      "endDate":  "2026-10-25",
+                      "title":  "2026 김동률 콘서트 ‘오래된 노래’",
+                      "meta":  "세종문화회관 대극장 · 10.17-10.25",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-09-04",
+                      "openAt":  "2026-09-04T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012694_p.gif",
+                      "view":  87996,
                       "isHot":  true
                   },
                   {
@@ -154,7 +154,7 @@
                       "open":  "2026-08-28",
                       "openAt":  "2026-08-28T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012276_p.gif",
-                      "view":  87996,
+                      "view":  87995,
                       "isHot":  true
                   },
                   {
@@ -168,7 +168,21 @@
                       "open":  "2026-06-05",
                       "openAt":  "2026-06-05T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007703_p.gif",
-                      "view":  87995,
+                      "view":  87994,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-10-09",
+                      "endDate":  "2026-10-09",
+                      "title":  "요우시 내한공연 (Yo-Sea Asia Tour 2026 - Minimum Band Set)",
+                      "meta":  "KT\u0026G 상상마당 홍대 라이브홀 · 10.9",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-09-03",
+                      "openAt":  "2026-09-03T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012710_p.gif",
+                      "view":  87993,
                       "isHot":  true
                   },
                   {
@@ -182,7 +196,7 @@
                       "open":  "2026-07-30",
                       "openAt":  "2026-07-30T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010980_p.gif",
-                      "view":  87994,
+                      "view":  87992,
                       "isHot":  true
                   },
                   {
@@ -196,7 +210,7 @@
                       "open":  "2026-07-28",
                       "openAt":  "2026-07-28T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010473_p.gif",
-                      "view":  87993,
+                      "view":  87991,
                       "isHot":  true
                   },
                   {
@@ -210,7 +224,7 @@
                       "open":  "2026-07-20",
                       "openAt":  "2026-07-20T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008115_p.gif",
-                      "view":  87992,
+                      "view":  87990,
                       "isHot":  true
                   },
                   {
@@ -224,7 +238,7 @@
                       "open":  "2026-08-31",
                       "openAt":  "2026-08-31T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012206_p.gif",
-                      "view":  87991,
+                      "view":  87989,
                       "isHot":  true
                   },
                   {
@@ -238,7 +252,7 @@
                       "open":  "2026-06-18",
                       "openAt":  "2026-06-18T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007670_p.gif",
-                      "view":  87990,
+                      "view":  87988,
                       "isHot":  true
                   },
                   {
@@ -252,7 +266,7 @@
                       "open":  "2026-08-06",
                       "openAt":  "2026-08-06T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011195_p.gif",
-                      "view":  87989,
+                      "view":  87987,
                       "isHot":  true
                   },
                   {
@@ -266,7 +280,7 @@
                       "open":  "2026-09-03",
                       "openAt":  "2026-09-03T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011974_p.gif",
-                      "view":  87988,
+                      "view":  87986,
                       "isHot":  true
                   },
                   {
@@ -280,7 +294,7 @@
                       "open":  "2026-08-19",
                       "openAt":  "2026-08-19T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011315_p.gif",
-                      "view":  87987,
+                      "view":  87985,
                       "isHot":  true
                   },
                   {
@@ -294,7 +308,7 @@
                       "open":  "2026-09-02",
                       "openAt":  "2026-09-02T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010722_p.gif",
-                      "view":  87986,
+                      "view":  87984,
                       "isHot":  true
                   },
                   {
@@ -308,21 +322,7 @@
                       "open":  "2026-08-28",
                       "openAt":  "2026-08-28T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011969_p.gif",
-                      "view":  87985,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-10-31",
-                      "endDate":  "2026-10-31",
-                      "title":  "Nujabes Metaphorical Ensemble Live in Seoul",
-                      "meta":  "NOL 씨어터 합정 동양생명홀 · 10.31",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-09-03",
-                      "openAt":  "2026-09-03T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012781_p.gif",
-                      "view":  87984,
+                      "view":  87983,
                       "isHot":  true
                   },
                   {
@@ -336,7 +336,7 @@
                       "open":  "2026-09-02",
                       "openAt":  "2026-09-02T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012666_p.gif",
-                      "view":  87983,
+                      "view":  87982,
                       "isHot":  true
                   },
                   {
@@ -350,7 +350,7 @@
                       "open":  "2026-08-05",
                       "openAt":  "2026-08-05T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010352_p.gif",
-                      "view":  87982,
+                      "view":  87981,
                       "isHot":  true
                   },
                   {
@@ -364,63 +364,7 @@
                       "open":  "2026-08-12",
                       "openAt":  "2026-08-12T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010721_p.gif",
-                      "view":  87981,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-10-09",
-                      "endDate":  "2026-10-11",
-                      "title":  "2026 GHOST 페스티벌",
-                      "meta":  "파주 임진각평화누리 · 10.9-10.11",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-09-02",
-                      "openAt":  "2026-09-02T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009992_p.gif",
                       "view":  87980,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-09-19",
-                      "endDate":  "2026-09-20",
-                      "title":  "조민규 단독 콘서트 ［ MONO DRAMA 2026 : Sweet Escape ］",
-                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 9.19-9.20",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-14",
-                      "openAt":  "2026-08-14T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011785_p.gif",
-                      "view":  87979,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-09-11",
-                      "endDate":  "2026-09-20",
-                      "title":  "2026 적재 LIVE SESSION : in s c ap e",
-                      "meta":  "얼터(alter.) · 9.11-9.20",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-27",
-                      "openAt":  "2026-08-27T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011367_p.gif",
-                      "view":  87978,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-12-03",
-                      "endDate":  "2026-12-03",
-                      "title":  "Sunny Day Service TOUR 2026 in SEOUL",
-                      "meta":  "무신사개러지 · 12.3",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-08-20",
-                      "openAt":  "2026-08-20T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011116_p.gif",
-                      "view":  87977,
                       "isHot":  true
                   },
                   {
@@ -434,7 +378,77 @@
                       "open":  "2026-03-10",
                       "openAt":  "2026-03-10T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26004504_p.gif",
+                      "view":  87979,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-10-09",
+                      "endDate":  "2026-10-11",
+                      "title":  "2026 GHOST 페스티벌",
+                      "meta":  "파주 임진각평화누리 · 10.9-10.11",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-09-02",
+                      "openAt":  "2026-09-02T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009992_p.gif",
+                      "view":  87978,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-09-19",
+                      "endDate":  "2026-09-20",
+                      "title":  "조민규 단독 콘서트 ［ MONO DRAMA 2026 : Sweet Escape ］",
+                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 9.19-9.20",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-14",
+                      "openAt":  "2026-08-14T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011785_p.gif",
+                      "view":  87977,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-09-11",
+                      "endDate":  "2026-09-20",
+                      "title":  "2026 적재 LIVE SESSION : in s c ap e",
+                      "meta":  "얼터(alter.) · 9.11-9.20",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-27",
+                      "openAt":  "2026-08-27T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011367_p.gif",
                       "view":  87976,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-12-03",
+                      "endDate":  "2026-12-03",
+                      "title":  "Sunny Day Service TOUR 2026 in SEOUL",
+                      "meta":  "무신사개러지 · 12.3",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-08-20",
+                      "openAt":  "2026-08-20T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011116_p.gif",
+                      "view":  87975,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-10-31",
+                      "endDate":  "2026-10-31",
+                      "title":  "Nujabes Metaphorical Ensemble Live in Seoul",
+                      "meta":  "NOL 씨어터 합정 동양생명홀 · 10.31",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-09-03",
+                      "openAt":  "2026-09-03T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012781_p.gif",
+                      "view":  87974,
                       "isHot":  true
                   },
                   {
@@ -448,7 +462,7 @@
                       "open":  "2026-09-01",
                       "openAt":  "2026-09-01T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012402_p.gif",
-                      "view":  87975,
+                      "view":  87973,
                       "isHot":  true
                   },
                   {
@@ -462,7 +476,7 @@
                       "open":  "2026-08-27",
                       "openAt":  "2026-08-27T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012221_p.gif",
-                      "view":  87974,
+                      "view":  87972,
                       "isHot":  true
                   },
                   {
@@ -476,7 +490,7 @@
                       "open":  "2026-07-30",
                       "openAt":  "2026-07-30T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009383_p.gif",
-                      "view":  87973,
+                      "view":  87971,
                       "isHot":  true
                   },
                   {
@@ -490,7 +504,7 @@
                       "open":  "2026-08-14",
                       "openAt":  "2026-08-14T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011916_p.gif",
-                      "view":  87972,
+                      "view":  87970,
                       "isHot":  true
                   },
                   {
@@ -504,7 +518,7 @@
                       "open":  "2026-08-04",
                       "openAt":  "2026-08-04T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010154_p.gif",
-                      "view":  87971,
+                      "view":  87969,
                       "isHot":  true
                   },
                   {
@@ -518,7 +532,7 @@
                       "open":  "2026-08-21",
                       "openAt":  "2026-08-21T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011954_p.gif",
-                      "view":  87970,
+                      "view":  87968,
                       "isHot":  true
                   },
                   {
@@ -532,7 +546,7 @@
                       "open":  "2026-08-11",
                       "openAt":  "2026-08-11T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011525_p.gif",
-                      "view":  87969,
+                      "view":  87967,
                       "isHot":  true
                   },
                   {
@@ -546,7 +560,7 @@
                       "open":  "2026-08-31",
                       "openAt":  "2026-08-31T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011422_p.gif",
-                      "view":  87968,
+                      "view":  87966,
                       "isHot":  true
                   },
                   {
@@ -560,7 +574,7 @@
                       "open":  "2026-07-28",
                       "openAt":  "2026-07-28T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010264_p.gif",
-                      "view":  87967,
+                      "view":  87965,
                       "isHot":  true
                   },
                   {
@@ -574,7 +588,7 @@
                       "open":  "2026-08-05",
                       "openAt":  "2026-08-05T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011047_p.gif",
-                      "view":  87966,
+                      "view":  87964,
                       "isHot":  true
                   },
                   {
@@ -588,7 +602,7 @@
                       "open":  "2026-08-21",
                       "openAt":  "2026-08-21T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012121_p.gif",
-                      "view":  87965,
+                      "view":  87963,
                       "isHot":  true
                   },
                   {
@@ -602,7 +616,7 @@
                       "open":  "2026-08-31",
                       "openAt":  "2026-08-31T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012400_p.gif",
-                      "view":  87964,
+                      "view":  87962,
                       "isHot":  true
                   },
                   {
@@ -616,7 +630,7 @@
                       "open":  "2026-08-18",
                       "openAt":  "2026-08-18T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011556_p.gif",
-                      "view":  87963,
+                      "view":  87961,
                       "isHot":  true
                   },
                   {
@@ -630,7 +644,7 @@
                       "open":  "2026-07-21",
                       "openAt":  "2026-07-21T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009919_p.gif",
-                      "view":  87962,
+                      "view":  87960,
                       "isHot":  true
                   },
                   {
@@ -644,7 +658,7 @@
                       "open":  "2026-08-03",
                       "openAt":  "2026-08-03T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010698_p.gif",
-                      "view":  87961,
+                      "view":  87959,
                       "isHot":  true
                   },
                   {
@@ -658,7 +672,7 @@
                       "open":  "2026-08-05",
                       "openAt":  "2026-08-05T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010322_p.gif",
-                      "view":  87960,
+                      "view":  87958,
                       "isHot":  true
                   },
                   {
@@ -672,7 +686,7 @@
                       "open":  "2026-07-24",
                       "openAt":  "2026-07-24T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010474_p.gif",
-                      "view":  87959,
+                      "view":  87957,
                       "isHot":  true
                   },
                   {
@@ -686,7 +700,7 @@
                       "open":  "2026-07-16",
                       "openAt":  "2026-07-16T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009565_p.gif",
-                      "view":  87958,
+                      "view":  87956,
                       "isHot":  true
                   },
                   {
@@ -700,7 +714,7 @@
                       "open":  "2026-04-02",
                       "openAt":  "2026-04-02T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26004771_p.gif",
-                      "view":  87957,
+                      "view":  87955,
                       "isHot":  true
                   },
                   {
@@ -714,7 +728,7 @@
                       "open":  "2026-06-29",
                       "openAt":  "2026-06-29T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008451_p.gif",
-                      "view":  87956,
+                      "view":  87954,
                       "isHot":  true
                   },
                   {
@@ -728,7 +742,7 @@
                       "open":  "2026-06-18",
                       "openAt":  "2026-06-18T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006903_p.gif",
-                      "view":  87955,
+                      "view":  87953,
                       "isHot":  true
                   },
                   {
@@ -742,7 +756,7 @@
                       "open":  "2026-07-15",
                       "openAt":  "2026-07-15T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010060_p.gif",
-                      "view":  87954,
+                      "view":  87952,
                       "isHot":  true
                   },
                   {
@@ -756,7 +770,7 @@
                       "open":  "2026-06-29",
                       "openAt":  "2026-06-29T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007444_p.gif",
-                      "view":  87953,
+                      "view":  87951,
                       "isHot":  true
                   },
                   {
@@ -770,7 +784,7 @@
                       "open":  "2026-08-03",
                       "openAt":  "2026-08-03T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010681_p.gif",
-                      "view":  87952,
+                      "view":  87950,
                       "isHot":  true
                   },
                   {
@@ -784,7 +798,7 @@
                       "open":  "2026-06-15",
                       "openAt":  "2026-06-15T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007834_p.gif",
-                      "view":  87951,
+                      "view":  87949,
                       "isHot":  true
                   },
                   {
@@ -798,7 +812,7 @@
                       "open":  "2026-05-21",
                       "openAt":  "2026-05-21T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26005759_p.gif",
-                      "view":  87950,
+                      "view":  87948,
                       "isHot":  true
                   },
                   {
@@ -812,7 +826,7 @@
                       "open":  "2026-05-26",
                       "openAt":  "2026-05-26T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006756_p.gif",
-                      "view":  87949,
+                      "view":  87947,
                       "isHot":  true
                   },
                   {
@@ -826,7 +840,7 @@
                       "open":  "2026-07-06",
                       "openAt":  "2026-07-06T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011393_p.gif",
-                      "view":  87948,
+                      "view":  87946,
                       "isHot":  true
                   },
                   {
@@ -840,7 +854,7 @@
                       "open":  "2026-08-28",
                       "openAt":  "2026-08-28T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012555_p.gif",
-                      "view":  87947,
+                      "view":  87945,
                       "isHot":  true
                   },
                   {
@@ -854,7 +868,7 @@
                       "open":  "2026-04-15",
                       "openAt":  "2026-04-15T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26004944_p.gif",
-                      "view":  87946,
+                      "view":  87944,
                       "isHot":  true
                   },
                   {
@@ -868,7 +882,7 @@
                       "open":  "2026-05-18",
                       "openAt":  "2026-05-18T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006739_p.gif",
-                      "view":  87945,
+                      "view":  87943,
                       "isHot":  true
                   },
                   {
@@ -882,7 +896,7 @@
                       "open":  "2026-07-03",
                       "openAt":  "2026-07-03T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26009086_p.gif",
-                      "view":  87944,
+                      "view":  87942,
                       "isHot":  true
                   },
                   {
@@ -896,7 +910,7 @@
                       "open":  "2026-08-18",
                       "openAt":  "2026-08-18T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011727_p.gif",
-                      "view":  87943,
+                      "view":  87941,
                       "isHot":  true
                   },
                   {
@@ -910,7 +924,7 @@
                       "open":  "2026-08-28",
                       "openAt":  "2026-08-28T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011243_p.gif",
-                      "view":  87942,
+                      "view":  87940,
                       "isHot":  true
                   },
                   {
@@ -924,50 +938,22 @@
                       "open":  "2026-09-03",
                       "openAt":  "2026-09-03T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011992_p.gif",
-                      "view":  87941,
+                      "view":  87939,
                       "isHot":  true
                   },
                   {
-                      "date":  "2026-10-17",
-                      "endDate":  "2026-10-25",
-                      "title":  "2026 김동률 콘서트 ‘오래된 노래’",
-                      "meta":  "세종문화회관 대극장 · 10.17-10.25",
-                      "kind":  "soon",
-                      "status":  "soon",
+                      "date":  "2026-09-12",
+                      "endDate":  "2026-09-12",
+                      "title":  "2026 임정희X김보경 합동콘서트 〈우리의 BGM〉",
+                      "meta":  "가빈아트홀 · 9.12",
+                      "kind":  "open",
+                      "status":  "open",
                       "source":  "interpark",
                       "open":  "2026-09-04",
-                      "openAt":  "2026-09-04T17:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012694_p.gif",
-                      "view":  51846,
+                      "openAt":  "2026-09-04T20:00:24+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011631_p.gif",
+                      "view":  87938,
                       "isHot":  true
-                  },
-                  {
-                      "date":  "2026-10-03",
-                      "endDate":  "2026-10-04",
-                      "title":  "트릭컬 리바이브 오케스트라 콘서트",
-                      "meta":  "경희대학교 평화의전당 · 10.3-10.4",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "ticketlink",
-                      "open":  "2026-09-04",
-                      "openAt":  "2026-09-04T12:00:00+09:00",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_9/e_open_0827.jpg",
-                      "view":  31682,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2026-10-16",
-                      "endDate":  "2026-10-18",
-                      "title":  "2026 HIGHLIGHT FAN CON [18년차 아이돌인 내가 이세계에선 데뷔조 연습생?!]",
-                      "meta":  "장충체육관 · 10.16-10.18",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "yes24",
-                      "open":  "2026-09-07",
-                      "openAt":  "2026-09-07T00:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260901/20260901-59891.jpg",
-                      "view":  21622,
-                      "isHot":  false
                   },
                   {
                       "date":  "2027-05-21",
@@ -980,35 +966,35 @@
                       "open":  "2026-09-11",
                       "openAt":  "2026-09-11T12:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012591_p.gif",
-                      "view":  20586,
+                      "view":  22323,
                       "isHot":  true
                   },
                   {
-                      "date":  "2026-11-07",
-                      "endDate":  "2026-11-08",
-                      "title":  "2026 KO1KEYZ 1ST FAN MEETING IN SEOUL",
-                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 11.7-11.8",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-09-02",
-                      "openAt":  "2026-09-02T20:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012046_p.gif",
-                      "view":  19475,
-                      "isHot":  true
+                      "date":  "2026-10-16",
+                      "endDate":  "2026-10-18",
+                      "title":  "2026 HIGHLIGHT FAN CON [18년차 아이돌인 내가 이세계에선 데뷔조 연습생?!]",
+                      "meta":  "장충체육관 · 10.16-10.18",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "yes24",
+                      "open":  "2026-09-07",
+                      "openAt":  "2026-09-07T00:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260901/20260901-59891.jpg",
+                      "view":  22007,
+                      "isHot":  false
                   },
                   {
-                      "date":  "",
-                      "endDate":  "",
+                      "date":  "2026-10-09",
+                      "endDate":  "2026-10-11",
                       "title":  "JX 2026 TOUR CONCERT 〈CORE〉 in INCHEON",
-                      "meta":  "인스파이어 아레나 · 티켓팅 9.10",
+                      "meta":  "인스파이어 아레나 · 10.9-10.11",
                       "kind":  "soon",
                       "status":  "soon",
                       "source":  "interpark",
                       "open":  "2026-09-10",
                       "openAt":  "2026-09-10T20:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/20260826121951.jpg",
-                      "view":  18755,
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012479_p.gif",
+                      "view":  20479,
                       "isHot":  true
                   },
                   {
@@ -1023,6 +1009,20 @@
                       "openAt":  "2026-08-26T00:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_2/cs_poster_0813.jpg",
                       "view":  12384,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-11-07",
+                      "endDate":  "2026-11-08",
+                      "title":  "2026 KO1KEYZ 1ST FAN MEETING IN SEOUL",
+                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 11.7-11.8",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-09-02",
+                      "openAt":  "2026-09-02T00:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012046_p.gif",
+                      "view":  11971,
                       "isHot":  true
                   },
                   {
@@ -1050,21 +1050,21 @@
                       "open":  "2026-08-20",
                       "openAt":  "2026-08-20T11:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260814/20260814-59766.jpg",
-                      "view":  9896,
+                      "view":  10497,
                       "isHot":  false
                   },
                   {
-                      "date":  "",
-                      "endDate":  "",
+                      "date":  "2026-10-09",
+                      "endDate":  "2026-10-10",
                       "title":  "PENTAGON 10th Anniversary Tour 〈101010〉 in Seoul",
-                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 티켓팅 9.8",
+                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 10.9-10.10",
                       "kind":  "soon",
                       "status":  "soon",
                       "source":  "interpark",
                       "open":  "2026-09-08",
                       "openAt":  "2026-09-08T20:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/20260818035726.jpg",
-                      "view":  8227,
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011526_p.gif",
+                      "view":  8859,
                       "isHot":  true
                   },
                   {
@@ -1078,7 +1078,7 @@
                       "open":  "2026-09-01",
                       "openAt":  "2026-09-01T12:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260825/20260825-59886.jpg",
-                      "view":  7170,
+                      "view":  7285,
                       "isHot":  false
                   },
                   {
@@ -1091,8 +1091,8 @@
                       "source":  "yes24",
                       "open":  "2026-08-28",
                       "openAt":  "2026-08-28T14:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260825/20260825-59743.jpg",
-                      "view":  6354,
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260904/20260904-59743.jpg",
+                      "view":  6380,
                       "isHot":  false
                   },
                   {
@@ -1106,7 +1106,7 @@
                       "open":  "2026-09-01",
                       "openAt":  "2026-09-01T20:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260820/20260820-59840.png",
-                      "view":  6033,
+                      "view":  6073,
                       "isHot":  false
                   },
                   {
@@ -1120,7 +1120,7 @@
                       "open":  "2026-08-24",
                       "openAt":  "2026-08-24T18:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260821/20260821-59841.jpg",
-                      "view":  5871,
+                      "view":  5884,
                       "isHot":  false
                   },
                   {
@@ -1134,21 +1134,7 @@
                       "open":  "2026-08-31",
                       "openAt":  "2026-08-31T20:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260818/20260818-59781.jpg",
-                      "view":  5697,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2026-10-17",
-                      "endDate":  "2026-10-17",
-                      "title":  "[부산] 2026 하루 첫 팬콘서트[오늘, 하루 : 처음 들려주는 이야기]",
-                      "meta":  "벡스코 오디토리움 · 10.17",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-19",
-                      "openAt":  "2026-08-19T14:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
-                      "view":  5323,
+                      "view":  5837,
                       "isHot":  false
                   },
                   {
@@ -1162,22 +1148,22 @@
                       "open":  "2026-09-03",
                       "openAt":  "2026-09-03T15:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260902/20260902-59992.jpg",
-                      "view":  4988,
+                      "view":  5691,
                       "isHot":  false
                   },
                   {
-                      "date":  "2026-10-03",
-                      "endDate":  "2026-10-04",
-                      "title":  "2026 산들 단독 콘서트 〈바람결〉",
-                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 10.3-10.4",
+                      "date":  "2026-10-17",
+                      "endDate":  "2026-10-17",
+                      "title":  "[부산] 2026 하루 첫 팬콘서트[오늘, 하루 : 처음 들려주는 이야기]",
+                      "meta":  "벡스코 오디토리움 · 10.17",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-09-03",
-                      "openAt":  "2026-09-03T20:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012383_p.gif",
-                      "view":  4531,
-                      "isHot":  true
+                      "source":  "yes24",
+                      "open":  "2026-08-19",
+                      "openAt":  "2026-08-19T14:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260811/20260811-59691.jpg",
+                      "view":  5337,
+                      "isHot":  false
                   },
                   {
                       "date":  "2026-11-25",
@@ -1189,8 +1175,8 @@
                       "source":  "yes24",
                       "open":  "2026-09-10",
                       "openAt":  "2026-09-10T11:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202608/20260828/20260828-cd3a7e4f-b49b-4b69-bd99-9527be8e1dba.jpg",
-                      "view":  4435,
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260904/20260904-60034.jpg",
+                      "view":  5136,
                       "isHot":  false
                   },
                   {
@@ -1203,8 +1189,8 @@
                       "source":  "yes24",
                       "open":  "2026-09-10",
                       "openAt":  "2026-09-10T11:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202608/20260828/20260828-2b76d14a-959f-4f8e-818a-28f937500462.jpg",
-                      "view":  4423,
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260904/20260904-60032.jpg",
+                      "view":  5121,
                       "isHot":  false
                   },
                   {
@@ -1218,8 +1204,22 @@
                       "open":  "2026-09-03",
                       "openAt":  "2026-09-03T14:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260831/20260831-59944.jpg",
-                      "view":  4421,
+                      "view":  5106,
                       "isHot":  false
+                  },
+                  {
+                      "date":  "2026-10-03",
+                      "endDate":  "2026-10-04",
+                      "title":  "2026 산들 단독 콘서트 〈바람결〉",
+                      "meta":  "블루스퀘어 우리WON뱅킹홀 · 10.3-10.4",
+                      "kind":  "open",
+                      "status":  "open",
+                      "source":  "interpark",
+                      "open":  "2026-09-03",
+                      "openAt":  "2026-09-03T20:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012383_p.gif",
+                      "view":  4693,
+                      "isHot":  true
                   },
                   {
                       "date":  "2026-10-10",
@@ -1232,22 +1232,8 @@
                       "open":  "2026-08-27",
                       "openAt":  "2026-08-27T15:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260826/20260826-59876_2.jpg",
-                      "view":  4294,
+                      "view":  4363,
                       "isHot":  false
-                  },
-                  {
-                      "date":  "2026-10-16",
-                      "endDate":  "2026-10-18",
-                      "title":  "2026 황민현 팬미팅 ［도원경］ - 서울",
-                      "meta":  "코엑스아티움 우리은행홀 · 10.16-10.18",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "interpark",
-                      "open":  "2026-09-09",
-                      "openAt":  "2026-09-09T20:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012215_p.gif",
-                      "view":  3654,
-                      "isHot":  true
                   },
                   {
                       "date":  "2026-10-31",
@@ -1260,7 +1246,21 @@
                       "open":  "2026-09-08",
                       "openAt":  "2026-09-08T20:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012668_p.gif",
-                      "view":  3581,
+                      "view":  3870,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-10-16",
+                      "endDate":  "2026-10-18",
+                      "title":  "2026 황민현 팬미팅 ［도원경］ - 서울",
+                      "meta":  "코엑스아티움 우리은행홀 · 10.16-10.18",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "interpark",
+                      "open":  "2026-09-09",
+                      "openAt":  "2026-09-09T20:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012215_p.gif",
+                      "view":  3854,
                       "isHot":  true
                   },
                   {
@@ -1274,22 +1274,8 @@
                       "open":  "2026-09-03",
                       "openAt":  "2026-09-03T19:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012326_p.gif",
-                      "view":  2454,
+                      "view":  2665,
                       "isHot":  true
-                  },
-                  {
-                      "date":  "",
-                      "endDate":  "",
-                      "title":  "2026 김정민 전국투어 : 정민이형 콘서트 - 창원",
-                      "meta":  "티켓팅 9.4",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "yes24",
-                      "open":  "2026-09-04",
-                      "openAt":  "2026-09-04T11:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260903/20260903-60027.jpg",
-                      "view":  1883,
-                      "isHot":  false
                   },
                   {
                       "date":  "2027-01-23",
@@ -1302,7 +1288,7 @@
                       "open":  "2026-10-07",
                       "openAt":  "2026-10-07T12:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202609/20260902/20260902-886d63be-8a7d-4f7f-9716-08ef0302a6ba.jpg",
-                      "view":  1196,
+                      "view":  1860,
                       "isHot":  false
                   },
                   {
@@ -1315,22 +1301,50 @@
                       "source":  "yes24",
                       "open":  "2026-09-09",
                       "openAt":  "2026-09-09T14:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202609/20260902/20260902-350930ca-9a22-4efe-bd78-96119641f260.jpg",
-                      "view":  1099,
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260904/20260904-60033.jpg",
+                      "view":  1820,
                       "isHot":  false
                   },
                   {
-                      "date":  "2026-12-05",
-                      "endDate":  "2026-12-05",
-                      "title":  "2026 무명전설 전국투어 콘서트 - 인천",
-                      "meta":  "인천남동체육관 · 12.5",
+                      "date":  "2026-10-24",
+                      "endDate":  "2026-10-25",
+                      "title":  "2026 데이먼스 이어 콘서트 〈죽은 연인에게로〉",
+                      "meta":  "장충체육관 · 10.24-10.25",
                       "kind":  "soon",
                       "status":  "soon",
                       "source":  "interpark",
-                      "open":  "2026-09-07",
-                      "openAt":  "2026-09-07T17:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012920_p.gif",
-                      "view":  572,
+                      "open":  "2026-09-10",
+                      "openAt":  "2026-09-10T19:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012976_p.gif",
+                      "view":  1689,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "",
+                      "endDate":  "",
+                      "title":  "2026-27 로이킴 LIVE TOUR ［R:O:Y］ in SEOUL",
+                      "meta":  "KSPO DOME · 티켓팅 9.16",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "interpark",
+                      "open":  "2026-09-16",
+                      "openAt":  "2026-09-16T20:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/20260904011416.jpg",
+                      "view":  1681,
+                      "isHot":  true
+                  },
+                  {
+                      "date":  "2026-10-31",
+                      "endDate":  "2026-11-01",
+                      "title":  "2026 이창섭 단독 콘서트 - 부산",
+                      "meta":  "벡스코 오디토리움 · 10.31-11.1",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "ticketlink",
+                      "open":  "2026-09-09",
+                      "openAt":  "2026-09-09T19:00:00+09:00",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_6/busan_open_0904.jpg",
+                      "view":  1254,
                       "isHot":  false
                   },
                   {
@@ -1344,7 +1358,77 @@
                       "open":  "2026-09-10",
                       "openAt":  "2026-09-10T19:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/2026090115343868.jpg",
-                      "view":  571,
+                      "view":  1175,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-11-07",
+                      "endDate":  "2026-11-07",
+                      "title":  "[안산] ASAC 콘서트 [ASAC한 Playlist ＃THE SOLUTIONS, 심아일랜드]",
+                      "meta":  "안산문화예술의전당 달맞이극장 · 11.7",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "yes24",
+                      "open":  "2026-09-17",
+                      "openAt":  "2026-09-17T11:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260903/20260903-59933.jpg",
+                      "view":  1045,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-10-05",
+                      "endDate":  "2026-10-05",
+                      "title":  "힙합콘서트 어셈블 크러쉬〈ASMBL CRSH〉",
+                      "meta":  "서울 KBS아레나 · 10.5",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "yes24",
+                      "open":  "2026-09-08",
+                      "openAt":  "2026-09-08T17:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202609/20260903/20260903-d34c22a6-7b75-4b70-8453-d01b4d743110.jpg",
+                      "view":  1043,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-09-11",
+                      "endDate":  "2026-11-08",
+                      "title":  "2026 이창섭 단독 콘서트 - 수원",
+                      "meta":  "경기아트센터 대극장 · 9.11-11.8",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "ticketlink",
+                      "open":  "2026-09-09",
+                      "openAt":  "2026-09-09T20:00:00+09:00",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_3/suwon_lee_open_0902.jpg",
+                      "view":  1038,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-11-28",
+                      "endDate":  "2026-11-29",
+                      "title":  "2026 이창섭 단독 콘서트 〈Unknown〉 - 대구",
+                      "meta":  "영남대학교 천마아트센터 그랜드홀 · 11.28-11.29",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "yes24",
+                      "open":  "2026-09-22",
+                      "openAt":  "2026-09-22T00:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202609/20260903/20260903-5b0e3baf-8795-42fd-9d2a-4d0dc35d1ee1.jpg",
+                      "view":  1029,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-12-05",
+                      "endDate":  "2026-12-05",
+                      "title":  "2026 무명전설 전국투어 콘서트 - 인천",
+                      "meta":  "인천남동체육관 · 12.5",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "interpark",
+                      "open":  "2026-09-07",
+                      "openAt":  "2026-09-07T17:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26012920_p.gif",
+                      "view":  930,
                       "isHot":  false
                   },
                   {
@@ -1358,21 +1442,7 @@
                       "open":  "2026-09-10",
                       "openAt":  "2026-09-10T20:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_2/2026정승환콘서트_포스터리사이징200x247.jpg",
-                      "view":  529,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2026-11-15",
-                      "endDate":  "2026-11-15",
-                      "title":  "2026 부활 40주년 콘서트 - 평택",
-                      "meta":  "평택아트센터 대공연장 · 11.15",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "ticketlink",
-                      "open":  "2026-09-03",
-                      "openAt":  "2026-09-03T14:00:00+09:00",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_8/open_0901.jpg",
-                      "view":  512,
+                      "view":  740,
                       "isHot":  false
                   },
                   {
@@ -1386,8 +1456,22 @@
                       "open":  "2026-09-11",
                       "openAt":  "2026-09-11T18:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26008033_p.gif",
-                      "view":  61,
+                      "view":  633,
                       "isHot":  true
+                  },
+                  {
+                      "date":  "",
+                      "endDate":  "",
+                      "title":  "카키 내한공연 (Khaki ONE-MAN Live in Seoul)",
+                      "meta":  "KT＆G 상상마당 홍대 라이브홀 · 티켓팅 9.16",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "interpark",
+                      "open":  "2026-09-16",
+                      "openAt":  "2026-09-16T18:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/2026083116243637.jpg",
+                      "view":  515,
+                      "isHot":  false
                   }
               ]
 }
