@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-09-04T20:02:24",
+    "generated":  "2026-09-04T21:00:02",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  true,
     "shows":  [
@@ -365,20 +365,6 @@
                       "openAt":  "2026-08-12T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26010721_p.gif",
                       "view":  87980,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-09-05",
-                      "endDate":  "2026-09-05",
-                      "title":  "〈미스트롯4〉 전국투어 콘서트 - 춘천",
-                      "meta":  "강원대학교 백령아트센터 · 9.5",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-03-10",
-                      "openAt":  "2026-03-10T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26004504_p.gif",
-                      "view":  87979,
                       "isHot":  true
                   },
                   {
@@ -760,20 +746,6 @@
                       "isHot":  true
                   },
                   {
-                      "date":  "2026-09-05",
-                      "endDate":  "2026-09-05",
-                      "title":  "2026 무명전설 전국투어 콘서트 - 부천",
-                      "meta":  "부천실내체육관 · 9.5",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-06-29",
-                      "openAt":  "2026-06-29T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26007444_p.gif",
-                      "view":  87951,
-                      "isHot":  true
-                  },
-                  {
                       "date":  "2026-11-28",
                       "endDate":  "2026-11-28",
                       "title":  "LET ME KNOW LIVE TOUR 2026-Re: Still Romance",
@@ -827,20 +799,6 @@
                       "openAt":  "2026-05-26T20:00:24+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26006756_p.gif",
                       "view":  87947,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-09-05",
-                      "endDate":  "2026-09-05",
-                      "title":  "홍경민 매달리스트 콘서트",
-                      "meta":  "구름아래소극장 · 9.5",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "interpark",
-                      "open":  "2026-07-06",
-                      "openAt":  "2026-07-06T20:00:24+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011393_p.gif",
-                      "view":  87946,
                       "isHot":  true
                   },
                   {
