@@ -253,7 +253,8 @@
   };
 
   const loadAutoShows = () => {
-    if (!features.autoShows || !showList) return;
+    if (!features.autoShows) return;
+    if (!showList && !document.getElementById('successGrid')) return;
     fetch('assets/data/shows.json?v=38')
       .then((res) => (res.ok ? res.json() : Promise.reject()))
       .then((data) => {
@@ -298,7 +299,7 @@
         const soonDated = soonList.filter((s) => s.date);
         renderSuccess(opened.concat(soonList));
         const ordered = opened.concat(soonDated);
-        if (!ordered.length) return;
+        if (!showList || !ordered.length) return;
         const cardHtml = (s, i) => {
           const soon = isSoonShow(s, today);
           const title = escapeHtml(s.title);
