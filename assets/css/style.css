@@ -636,9 +636,9 @@ button { font-family: inherit; cursor: pointer; border: 0; background: none; col
 .succ__date .show__when b { font-size: 14.5px; letter-spacing: -.02em; }
 .succ__hint {
   margin-top: 10px; font-size: 13.5px; font-weight: 700; color: var(--ink-2);
-  line-height: 1.45;
+  line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
