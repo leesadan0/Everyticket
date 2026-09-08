@@ -531,7 +531,36 @@
     };
   };
   const reviewKeySeed = (key) => key.split('').reduce((h, ch) => (h * 33 + ch.charCodeAt(0)) | 0, 7);
-  const EMO = ['', '', '', '', '', ' ㅠㅠ', ' ㅎㅎ', ' ㅋㅋ', ' ㅠ', ' 🥹', ' 😭'];
+  const EMO = ['', ' ㅠㅠ', ' ㅎㅎ', ' ㅋㅋ', ' ㅠ', ' 🥹', ' 😭', ' ✨', ' 🙏', ' 👍', ' ㅠㅠㅠ', ' 😊', ' ❤️'];
+  const CARD_MOVE = [
+    '오픈 놓쳤는데 구해졌어요 ㅠㅠ ✨',
+    '아옮 처음인데 인증 먼저 해주심 🙏',
+    '연석으로 받아서 진짜 다행이에요 😭',
+    '예매내역 보고 바로 진행함 ㅎㅎ',
+    '자리 그대로 넘어와서 안심됨 🥹',
+    '설명 짧고 인계 빨랐어요 👍',
+    '친구 몫까지 붙여서 옴 ㅋㅋ',
+    '워터마크 보고 나서 맡겼어요 ✨',
+    '사기 무서웠는데 인증이 진짜 먼저더라 ㅠ',
+    '당일 오전에 문의했는데 점심때 끝남 🙏',
+    '가능한 자리만 말해줘서 믿음 갔어요 ㅎㅎ',
+    '아이디 넘기고 바로 로그인 확인함 ✨',
+    '단계별로 카톡 와서 안 헤맸어요 🥹',
+    '오픈 끝난 자리도 구해져서 좀 놀람 😭',
+    '비번 바꾸고 로그아웃까지 하니까 끝 👍'
+  ];
+  const CARD_DELTA = [
+    '혼자 넣기 무서워서 미리 맡김 ㅠ',
+    '출근이랑 겹쳐서 그냥 카톡 보냈어요 😭',
+    '인기 많아서 저 자신 못 믿겠음 ㅎㅎ',
+    '선예매 아직인데 일단 걸어둠 🙏',
+    '손 느린 거 알아서 오픈 전에 맡겼어요 ㅠㅠ',
+    '바빠서 회차만 적고 보냄 ✨',
+    '야근이라 오픈 날 폰 볼 자신이 없음 ㅠ',
+    '걸어두니까 밤에 좀 덜 뒤척여요 🥹',
+    '시험기간이라 그 시간에 못 넣어요 😭',
+    '알람 맞춰놔도 잠들어서 이번엔 맡김 ㅋㅋ'
+  ];
   const DELTA = [
     '티켓팅만 생각하면 손이 떨려서 그냥 맡겼어요.',
     '저번에 혼자 넣다 광탈해서 이번엔 미리 카톡 보냄.',
@@ -884,7 +913,7 @@
       }
       let text = bits.join(' ');
       const emo = pick(rng, EMO);
-      if (emo && rng() < 0.26 && text.indexOf(emo.trim()) < 0) text += emo;
+      if (emo && rng() < 0.68 && text.indexOf(emo.trim()) < 0) text += emo;
       items.push({ name: name, date: date, stars: stars, text: text });
     }
     items.sort((a, b) => b.date.localeCompare(a.date) || a.name.localeCompare(b.name, 'ko'));
@@ -929,12 +958,13 @@
       const n = REVIEWS[key].length;
       const badge = soon ? (n + '건') : (Math.max(1, Math.floor(n / 10)) + 'X건');
       const kind = soon ? ' succ--soon' : ' succ--move';
-      const hint = soon ? '댈티 후기' : '아옮 후기';
+      const snippets = soon ? CARD_DELTA : CARD_MOVE;
+      const hint = snippets[Math.floor(reviewRng(0xc0de ^ reviewKeySeed(key + s.title))() * snippets.length)];
       return (
         '<article class="succ' + kind + '" data-review="' + key + '" data-kind="' + (soon ? 'delta' : 'move') + '" tabindex="0">' +
           '<div class="succ__top"><h3>' + escapeHtml(s.title) + '</h3><span class="succ__cnt">' + badge + '</span></div>' +
           '<p class="succ__date">' + cardDateHtml(s) + '</p>' +
-          '<p class="succ__hint">' + hint + '</p>' +
+          '<p class="succ__hint">' + escapeHtml(hint) + '</p>' +
         '</article>'
       );
     }).join('');
@@ -959,6 +989,11 @@
         surRot: surRot,
         givenRot: makeRotator(reviewRng(0x9e37 ^ reviewKeySeed(key + title)), GIVEN)
       });
+      const hintEl = el.querySelector('.succ__hint');
+      if (hintEl) {
+        const snippets = soon ? CARD_DELTA : CARD_MOVE;
+        hintEl.textContent = snippets[Math.floor(reviewRng(0xc0de ^ reviewKeySeed(key + title))() * snippets.length)];
+      }
     });
     paintSuccPage();
   };
