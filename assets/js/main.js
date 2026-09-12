@@ -1296,7 +1296,7 @@
   /* ---------- 카카오톡 문의 모달 ---------- */
   const kakaoModal = document.getElementById('kakaoModal');
   const kakaoCopyBtn = document.getElementById('kakaoCopyBtn');
-  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'ticket407';
+  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'every0';
 
   document.querySelectorAll('[data-kakao-id-text]').forEach((el) => {
     el.textContent = kakaoId;
@@ -1438,10 +1438,10 @@
     const ua = navigator.userAgent || '';
     const android = /Android/i.test(ua);
     const ios = /iPhone|iPad|iPod/i.test(ua);
-    const scheme = 'kakaotalk://launch';
+    const scheme = 'kakaotalk://addfriend?id=' + encodeURIComponent(kakaoId);
 
     if (android) {
-      window.location.href = 'intent://launch#Intent;scheme=kakaotalk;package=com.kakao.talk;end';
+      window.location.href = 'intent://addfriend?id=' + encodeURIComponent(kakaoId) + '#Intent;scheme=kakaotalk;package=com.kakao.talk;end';
       return;
     }
     if (ios) {
