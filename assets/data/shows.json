@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-09-18T20:00:35",
+    "generated":  "2026-09-18T21:00:02",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  false,
     "shows":  [
@@ -29,20 +29,6 @@
                       "openAt":  "2026-08-10T00:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26011092_p.gif",
                       "view":  94000,
-                      "isHot":  true
-                  },
-                  {
-                      "date":  "2026-09-19",
-                      "endDate":  "2026-09-19",
-                      "title":  "2026 ifeye 1st APAC TOUR [If I] IN SEOUL",
-                      "meta":  "예스24 원더로크홀 · 9.19",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-08-21",
-                      "openAt":  "2026-08-21T00:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202608/20260819/20260819-59806.jpg",
-                      "view":  93000,
                       "isHot":  true
                   },
                   {
