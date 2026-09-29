@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-09-28T21:00:02",
+    "generated":  "2026-09-29T20:00:46",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  true,
     "shows":  [
@@ -36,13 +36,13 @@
                       "endDate":  "2026-10-31",
                       "title":  "2026 장한별 콘서트",
                       "meta":  "세종대학교 대양홀 · 10.31",
-                      "kind":  "soon",
-                      "status":  "soon",
+                      "kind":  "open",
+                      "status":  "open",
                       "source":  "ticketlink",
                       "open":  "2026-09-29",
                       "openAt":  "2026-09-29T14:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_8/star_open0923.jpg",
-                      "view":  29456,
+                      "view":  51367,
                       "isHot":  false
                   },
                   {
@@ -56,7 +56,7 @@
                       "open":  "2026-10-01",
                       "openAt":  "2026-10-01T20:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26013161_p.gif",
-                      "view":  12867,
+                      "view":  12895,
                       "isHot":  true
                   },
                   {
@@ -88,20 +88,6 @@
                       "isHot":  true
                   },
                   {
-                      "date":  "2026-10-04",
-                      "endDate":  "2026-10-04",
-                      "title":  "2026 강남페스티벌 콘서트 : K-POP 콘서트",
-                      "meta":  "도산대로 (현대모터스튜디오 앞) · 10.4",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "ticketlink",
-                      "open":  "2026-09-22",
-                      "openAt":  "2026-09-22T20:00:00+09:00",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_8/kpop_open_0921.jpg",
-                      "view":  11375,
-                      "isHot":  false
-                  },
-                  {
                       "date":  "2026-11-21",
                       "endDate":  "2026-11-22",
                       "title":  "2026 MONSTA X WORLD TOUR ［THE X : NEXUS］ - ENCORE",
@@ -109,10 +95,10 @@
                       "kind":  "open",
                       "status":  "open",
                       "source":  "interpark",
-                      "open":  "2026-09-28",
-                      "openAt":  "2026-09-28T20:00:00+09:00",
+                      "open":  "2026-09-29",
+                      "openAt":  "2026-09-29T20:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26013132_p.gif",
-                      "view":  9399,
+                      "view":  9402,
                       "isHot":  true
                   },
                   {
@@ -126,21 +112,7 @@
                       "open":  "2026-10-06",
                       "openAt":  "2026-10-06T00:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_3/funnyfamily_teaser_200_247.jpg",
-                      "view":  6808,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2027-01-23",
-                      "endDate":  "2027-01-23",
-                      "title":  "Hump Back “HELLO ANEW TOUR SEOUL 2027”",
-                      "meta":  " · 1.23",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "yes24",
-                      "open":  "2026-10-07",
-                      "openAt":  "2026-10-07T12:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60207.jpg",
-                      "view":  6663,
+                      "view":  7757,
                       "isHot":  false
                   },
                   {
@@ -154,8 +126,22 @@
                       "open":  "2026-10-26",
                       "openAt":  "2026-10-26T20:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/20260923102307.jpg",
-                      "view":  6058,
+                      "view":  6961,
                       "isHot":  true
+                  },
+                  {
+                      "date":  "2027-01-23",
+                      "endDate":  "2027-01-23",
+                      "title":  "Hump Back “HELLO ANEW TOUR SEOUL 2027”",
+                      "meta":  " · 1.23",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "yes24",
+                      "open":  "2026-10-07",
+                      "openAt":  "2026-10-07T12:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60207.jpg",
+                      "view":  6704,
+                      "isHot":  false
                   },
                   {
                       "date":  "2026-10-29",
@@ -168,7 +154,7 @@
                       "open":  "2026-09-22",
                       "openAt":  "2026-09-22T14:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/BoardNotice/202609/20260918/20260918-40b44d8f-20ef-4923-a78e-9b1ebb3ba925.jpg",
-                      "view":  5962,
+                      "view":  6315,
                       "isHot":  false
                   },
                   {
@@ -182,7 +168,7 @@
                       "open":  "2026-09-18",
                       "openAt":  "2026-09-18T14:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260918/20260918-60153.jpg",
-                      "view":  5892,
+                      "view":  5930,
                       "isHot":  false
                   },
                   {
@@ -196,7 +182,7 @@
                       "open":  "2026-10-01",
                       "openAt":  "2026-10-01T18:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26013510_p.gif",
-                      "view":  5732,
+                      "view":  5741,
                       "isHot":  true
                   },
                   {
@@ -210,7 +196,7 @@
                       "open":  "2026-09-22",
                       "openAt":  "2026-09-22T20:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260914/20260914-59888_1.jpg",
-                      "view":  4937,
+                      "view":  4985,
                       "isHot":  false
                   },
                   {
@@ -224,7 +210,7 @@
                       "open":  "2026-09-23",
                       "openAt":  "2026-09-23T16:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260921/20260921-60307.jpg",
-                      "view":  4891,
+                      "view":  4953,
                       "isHot":  false
                   },
                   {
@@ -238,7 +224,7 @@
                       "open":  "2026-10-06",
                       "openAt":  "2026-10-06T19:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_1/redsquare_bol4_mainposter_200x247.png",
-                      "view":  4338,
+                      "view":  4683,
                       "isHot":  false
                   },
                   {
@@ -252,7 +238,7 @@
                       "open":  "2026-09-16",
                       "openAt":  "2026-09-16T00:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260914/20260914-60161.jpg",
-                      "view":  4281,
+                      "view":  4433,
                       "isHot":  false
                   },
                   {
@@ -266,7 +252,7 @@
                       "open":  "2026-10-15",
                       "openAt":  "2026-10-15T00:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260928/20260928-60392.jpg",
-                      "view":  4188,
+                      "view":  4316,
                       "isHot":  false
                   },
                   {
@@ -280,7 +266,7 @@
                       "open":  "2026-09-23",
                       "openAt":  "2026-09-23T14:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260917/20260917-60261.jpg",
-                      "view":  4135,
+                      "view":  4187,
                       "isHot":  false
                   },
                   {
@@ -294,7 +280,7 @@
                       "open":  "2026-09-23",
                       "openAt":  "2026-09-23T15:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260918/20260918-60293_1.jpg",
-                      "view":  3610,
+                      "view":  3669,
                       "isHot":  false
                   },
                   {
@@ -308,7 +294,7 @@
                       "open":  "2026-09-17",
                       "openAt":  "2026-09-17T15:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60238.jpg",
-                      "view":  3480,
+                      "view":  3513,
                       "isHot":  false
                   },
                   {
@@ -322,21 +308,7 @@
                       "open":  "2026-09-21",
                       "openAt":  "2026-09-21T14:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60154.jpg",
-                      "view":  3323,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2026-10-03",
-                      "endDate":  "2026-10-03",
-                      "title":  "nafla instinct tour 2026-2027",
-                      "meta":  "예스24 원더로크홀 · 10.3",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-09-14",
-                      "openAt":  "2026-09-14T20:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260909/20260909-60107.jpg",
-                      "view":  3115,
+                      "view":  3358,
                       "isHot":  false
                   },
                   {
@@ -350,7 +322,7 @@
                       "open":  "2026-09-16",
                       "openAt":  "2026-09-16T12:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260915/20260915-60194.jpg",
-                      "view":  3028,
+                      "view":  3040,
                       "isHot":  false
                   },
                   {
@@ -364,7 +336,7 @@
                       "open":  "2026-09-22",
                       "openAt":  "2026-09-22T16:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60215.jpg",
-                      "view":  2487,
+                      "view":  2528,
                       "isHot":  false
                   },
                   {
@@ -378,7 +350,7 @@
                       "open":  "2026-09-21",
                       "openAt":  "2026-09-21T15:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60208.jpg",
-                      "view":  2465,
+                      "view":  2500,
                       "isHot":  false
                   },
                   {
@@ -392,7 +364,7 @@
                       "open":  "2026-09-22",
                       "openAt":  "2026-09-22T15:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60212.jpg",
-                      "view":  2411,
+                      "view":  2450,
                       "isHot":  false
                   },
                   {
@@ -406,7 +378,7 @@
                       "open":  "2026-09-22",
                       "openAt":  "2026-09-22T14:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260916/20260916-60209.jpg",
-                      "view":  2200,
+                      "view":  2236,
                       "isHot":  false
                   },
                   {
@@ -420,63 +392,21 @@
                       "open":  "2026-09-23",
                       "openAt":  "2026-09-23T20:00:00+09:00",
                       "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260915/20260915-60203.jpg",
-                      "view":  1843,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2026-11-08",
-                      "endDate":  "2026-11-08",
-                      "title":  "2026 별 콘서트",
-                      "meta":  "구름아래소극장 · 11.8",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "ticketlink",
-                      "open":  "2026-09-28",
-                      "openAt":  "2026-09-28T20:00:00+09:00",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_2/STAY_PST_open_0921.jpg",
-                      "view":  1379,
+                      "view":  1885,
                       "isHot":  false
                   },
                   {
                       "date":  "2026-12-13",
                       "endDate":  "2026-12-13",
-                      "title":  "［데뷔 60주년 기념공연］ 2026 남진 전국투어 콘서트 - 공주",
+                      "title":  "[데뷔 60주년 기념공연] 2026 남진 전국투어 콘서트 - 공주",
                       "meta":  "공주문예회관 대공연장 · 12.13",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "interpark",
-                      "open":  "2026-09-29",
-                      "openAt":  "2026-09-29T11:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26013927_p.gif",
-                      "view":  1150,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2026-10-31",
-                      "endDate":  "2026-11-01",
-                      "title":  "2026 윤마치(MRCH) CONCERT [공생관계 : We Live Together]",
-                      "meta":  "예스24 라이브홀 · 10.31-11.1",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "yes24",
-                      "open":  "2026-10-06",
-                      "openAt":  "2026-10-06T20:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260922/20260922-60342.jpg",
-                      "view":  1131,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "2026-10-24",
-                      "endDate":  "2026-10-24",
-                      "title":  "2026 DKB FAN-CON [BF: Besties Forever]",
-                      "meta":  "큐브컨벤션센터 · 10.24",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-09-21",
-                      "openAt":  "2026-09-21T00:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260918/20260918-60284.jpg",
-                      "view":  1045,
+                      "source":  "ticketlink",
+                      "open":  "2026-09-29",
+                      "openAt":  "2026-09-29T11:00:00+09:00",
+                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_7/nj_pst0923.jpg",
+                      "view":  1694,
                       "isHot":  false
                   },
                   {
@@ -490,49 +420,35 @@
                       "open":  "2026-09-30",
                       "openAt":  "2026-09-30T17:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_8/hg_seoul_open_0923.jpg",
-                      "view":  1004,
-                      "isHot":  false
-                  },
-                  {
-                      "date":  "",
-                      "endDate":  "",
-                      "title":  "[공주] [데뷔 60주년 기념공연] 2026 남진 전국투어 콘서트",
-                      "meta":  "티켓팅 9.29",
-                      "kind":  "soon",
-                      "status":  "soon",
-                      "source":  "yes24",
-                      "open":  "2026-09-29",
-                      "openAt":  "2026-09-29T11:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260923/20260923-60363.jpg",
-                      "view":  957,
+                      "view":  1275,
                       "isHot":  false
                   },
                   {
                       "date":  "2026-10-31",
-                      "endDate":  "2026-10-31",
-                      "title":  "NEMESIS Nightfall to Snowfall Tour 2026 - 거제",
-                      "meta":  "언드(UND) · 10.31",
+                      "endDate":  "2026-11-01",
+                      "title":  "2026 윤마치(MRCH) CONCERT [공생관계 : We Live Together]",
+                      "meta":  "예스24 라이브홀 · 10.31-11.1",
                       "kind":  "soon",
                       "status":  "soon",
-                      "source":  "interpark",
-                      "open":  "2026-09-29",
-                      "openAt":  "2026-09-29T19:00:00+09:00",
-                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26013311_p.gif",
-                      "view":  939,
+                      "source":  "yes24",
+                      "open":  "2026-10-06",
+                      "openAt":  "2026-10-06T20:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260922/20260922-60342.jpg",
+                      "view":  1251,
                       "isHot":  false
                   },
                   {
-                      "date":  "2026-12-05",
-                      "endDate":  "2026-12-05",
-                      "title":  "사랑과 평화 with나미애 청주콘서트",
-                      "meta":  "청주예술의전당 · 12.5",
+                      "date":  "2026-10-24",
+                      "endDate":  "2026-10-24",
+                      "title":  "2026 DKB FAN-CON [BF: Besties Forever]",
+                      "meta":  "큐브컨벤션센터 · 10.24",
                       "kind":  "open",
                       "status":  "open",
-                      "source":  "ticketlink",
-                      "open":  "2026-09-28",
-                      "openAt":  "2026-09-28T10:00:00+09:00",
-                      "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_4/티켓썸네일.jpg",
-                      "view":  891,
+                      "source":  "yes24",
+                      "open":  "2026-09-21",
+                      "openAt":  "2026-09-21T00:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260918/20260918-60284.jpg",
+                      "view":  1090,
                       "isHot":  false
                   },
                   {
@@ -546,7 +462,21 @@
                       "open":  "2026-09-30",
                       "openAt":  "2026-09-30T20:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_9/lee_open_0922.jpg",
-                      "view":  755,
+                      "view":  945,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-11-14",
+                      "endDate":  "2026-11-14",
+                      "title":  "baby selects “Buckshot” Live in Seoul",
+                      "meta":  "홍대스테이지 · 11.14",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "yes24",
+                      "open":  "2026-10-02",
+                      "openAt":  "2026-10-02T12:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260929/20260929-60420.jpg",
+                      "view":  835,
                       "isHot":  false
                   },
                   {
@@ -560,7 +490,35 @@
                       "open":  "2026-09-30",
                       "openAt":  "2026-09-30T18:00:00+09:00",
                       "poster":  "https://image.toast.com/aaaaab/ticketlink/TKL_2/hg_dg_open_0923.jpg",
-                      "view":  655,
+                      "view":  827,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "",
+                      "endDate":  "",
+                      "title":  "스트릿 월드 파이터 : 디렉터스 워 [ON THE STAGE ] Tour - 서울",
+                      "meta":  "고려대학교 화정체육관 · 티켓팅 10.7",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "interpark",
+                      "open":  "2026-10-07",
+                      "openAt":  "2026-10-07T16:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/2026092309445045.jpg",
+                      "view":  805,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-10-17",
+                      "endDate":  "2026-10-18",
+                      "title":  "HYOJUNG 1st LIVE 〈Lost \u0026 Found〉",
+                      "meta":  "XSCALA(엑스칼라) · 10.17-10.18",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "yes24",
+                      "open":  "2026-10-01",
+                      "openAt":  "2026-10-01T00:00:00+09:00",
+                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260928/20260928-60386.jpg",
+                      "view":  735,
                       "isHot":  false
                   },
                   {
@@ -571,10 +529,24 @@
                       "kind":  "soon",
                       "status":  "soon",
                       "source":  "interpark",
-                      "open":  "2026-09-29",
-                      "openAt":  "2026-09-29T12:00:00+09:00",
+                      "open":  "2026-09-30",
+                      "openAt":  "2026-09-30T12:00:00+09:00",
                       "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26013626_p.gif",
-                      "view":  607,
+                      "view":  609,
+                      "isHot":  false
+                  },
+                  {
+                      "date":  "2026-10-17",
+                      "endDate":  "2026-10-18",
+                      "title":  "그랜드 민트 페스티벌 2026 - 우선입장권",
+                      "meta":  "올림픽공원 · 10.17-10.18",
+                      "kind":  "soon",
+                      "status":  "soon",
+                      "source":  "interpark",
+                      "open":  "2026-09-30",
+                      "openAt":  "2026-09-30T14:00:00+09:00",
+                      "poster":  "https://ticketimage.interpark.com/Play/image/large/26/26013319_p.gif",
+                      "view":  587,
                       "isHot":  false
                   }
               ]
