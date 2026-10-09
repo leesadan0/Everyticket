@@ -1296,7 +1296,7 @@
   /* ---------- 카카오톡 문의 모달 ---------- */
   const kakaoModal = document.getElementById('kakaoModal');
   const kakaoCopyBtn = document.getElementById('kakaoCopyBtn');
-  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'everyticket';
+  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'agentevery';
 
   document.querySelectorAll('[data-kakao-id-text]').forEach((el) => {
     el.textContent = kakaoId;
