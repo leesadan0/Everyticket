@@ -1296,9 +1296,7 @@
   /* ---------- 카카오톡 문의 모달 ---------- */
   const kakaoModal = document.getElementById('kakaoModal');
   const kakaoCopyBtn = document.getElementById('kakaoCopyBtn');
-  const twitterQ = (kakaoModal && kakaoModal.dataset.twitterQ) || '마이원티켓';
-  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || '트위터 DM 주세요';
-  const twitterUrl = 'https://x.com/search?q=' + encodeURIComponent(twitterQ) + '&f=user';
+  const kakaoId = (kakaoModal && kakaoModal.dataset.kakaoId) || 'ticketagent';
 
   document.querySelectorAll('[data-kakao-id-text]').forEach((el) => {
     el.textContent = kakaoId;
@@ -1409,7 +1407,7 @@
     if (!kakaoIdBox) return;
     const label = kakaoIdBox.querySelector('.kakao-modal__idlabel');
     const prev = label ? label.textContent : '';
-    if (label) label.textContent = '검색어가 복사되었습니다';
+    if (label) label.textContent = '아이디가 복사되었습니다';
     kakaoIdBox.classList.add('is-copied');
     window.setTimeout(() => {
       if (label) label.textContent = prev;
@@ -1419,13 +1417,13 @@
 
   if (kakaoCopyBtn) {
     kakaoCopyBtn.addEventListener('click', () => {
-      copyText(twitterQ, kakaoCopyBtn, '검색어가 복사되었습니다');
+      copyText(kakaoId, kakaoCopyBtn, '아이디가 복사되었습니다');
       flashIdBox();
     });
   }
   if (kakaoIdBox) {
     kakaoIdBox.addEventListener('click', () => {
-      copyText(twitterQ);
+      copyText(kakaoId);
       flashIdBox();
     });
   }
@@ -1437,7 +1435,27 @@
 
   const kakaoOpenBtn = document.getElementById('kakaoOpenBtn');
   const openKakaoApp = () => {
-    window.open(twitterUrl, '_blank', 'noopener');
+    const ua = navigator.userAgent || '';
+    const android = /Android/i.test(ua);
+    const ios = /iPhone|iPad|iPod/i.test(ua);
+    const scheme = 'kakaotalk://addfriend?id=' + encodeURIComponent(kakaoId);
+
+    if (android) {
+      window.location.href = 'intent://addfriend?id=' + encodeURIComponent(kakaoId) + '#Intent;scheme=kakaotalk;package=com.kakao.talk;end';
+      return;
+    }
+    if (ios) {
+      window.location.href = scheme;
+      return;
+    }
+
+    const frame = document.createElement('iframe');
+    frame.setAttribute('aria-hidden', 'true');
+    frame.tabIndex = -1;
+    frame.style.cssText = 'position:fixed;width:0;height:0;border:0;opacity:0;pointer-events:none';
+    frame.src = scheme;
+    document.body.appendChild(frame);
+    window.setTimeout(() => frame.remove(), 2000);
   };
   if (kakaoOpenBtn) kakaoOpenBtn.addEventListener('click', openKakaoApp);
 })();
