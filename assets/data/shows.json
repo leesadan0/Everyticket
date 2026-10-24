@@ -1,5 +1,5 @@
 {
-    "generated":  "2026-10-24T20:00:32",
+    "generated":  "2026-10-24T21:00:01",
     "source":  "interpark,ticketlink,yes24,melon",
     "melon":  false,
     "shows":  [
@@ -198,20 +198,6 @@
                       "poster":  "https://ticketimage.interpark.com/TicketImage/notice_poster/20/2026101512000530.jpg",
                       "view":  4653,
                       "isHot":  true
-                  },
-                  {
-                      "date":  "2026-10-24",
-                      "endDate":  "2026-10-25",
-                      "title":  "2026 김지원 팬미팅 〈WONEDERLAND〉 - 서울 추가",
-                      "meta":  "성신여대 운정그린캠퍼스 대강당 · 10.24-10.25",
-                      "kind":  "open",
-                      "status":  "open",
-                      "source":  "yes24",
-                      "open":  "2026-10-07",
-                      "openAt":  "2026-10-07T20:00:00+09:00",
-                      "poster":  "https://tkfile.yes24.com/upload2/PerfBlog/202609/20260909/20260909-60109.jpg",
-                      "view":  4540,
-                      "isHot":  false
                   },
                   {
                       "date":  "2026-12-19",
